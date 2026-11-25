@@ -116,7 +116,8 @@ parsed.version = 2;
 
 const SCHEMA_NOTE = "# Schema v2 — see scripts/migrate-interactions-v2.mjs for the added keys.\n";
 const body = YAML.stringify(parsed, { lineWidth: 0 });
-const next = `${header}${header.includes("# Schema v2") ? "" : SCHEMA_NOTE}${body}`;
+const cleanHeader = header.replace(/^\n+/, "");
+const next = `${cleanHeader}${cleanHeader.includes("# Schema v2") ? "" : SCHEMA_NOTE}${body}`;
 
 if (process.argv.includes("--check")) {
   if (original !== next) {
