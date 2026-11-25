@@ -10,16 +10,20 @@
     "pull": "node scripts/pull-subframe.mjs",
     "sync": "node scripts/sync-components.mjs",
     "vendor-core": "node scripts/vendor-core.mjs",
-    "gen": "node scripts/gen-yaml.mjs && node scripts/gen-routes.mjs",
+    "gen": "node scripts/gen-yaml.mjs && node scripts/gen-routes.mjs && node scripts/gen-labels.mjs",
     "shoot": "node scripts/shoot.mjs",
     "diff": "node scripts/diff.mjs",
     "refs": "node scripts/refs.mjs",
-    "verify": "npm run build && npm run shoot -- --all && npm run diff -- --all && npm run gen",
+    "verify": "npm run build && npm run shoot -- --all && npm run diff -- --all && npm run gen && npm run check:interactions && npm run audit:interactions",
     "check:yaml": "node scripts/gen-yaml.mjs --check && node scripts/gen-routes.mjs --check",
     "check:interactions": "node scripts/check-interactions.mjs",
     "signoff": "node scripts/signoff.mjs",
     "verify:chrome": "node scripts/verify-chrome.mjs",
-    "verify:pipeline": "node scripts/verify-pipeline.mjs"
+    "verify:pipeline": "node scripts/verify-pipeline.mjs",
+    "gen:labels": "node scripts/gen-labels.mjs",
+    "migrate:interactions": "node scripts/migrate-interactions-v2.mjs",
+    "check:migrate": "node scripts/migrate-interactions-v2.mjs --check",
+    "audit:interactions": "node scripts/audit-interactions.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.0.0",

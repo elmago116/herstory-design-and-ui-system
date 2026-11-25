@@ -14,6 +14,9 @@ component contracts, and interaction model can be reviewed, reused, and built on
 | `design-system/` | Subframe-derived React + Tailwind component library: `src/ui/` (theme tokens, primitives, layouts), `src/pages/` (per-screen compositions) |
 | `prototype/` | Astro + React pixel-parity prototype. Builds every board route, renders screens from `uis.yaml`, and verifies parity headlessly (`npm run shoot`, `npm run diff`) |
 | `docs/` | Screen inventory (`HerStory UIs.md`), IA map (`HerStory UI Map.md`), the UI gate/QA plan and prototypes plan notes |
+| `docs/ux/` | Usability requirements, the round-1 interaction evaluation, and its remediation plan |
+| `docs/gate/` | `task-scripts.md` — protocol tasks T1–T7 as runnable steps against the prototype |
+| `skills/` | `interaction-usability-audit` — the evaluation skill: workflow, dimension index (M1–M8), requirement index, evidence protocol, report template |
 | `assets/` | `General UI.svg` — the system overview diagram |
 
 ## Prototype
@@ -22,7 +25,7 @@ component contracts, and interaction model can be reviewed, reused, and built on
 cd prototype
 npm install
 npm run dev        # http://localhost:4321
-npm run verify     # build → screenshot every board → parity diff → regenerate yaml/routes
+npm run verify     # build → screenshots → parity diff → regenerate yaml/routes/labels → interaction gates
 ```
 
 `prototype/uis.yaml` is the single machine-readable index of every screen and the components it

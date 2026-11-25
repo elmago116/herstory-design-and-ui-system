@@ -22,10 +22,11 @@ npm run verify         # build → screenshots → pixel gate → refresh uis.ya
 | `src/pages/ui/*.astro` | One generated route per board. Do not hand-edit (header says so). |
 | `src/pages/ds/tokens.astro` | Hand-written token reference, parsed from `theme.css`. |
 | `src/layouts/GeneralScreen.astro` | Persistent chrome for wrapped UI routes: UI-37.1 header, conditional breadcrumbs, task-aware foldable rail, content slot, footer. Header/rail are React islands (`GeneralHeader`, `GeneralNav`) driven by `general-nav-config.tsx`. |
-| `public/interactions.yaml` | **Single source of behaviour links.** Matches a control on a surface to an effect (`navigate` / `back` / `action`) and target route. Edit this file only; no route or code change is needed for a link edit. 448 rules across 141 surfaces, including the role-shell sidebar items. |
-| `src/scripts/interactions.ts` | Runtime loader: fetches `/interactions.yaml`, matches clicks by surface + visible control text (`nth`/`scope` for duplicates), and navigates. Controls with no rule show an explanatory toast instead of failing silently. Loaded by `Board.astro` on every route. |
+| `public/interactions.yaml` | **Single source of behaviour links.** Schema v2. Matches a control on a surface to an effect (`navigate` / `back` / `action`) plus the optional keys `carry`, `confirm`, `undo`, `rowScoped`, `label`. Edit this file only; no route or code change is needed for a link edit. 448 rules across 141 surfaces, including the role-shell sidebar items. |
+| `src/scripts/interactions.ts` | Runtime: fetches `/interactions.yaml`, matches clicks by surface + visible control text (`nth`/`scope` for duplicates), navigates, carries outcome messages across the navigation, confirms destructive actions with a dialog + 10 s undo, keeps per-route input drafts, labels icon-only controls from `/control-labels.json`, and makes board-drawn nav keyboard operable. Loaded by `Board.astro` on every route. |
+| `public/control-labels.json` | Accessible names for icon-only controls, generated from the `IconButton` inventory in document order (`npm run gen:labels`). The runtime zips unnamed buttons against it, and refuses to guess when the counts disagree. |
 | `src/pages/prototype.astro` | Generated coverage report at `/prototype`: every control per surface, wired / simulated / local / not wired, plus the prototype's limits. |
-| `scripts/` | `pull`, `sync`, `vendor-core`, `refs`, `gen-yaml`, `gen-routes`, `shoot`, `diff`, `check-interactions`. |
+| `scripts/` | `pull`, `sync`, `vendor-core`, `refs`, `gen-yaml`, `gen-routes`, `gen-labels`, `shoot`, `diff`, `check-interactions`, `audit-interactions`, `migrate-interactions-v2`. |
 | `vendor/subframe-snapshot/manifest.json` | Provenance: page id, canvas, `lastModifiedAt`, sha256 per board + theme + component list. |
 | `shots/{reference,local,diff}` | Parity oracle, current render, heat maps. |
 
@@ -167,8 +168,17 @@ surfaces:
   `localStorage["herstory-prototype/v1"]` and show a toast. Generic actions mark
   the prototype boundary without pretending: `confirm` (saved locally),
   `simulate` (no live service), `download` (no file generated), `external`,
-  `destructive` (data left unchanged), and `copy`. Add a new action in
-  `src/scripts/interactions.ts` only when a new behaviour class is needed.
+  `destructive` (simulated, counted in `destructiveRuns`, reversible), and
+  `copy`. Add a new action in `src/scripts/interactions.ts` only when a new
+  behaviour class is needed.
+- **Schema v2 keys** (see `scripts/migrate-interactions-v2.mjs`):
+  `carry: true` — the outcome message survives the navigation the action
+  triggers (required by the gate whenever an `action` also has `to`);
+  `confirm: {title, body, confirmLabel}` — dialog before a destructive action,
+  which must also set `undo: true` (or `undoExempt: "<reason>"`);
+  `rowScoped: true` — append `?row=<first cell of the row>` to the destination,
+  and the destination shows a "Viewing: …" strip;
+  `label: "…"` — accessible name / dialog copy for controls without text.
 - **No silent dead controls:** a click on a control that has no matching rule
   shows a one-time toast naming the control and pointing at `/prototype`, where
   every surface lists what is wired and why the rest is not. Screenshot runs
@@ -176,7 +186,13 @@ surfaces:
 - **Portals:** menus/dropdown items render outside `[data-board-root]`; the
   runtime falls back to the page surface and matches `role=menuitem`/`option`.
 - **Validate:** `npm run check:interactions` checks surface ids, control keys,
-  duplicate rules, actions, and that every target route exists.
+  duplicate rules, actions, target routes, the v2 gates (I01 action+`to` without
+  `carry`; I02 destructive without `confirm`; I03 confirm without `undo`; I04
+  row-blind duplicate label; I06 task-script control without a rule), and prints
+  coverage. `npm run audit:interactions` drives the built site in Chromium and
+  asserts the behaviour the schema promises (guard, carried feedback, confirm +
+  undo, row identity, accessible names, keyboard nav, drafts, loader failure,
+  no silent dead controls). Both run inside `npm run verify`.
 - **Routes:** adding a link between existing screens needs only YAML. A brand-new
   destination screen still needs its normal route to exist.
 

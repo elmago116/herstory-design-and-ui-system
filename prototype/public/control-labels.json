@@ -1,0 +1,114 @@
+{
+ "UI-09": [
+  "Delete"
+ ],
+ "UI-10": [
+  "Delete",
+  "Delete",
+  "Delete",
+  "Delete"
+ ],
+ "UI-11C": [
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete"
+ ],
+ "UI-11.5": [
+  "Check Check",
+  "Close",
+  "Message Circle Question Mark",
+  "Check Check",
+  "Close",
+  "Message Circle Question Mark",
+  "Check Check",
+  "Close",
+  "Message Circle Question Mark",
+  "Check Check",
+  "Close",
+  "Message Circle Question Mark"
+ ],
+ "UI-11.6": [
+  "Copy",
+  "Close",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Edit",
+  "Delete",
+  "Close",
+  "Delete",
+  "Delete"
+ ],
+ "UI-14": [
+  "View",
+  "Edit2",
+  "Share2",
+  "View",
+  "Edit2",
+  "Share2",
+  "View",
+  "Edit2",
+  "Share2",
+  "View",
+  "Edit2",
+  "Share2",
+  "View",
+  "Edit2",
+  "Share2"
+ ],
+ "UI-18": [
+  "Confirm",
+  "Confirm",
+  "Edit2",
+  "Confirm",
+  "Edit2"
+ ],
+ "UI-37.1": [
+  "Help Circle",
+  "Moon"
+ ],
+ "UI-37.5": [
+  "Help Circle",
+  "Sun"
+ ],
+ "UI-37.6.2": [
+  "Help Circle",
+  "Sun"
+ ],
+ "UI-37.6.1": [
+  "Help Circle",
+  "Sun"
+ ],
+ "UI-37.7": [
+  "Help Circle",
+  "Sun"
+ ],
+ "DS-02": [
+  "Settings",
+  "Share2",
+  "Add",
+  "Star",
+  "Delete",
+  "Close",
+  "Maximize",
+  "Copy"
+ ]
+}

@@ -1,4 +1,3 @@
-version: 1
 
 # HerStory prototype interactions
 # ------------------------------------------------------------------
@@ -18,6 +17,8 @@ version: 1
 # Actions that do not mutate data explain the prototype boundary in a toast.
 # Every control without a rule also explains itself when clicked.
 
+# Schema v2 — see scripts/migrate-interactions-v2.mjs for the added keys.
+version: 2
 surfaces:
   UI-01:
     - control: Button:AuthenticationPolicy
@@ -46,6 +47,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-01-user-management
+      carry: true
   UI-01.2:
     - control: Button:Cancel
       match: Cancel
@@ -56,6 +58,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-01-user-management
+      carry: true
   UI-01.3:
     - control: Button:Discard
       match: Discard
@@ -66,6 +69,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-01-user-management
+      carry: true
   UI-02:
     - control: Button:CreateWorkspace
       match: Create workspace
@@ -79,6 +83,7 @@ surfaces:
       match: Inspect
       effect: navigate
       to: /ui/ui-02-1-inspect-workspace
+      rowScoped: true
     - control: Button:SovereigntyAndQuota
       match: Sovereignty and quota
       effect: navigate
@@ -102,6 +107,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-02-workspace-management
+      carry: true
   UI-02.3:
     - control: Button:Cancel
       match: Cancel
@@ -112,6 +118,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-02-workspace-management
+      carry: true
   UI-02.4:
     - control: Button:Discard
       match: Discard
@@ -122,6 +129,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-02-workspace-management
+      carry: true
   UI-03:
     - control: Button:Discard
       match: Discard
@@ -131,6 +139,7 @@ surfaces:
       match: Save changes
       effect: navigate
       to: /ui/ui-03-1-save-integration-settings
+      rowScoped: true
   UI-03.1:
     - control: Button:Cancel
       match: Cancel
@@ -141,12 +150,14 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-03-integration-settings
+      carry: true
   UI-03.2:
     - control: Button:DiscardChanges
       match: Discard changes
       effect: action
       action: confirm
       to: /ui/ui-03-integration-settings
+      carry: true
     - control: Button:KeepEditing
       match: Keep editing
       effect: navigate
@@ -168,6 +179,7 @@ surfaces:
       match: Review
       effect: navigate
       to: /ui/ui-04-2-review-policy
+      rowScoped: true
   UI-04.1:
     - control: Button:Cancel
       match: Cancel
@@ -178,12 +190,14 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-04-governance-panel
+      carry: true
   UI-04.2:
     - control: Button:ApprovePolicy
       match: Approve policy
       effect: action
       action: confirm
       to: /ui/ui-04-governance-panel
+      carry: true
     - control: Button:Reject
       match: Reject
       effect: navigate
@@ -194,6 +208,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-04-governance-panel
+      carry: true
   UI-04.4:
     - control: Button:Close
       match: Close
@@ -208,6 +223,7 @@ surfaces:
       match: Edit
       effect: navigate
       to: /ui/ui-05-2-edit-retention-rule
+      rowScoped: true
     - control: Button:RunRetentionSweep
       match: Run retention sweep
       effect: navigate
@@ -222,6 +238,12 @@ surfaces:
       effect: action
       action: destructive
       to: /ui/ui-05-data-retention-console
+      carry: true
+      confirm:
+        title: Delete files past the retention window?
+        body: Files older than the active retention rule are removed from the staging bucket. This prototype simulates the deletion and keeps the data; the undo offer below is the pattern the product needs.
+        confirmLabel: Delete files
+      undo: true
   UI-05.2:
     - control: Button:Cancel
       match: Cancel
@@ -232,6 +254,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-05-data-retention-console
+      carry: true
   UI-06:
     - control: Button:AddStakeholder
       match: Add stakeholder
@@ -249,12 +272,14 @@ surfaces:
       match: View
       effect: navigate
       to: /ui/ui-06-3-view-stakeholder
+      rowScoped: true
   UI-06.1:
     - control: Button:AddStakeholder
       match: Add stakeholder
       effect: action
       action: confirm
       to: /ui/ui-06-stakeholder-registry
+      carry: true
     - control: Button:Cancel
       match: Cancel
       effect: navigate
@@ -287,6 +312,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-06-stakeholder-registry
+      carry: true
   UI-07:
     - control: Button:AssignOrEscalate
       match: Assign or escalate
@@ -296,6 +322,7 @@ surfaces:
       match: View
       effect: navigate
       to: /ui/ui-07-1-view-governance-event
+      rowScoped: true
   UI-07.1:
     - control: Button:Close
       match: Close
@@ -311,6 +338,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-07-cross-workspace-governance-dashboard
+      carry: true
     - control: Button:Cancel
       match: Cancel
       effect: navigate
@@ -324,6 +352,7 @@ surfaces:
       match: Revoke
       effect: navigate
       to: /ui/ui-08-2-revoke-session
+      rowScoped: true
   UI-08.1:
     - control: Button:Cancel
       match: Cancel
@@ -343,6 +372,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-08-audit-logs-session-monitor
+      carry: true
   UI-08.3:
     - control: Button:Close
       match: Close
@@ -373,6 +403,11 @@ surfaces:
       match: Trash
       effect: action
       action: destructive
+      confirm:
+        title: Remove this source?
+        body: The registered source and its upload are detached from the workspace. Re-uploading is the only way back.
+        confirmLabel: Remove source
+      undo: true
     - control: Button:Close
       match: Close
       effect: back
@@ -404,6 +439,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-09-source-registration
+      carry: true
   UI-10:
     - control: DropdownMenu
       match: Escalate to engineer
@@ -417,6 +453,7 @@ surfaces:
       match: View
       effect: navigate
       to: /ui/ui-10-2-retry-or-escalate-run
+      rowScoped: true
     - control: Button:Close
       match: Close
       effect: back
@@ -430,11 +467,13 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-10-ingestion-monitor
+      carry: true
     - control: Button:RetryRun
       match: Retry run
       effect: action
       action: confirm
       to: /ui/ui-10-ingestion-monitor
+      carry: true
   UI-11C:
     - control: SplitButton:Add
       match: Add
@@ -472,10 +511,12 @@ surfaces:
       match: Close
       effect: navigate
       to: /ui/ui-11s-ontology-manager-select
+      rowScoped: true
     - control: Button:View#6
       match: View
       effect: navigate
       to: /ui/ui-11-6-edit-class
+      rowScoped: true
     - control: Button:ViewMappings
       match: View mappings
       effect: navigate
@@ -505,12 +546,14 @@ surfaces:
       match: view
       effect: navigate
       to: /ui/ui-11-6-edit-class
+      rowScoped: true
   UI-11.1:
     - control: Button:SaveProperty
       match: Save property
       effect: action
       action: confirm
       to: /ui/ui-11c-ontology-manager-create
+      carry: true
     - control: Button:Cancel
       match: Cancel
       effect: navigate
@@ -521,6 +564,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-11c-ontology-manager-create
+      carry: true
     - control: Button:Cancel
       match: Cancel
       effect: navigate
@@ -531,6 +575,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-11c-ontology-manager-create
+      carry: true
     - control: Button:Cancel
       match: Cancel
       effect: navigate
@@ -566,6 +611,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-11c-ontology-manager-create
+      carry: true
     - control: Button:Cancelar
       match: cancelar
       effect: navigate
@@ -595,6 +641,7 @@ surfaces:
       match: Edit
       effect: navigate
       to: /ui/ui-12-1-edit-mapping-rule
+      rowScoped: true
     - control: Button:EditRule
       match: Edit rule
       effect: navigate
@@ -611,15 +658,22 @@ surfaces:
       match: Remove
       effect: action
       action: destructive
+      confirm:
+        title: Remove this mapping rule?
+        body: Records already mapped with this rule keep their current triples until the pipeline is re-run.
+        confirmLabel: Remove rule
+      undo: true
     - control: Button:View#4
       match: View
       effect: navigate
       to: /ui/ui-12-1-edit-mapping-rule
+      rowScoped: true
     - control: Button:Save
       match: Save
       effect: action
       to: /ui/ui-11c-ontology-manager-create
       action: confirm
+      carry: true
   UI-12.1:
     - control: Button:Cancel
       match: Cancel
@@ -630,6 +684,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-12-mapping-editor
+      carry: true
   UI-12.2:
     - control: Button:Cancel
       match: Cancel
@@ -640,15 +695,18 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-12-mapping-editor
+      carry: true
   UI-13:
     - control: Button:Edit#3
       match: Edit
       effect: navigate
       to: /ui/ui-11-6-edit-class
+      rowScoped: true
     - control: Button:EditShape
       match: Edit shape
       effect: navigate
       to: /ui/ui-11-6-edit-class
+      rowScoped: true
     - control: Button:SaveShape
       match: Save shape
       effect: action
@@ -657,6 +715,7 @@ surfaces:
       match: View
       effect: navigate
       to: /ui/ui-11-6-edit-class
+      rowScoped: true
     - control: Button:ViewValidationReport
       match: View validation report
       effect: navigate
@@ -678,6 +737,7 @@ surfaces:
       match: Eye
       effect: navigate
       to: /ui/ui-14-1-cq-detail
+      rowScoped: true
     - control: Button:NewCQ
       match: New CQ
       effect: navigate
@@ -700,6 +760,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-14-competency-question-registry
+      carry: true
     - control: Button:AddFacet
       match: Add facet
       effect: action
@@ -723,6 +784,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-15-transformer-runner
+      carry: true
     - control: Button:ShowReport
       match: Show report
       effect: navigate
@@ -741,6 +803,7 @@ surfaces:
       effect: action
       action: sendToStaging
       to: /ui/ui-16-staging-review
+      carry: true
   UI-16:
     - control: Button:ApproveAndPublish
       match: Approve and publish
@@ -754,16 +817,19 @@ surfaces:
       match: Reject
       effect: navigate
       to: /ui/ui-16-3-reject-triple-with-reason
+      rowScoped: true
     - control: Button:Approve#5
       match: Approve
       effect: navigate
       to: /ui/ui-16-1-approve-batch
+      rowScoped: true
   UI-16.1:
     - control: Button:ApproveBatch
       match: Approve batch
       effect: action
       action: approveBatch
       to: /ui/ui-16-2-approve-and-publish
+      carry: true
     - control: Button:Cancel
       match: Cancel
       effect: navigate
@@ -778,6 +844,7 @@ surfaces:
       effect: action
       action: publishBatch
       to: /ui/ui-19-artifact-exporter
+      carry: true
   UI-16.3:
     - control: Button:Cancel
       match: Cancel
@@ -788,6 +855,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-16-staging-review
+      carry: true
   UI-16.4:
     - control: Button:CancelJob
       match: Cancel job
@@ -818,16 +886,19 @@ surfaces:
       match: Review
       effect: navigate
       to: /ui/ui-17-1-review-suggestion
+      rowScoped: true
     - control: Button:Add#5
       match: Add
       effect: navigate
       to: /ui/ui-17-1-review-suggestion
+      rowScoped: true
   UI-17.1:
     - control: Button:AcceptSuggestion
       match: Accept suggestion
       effect: action
       action: acceptSuggestion
       to: /ui/ui-17-llm-suggestion-panel
+      carry: true
     - control: Button:Reject
       match: Reject
       effect: navigate
@@ -847,6 +918,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-17-llm-suggestion-panel
+      carry: true
     - control: Button:BackToSuggestions
       match: Back to suggestions
       effect: navigate
@@ -864,6 +936,7 @@ surfaces:
       match: Check
       effect: navigate
       to: /ui/ui-18-2-candidate-comparison
+      rowScoped: true
     - control: IconButton:Edit2
       match: Edit 2
       effect: navigate
@@ -878,12 +951,14 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-18-wikidata-resolver
+      carry: true
   UI-18.2:
     - control: Button:ConfirmMatch
       match: Confirm match
       effect: action
       action: confirm
       to: /ui/ui-18-wikidata-resolver
+      carry: true
     - control: Button:KeepHSIdentifier
       match: Keep HS identifier
       effect: navigate
@@ -897,6 +972,7 @@ surfaces:
       match: Download
       effect: navigate
       to: /ui/ui-19-2-artifact-detail
+      rowScoped: true
     - control: Button:Export
       match: Export
       effect: navigate
@@ -932,6 +1008,7 @@ surfaces:
       match: View
       effect: navigate
       to: /ui/ui-20-1-view-absence
+      rowScoped: true
     - control: Button:Close
       match: Close
       effect: navigate
@@ -967,6 +1044,7 @@ surfaces:
       match: Review
       effect: navigate
       to: /ui/ui-21-2-review-term
+      rowScoped: true
   UI-21.1:
     - control: Button:Cancel
       match: Cancel
@@ -977,12 +1055,14 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-21-vocabulary-review-panel
+      carry: true
   UI-21.2:
     - control: Button:ApproveTerm
       match: Approve term
       effect: action
       action: confirm
       to: /ui/ui-21-vocabulary-review-panel
+      carry: true
     - control: Button:Reject
       match: Reject
       effect: navigate
@@ -1009,6 +1089,7 @@ surfaces:
       match: Respond
       effect: navigate
       to: /ui/ui-22-1-view-document
+      rowScoped: true
     - control: Button:SendResponse
       match: Send response
       effect: navigate
@@ -1028,6 +1109,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-22-objection-management-dashboard
+      carry: true
   UI-22.3:
     - control: Button:Cancel
       match: Cancel
@@ -1060,6 +1142,7 @@ surfaces:
       match: Edit
       effect: navigate
       to: /ui/ui-24-1-edit-workshop
+      rowScoped: true
     - control: Button:ScheduleWorkshop
       match: Schedule workshop
       effect: navigate
@@ -1074,6 +1157,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-24-community-workshop-scheduler
+      carry: true
   UI-24.2:
     - control: Button:Cancel
       match: Cancel
@@ -1084,6 +1168,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-24-community-workshop-scheduler
+      carry: true
   UI-25:
     - control: Button:Compare
       match: Compare
@@ -1181,6 +1266,7 @@ surfaces:
       match: Open
       effect: navigate
       to: /ui/ui-28-2-entity-detail
+      rowScoped: true
     - control: Button:OpenInGraph
       match: Open in graph
       effect: navigate
@@ -1208,6 +1294,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-28-graph-explorer
+      carry: true
   UI-28.4:
     - control: Button:Back
       match: Back
@@ -1244,6 +1331,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-29-visual-query-builder
+      carry: true
     - control: Button:Cancel
       match: Cancel
       effect: navigate
@@ -1285,6 +1373,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-30-sparql-editor
+      carry: true
     - control: Button:Close
       match: Close
       effect: navigate
@@ -1334,6 +1423,7 @@ surfaces:
       match: Open
       effect: navigate
       to: /ui/ui-32-1-collection-detail
+      rowScoped: true
     - control: Button:Cards
       match: Cards
       effect: action
@@ -1352,6 +1442,7 @@ surfaces:
       match: Open
       effect: navigate
       to: /ui/ui-33-2-document-detail
+      rowScoped: true
     - control: Button:UploadDocument
       match: Upload document
       effect: navigate
@@ -1366,6 +1457,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-33-document-corpus
+      carry: true
     - control: Button:ChooseFile
       match: Choose file
       effect: action
@@ -1454,6 +1546,7 @@ surfaces:
       effect: action
       to: /ui/ui-36-1-submission-receipt
       action: confirm
+      carry: true
   UI-35.6:
     - control: Button:BackToHelp
       match: Back to help
@@ -1583,6 +1676,7 @@ surfaces:
       match: Delegate task
       effect: navigate
       to: /ui/ui-07-2-assign-or-escalate-event
+      rowScoped: true
     - control: Button:OpenQualityGates
       match: Open quality gates
       effect: navigate
@@ -1848,6 +1942,7 @@ surfaces:
       effect: action
       action: confirm
       to: /ui/ui-39-pipeline-observability-dashboard
+      carry: true
     - control: Button:Cancel
       match: Cancel
       effect: navigate
@@ -1875,6 +1970,12 @@ surfaces:
       effect: action
       action: destructive
       to: /ui/ui-40-personalisation-adaptation-settings
+      carry: true
+      confirm:
+        title: Clear search history?
+        body: Recent searches and suggestions are forgotten in this workspace. Saved views are not affected.
+        confirmLabel: Clear history
+      undo: true
   UI-START:
     - control: Button:CoordinatorResearcher
       match: Coordinator / researcher
@@ -1882,24 +1983,28 @@ surfaces:
       action: selectRole
       role: coordinator
       to: /ui/ui-37-6-1-general-operation-coordinator-alone
+      carry: true
     - control: Button:CoordinatorTeam
       match: Coordinator of a team
       effect: action
       action: selectRole
       role: coordinator-team
       to: /ui/ui-37-6-2-general-operation-coordinator-team
+      carry: true
     - control: Button:Inquirer
       match: Inquirer
       effect: action
       action: selectRole
       role: inquirer
       to: /ui/ui-37-7-general-operation-inquirer
+      carry: true
     - control: Button:Superadmin
       match: Superadmin
       effect: action
       action: selectRole
       role: superadmin
       to: /ui/ui-37-5-general-operation-superadmin
+      carry: true
   UI-35.1:
     - control: Button:BackToHelp
       match: Back to help
