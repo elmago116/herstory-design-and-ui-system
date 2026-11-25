@@ -1,0 +1,44 @@
+---
+import "@/styles/globals.css";
+import PrototypeNav from "@/components/PrototypeNav.astro";
+import GeneralScreen from "@/layouts/GeneralScreen.astro";
+
+interface Props {
+  title: string;
+  id?: string;
+  slug?: string;
+  pipelineStep?: string | null;
+}
+
+const { title, id, slug, pipelineStep = null } = Astro.props;
+const wrapped = Boolean(
+  id && id.startsWith("UI-") && id !== "UI-START" && !id.startsWith("UI-37"),
+);
+---
+
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="generator" content={Astro.generator} />
+    {id ? <meta name="ui-id" content={id} /> : null}
+    {slug ? <meta name="ui-slug" content={slug} /> : null}
+  </head>
+  <body class="bg-default-background font-body text-default-font">
+    {!wrapped && id !== "UI-START" ? <PrototypeNav /> : null}
+    {
+      wrapped ? (
+        <GeneralScreen id={id ?? ""} title={title} slug={slug} pipelineStep={pipelineStep}>
+          <slot />
+        </GeneralScreen>
+      ) : (
+        <slot />
+      )
+    }
+    <script>
+      import "@/scripts/interactions";
+    </script>
+  </body>
+</html>

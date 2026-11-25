@@ -1,0 +1,162 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import YAML from "yaml";
+import PipelineFlow from "@/components/PipelineFlow.astro";
+import GeneralHeader from "@/components/GeneralHeader";
+import GeneralNav from "@/components/GeneralNav";
+
+interface Props {
+  id: string;
+  title: string;
+  slug?: string;
+  pipelineStep?: string | null;
+}
+
+const { id, title, slug = "", pipelineStep = null } = Astro.props;
+
+const cfg = YAML.parse(
+  fs.readFileSync(path.join(process.cwd(), "uis.yaml"), "utf8"),
+) as {
+  sections: { id: string; heading: string }[];
+  ui: {
+    id: string;
+    title: string;
+    route: string | null;
+    section: string | null;
+    parent: string | null;
+    kind?: string;
+    components?: { component: string }[];
+  }[];
+};
+
+const entry = cfg.ui.find((candidate) => candidate.id === id);
+const section = cfg.sections.find((candidate) => entry?.section?.startsWith(candidate.id));
+
+// Some boards (collections, corpus, map) draw their own breadcrumb row. Do not
+// stack a second one above it.
+const hasBoardBreadcrumbs = (entry?.components ?? []).some(
+  (component) => component.component === "Breadcrumbs" || component.component === "BreadcrumbsMainProcess",
+);
+
+const componentNames = new Set((entry?.components ?? []).map((component) => component.component));
+const showPipelineFlow = Boolean(pipelineStep) && entry?.kind === "primary";
+const showMainStepper = showPipelineFlow && !componentNames.has("PipelineStepper");
+---
+
+<div
+  class:list={["general-shell", { "no-breadcrumbs": hasBoardBreadcrumbs }]}
+  id="general-shell"
+>
+  <GeneralHeader client:load />
+
+  {
+    !hasBoardBreadcrumbs ? (
+      <nav class="general-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="/">Home</a>
+        {section ? (
+          <>
+            <span>/</span>
+            <span>{section.heading}</span>
+          </>
+        ) : null}
+        <span>/</span>
+        <span aria-current="page">{title.replace(/ — HerStory$/, "")}</span>
+      </nav>
+    ) : null
+  }
+
+  <div class="general-body">
+    <GeneralNav client:load current={slug} />
+
+    <main class="general-main">
+      <PipelineFlow pipelineStep={pipelineStep ?? ""} showMain={showMainStepper} />
+      <div class="general-content">
+        <slot />
+      </div>
+    </main>
+  </div>
+
+  <footer class="general-footer">
+    <span>HerStory · General UI</span>
+    <span>{id}</span>
+  </footer>
+</div>
+
+<style>
+  .general-shell {
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr) 56px;
+    height: 100vh;
+    background: var(--color-default-background);
+    color: var(--color-default-font);
+  }
+
+  .general-shell.no-breadcrumbs {
+    grid-template-rows: auto minmax(0, 1fr) 56px;
+  }
+
+  .general-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--color-neutral-border);
+    padding: 0 24px;
+    font: 400 12px var(--font-caption);
+    color: var(--color-subtext-color);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .general-breadcrumbs a {
+    color: var(--color-brand-700);
+    text-decoration: none;
+  }
+
+  .general-body {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    min-height: 0;
+    position: relative;
+  }
+
+  #general-shell[data-nav-collapsed="true"] .general-body {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .general-main {
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  .general-content {
+    min-height: 100%;
+  }
+
+  .general-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-neutral-border);
+    padding: 0 24px;
+    font: 400 12px var(--font-caption);
+    color: var(--color-subtext-color);
+  }
+
+  @media (max-width: 900px) {
+    .general-shell {
+      grid-template-rows: auto auto minmax(0, 1fr) 48px;
+    }
+
+    .general-shell.no-breadcrumbs {
+      grid-template-rows: auto minmax(0, 1fr) 48px;
+    }
+
+    .general-breadcrumbs,
+    .general-footer {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+</style>

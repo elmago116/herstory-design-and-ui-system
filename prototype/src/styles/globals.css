@@ -1,0 +1,86 @@
+@import "../ui/fonts/fonts.css";
+@import "../ui/theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The synced boards assume a full-height tree (Subframe's preview shell does the
+   same): html → flex column → 100vh, body grows. Keep this identical. */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root,
+[data-board-root] {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+/* Screenshot determinism — only active when the capture harness sets the flag,
+   so the dev experience keeps its animations. */
+html[data-shots] *,
+html[data-shots] *::before,
+html[data-shots] *::after {
+  animation: none !important;
+  transition: none !important;
+  animation-delay: 0s !important;
+  transition-delay: 0s !important;
+  caret-color: transparent !important;
+  scroll-behavior: auto !important;
+}
+
+html[data-shots] *::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+html[data-shots] * {
+  scrollbar-width: none !important;
+}
+
+/* Pipeline chrome, nav and the general screen shell are prototype affordances:
+   never part of a parity shot. A board must still lay out at the full reference
+   canvas width, so the shell collapses to its content slot rather than merely
+   hiding its header. */
+html[data-shots] .pipeline-flow,
+html[data-shots] .proto-nav,
+html[data-shots] .general-header,
+html[data-shots] .general-breadcrumbs,
+html[data-shots] .general-nav,
+html[data-shots] .general-footer {
+  display: none !important;
+}
+
+html[data-shots] .general-shell {
+  display: block !important;
+  height: auto !important;
+  grid-template-rows: none !important;
+}
+
+html[data-shots] .general-body {
+  display: block !important;
+  min-height: 0 !important;
+}
+
+html[data-shots] .general-main {
+  overflow: visible !important;
+}
+
+html[data-shots] .general-content {
+  min-height: 0 !important;
+}
+
+html[data-shots] .general-content > [data-board-root] {
+  height: 100vh;
+  min-height: 100vh;
+}

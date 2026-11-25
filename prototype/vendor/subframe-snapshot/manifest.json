@@ -1,0 +1,4133 @@
+{
+  "projectId": "fbbaaa9a39d6",
+  "pulledAt": "2026-11-24T12:20:43.303Z",
+  "pages": {
+    "UI-01": {
+      "kind": "primary",
+      "id": "UI-01",
+      "title": "User management",
+      "slug": "ui-01-user-management",
+      "file": "UI01UserManagement.tsx",
+      "subframePageId": "3a5a50a8-0472-4871-af3e-625004b2fe2e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-13T11:28:24.530Z",
+      "exportedFileName": "Ui01UserManagement.tsx",
+      "bytes": 13499,
+      "sha256": "003117b7102093d66e00b9ed14c2b320707d8681591becc76c8cce7cd9627d32",
+      "pulledAt": "2026-11-24T12:19:27.290Z"
+    },
+    "UI-28": {
+      "kind": "primary",
+      "id": "UI-28",
+      "title": "Graph explorer",
+      "slug": "ui-28-graph-explorer",
+      "file": "UI28GraphExplorer.tsx",
+      "subframePageId": "2473e91c-202a-4901-8a6f-5421996f9d2f",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-18T13:40:30.009Z",
+      "exportedFileName": "Ui28GraphExplorer.tsx",
+      "bytes": 12737,
+      "sha256": "00179f90045fa94ea2d6b9eff1166ea7bca19ecd624cc5791f1761b322c1ce67",
+      "pulledAt": "2026-11-24T12:19:44.256Z"
+    },
+    "UI-37.5": {
+      "kind": "secondary",
+      "id": "UI-37.5",
+      "title": "General operation - Superadmin",
+      "slug": "ui-37-5-general-operation-superadmin",
+      "file": "UI375GeneralOperationSuperadmin.tsx",
+      "subframePageId": "f5aaaf0d-3d0d-4bc2-8d5c-5c37dcb4713b",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-18T11:42:59.945Z",
+      "exportedFileName": "Ui375GeneralOperationSuperadmin.tsx",
+      "bytes": 25502,
+      "sha256": "0b3692816f89b991e0e1fec96afaa5a9e474d6a1ddeb561fa48dc2fabbf6804f",
+      "pulledAt": "2026-11-24T12:20:39.110Z"
+    },
+    "UI-37.7": {
+      "kind": "secondary",
+      "id": "UI-37.7",
+      "title": "General operation - Inquirer",
+      "slug": "ui-37-7-general-operation-inquirer",
+      "file": "UI377GeneralOperationInquirer.tsx",
+      "subframePageId": "30886cc4-c849-4504-b7b2-5f8b1b7146d1",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-16T12:08:12.285Z",
+      "exportedFileName": "Ui377GeneralOperationInquirer.tsx",
+      "bytes": 11496,
+      "sha256": "88a4f6d3d5bde65610ad13aa30771ba2ee5cf08f1d769c6c3e5e315d6b752017",
+      "pulledAt": "2026-11-24T12:20:40.078Z"
+    },
+    "UI-37.6.2": {
+      "kind": "secondary",
+      "id": "UI-37.6.2",
+      "title": "General operation - Coordinator team",
+      "slug": "ui-37-6-2-general-operation-coordinator-team",
+      "file": "UI3762GeneralOperationCoordinatorTeam.tsx",
+      "subframePageId": "441382b5-debf-4118-9b20-6d3207c356b7",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-16T14:02:44.745Z",
+      "exportedFileName": "Ui3762GeneralOperationCoordinatorTeam.tsx",
+      "bytes": 37469,
+      "sha256": "9c4664adbd73817e3575393bfde93b97aa799be65cd3647b8a13ac93ae3c2a1f",
+      "pulledAt": "2026-11-24T12:20:40.752Z"
+    },
+    "UI-11.6": {
+      "kind": "secondary",
+      "id": "UI-11.6",
+      "title": "Edit class",
+      "slug": "ui-11-6-edit-class",
+      "file": "UI116EditClass.tsx",
+      "subframePageId": "468708e7-3b85-4c89-863a-8ec01b9e13e2",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-16T11:04:02.127Z",
+      "exportedFileName": "Ui116EditClass.tsx",
+      "bytes": 37731,
+      "sha256": "213fe066090914e17ad5fb9df7a1beca2545b18227e79bea747bc66b0afeeb2e",
+      "pulledAt": "2026-11-24T12:20:42.284Z"
+    },
+    "DS-01": {
+      "kind": "design-system",
+      "id": "DS-01",
+      "title": "Foundations",
+      "slug": "ds-foundations",
+      "file": "Ds01Foundations.tsx",
+      "subframePageId": "f33007cb-d6cd-4883-b03b-ca87da7d459e",
+      "canvasName": "HerStory Design system",
+      "lastModifiedAt": "2026-11-13T09:56:24.066Z",
+      "exportedFileName": "_01Foundations.tsx",
+      "bytes": 85596,
+      "sha256": "94be8113bcea662cb32af105d9f5bcf279495949e4f818cc489fc12ecd3da61b",
+      "pulledAt": "2026-11-24T12:19:25.045Z"
+    },
+    "DS-02": {
+      "kind": "design-system",
+      "id": "DS-02",
+      "title": "Components",
+      "slug": "ds-components",
+      "file": "Ds02Components.tsx",
+      "subframePageId": "cc6d8c2e-c528-40bc-b569-8389042c9006",
+      "canvasName": "HerStory Design system",
+      "lastModifiedAt": "2026-11-10T09:58:15.241Z",
+      "exportedFileName": "_02Components.tsx",
+      "bytes": 91136,
+      "sha256": "6643b16d422fd4ca924ef9b16347d740bb8a556332cf731ac05cecac1afba66c",
+      "pulledAt": "2026-11-24T12:19:25.913Z"
+    },
+    "DS-03": {
+      "kind": "design-system",
+      "id": "DS-03",
+      "title": "Overlays",
+      "slug": "ds-overlays",
+      "file": "Ds03Overlays.tsx",
+      "subframePageId": "cb3ed171-59bd-422d-98fb-8f5f6c2587e9",
+      "canvasName": "HerStory Design system",
+      "lastModifiedAt": "2026-11-01T17:27:01.795Z",
+      "exportedFileName": "_03Overlays.tsx",
+      "bytes": 12750,
+      "sha256": "c1a67b0524f238605287f69233f47c5dabcd04e190121ccc239ea33466155188",
+      "pulledAt": "2026-11-24T12:19:26.385Z"
+    },
+    "UI-02": {
+      "kind": "primary",
+      "id": "UI-02",
+      "title": "Workspace management",
+      "slug": "ui-02-workspace-management",
+      "file": "UI02WorkspaceManagement.tsx",
+      "subframePageId": "027e7ce0-b844-4d86-9068-cd826e98199d",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-13T11:29:38.963Z",
+      "exportedFileName": "Ui02WorkspaceManagement.tsx",
+      "bytes": 17346,
+      "sha256": "3a1a33a200be087954aa6ca45d04197b155b82d66be12a53e1cb14180cb2845c",
+      "pulledAt": "2026-11-24T12:19:27.965Z"
+    },
+    "UI-03": {
+      "kind": "primary",
+      "id": "UI-03",
+      "title": "Integration settings",
+      "slug": "ui-03-integration-settings",
+      "file": "UI03IntegrationSettings.tsx",
+      "subframePageId": "98a6f6f1-e333-44a0-aeeb-42d23b9a37b5",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-12T10:34:10.268Z",
+      "exportedFileName": "Ui03IntegrationSettings.tsx",
+      "bytes": 12327,
+      "sha256": "89baf2f6b792a8cf53bdbe3c75a59dbe0252cd10a5704fa96665b1be8b5a3779",
+      "pulledAt": "2026-11-24T12:19:28.414Z"
+    },
+    "UI-04": {
+      "kind": "primary",
+      "id": "UI-04",
+      "title": "Governance panel",
+      "slug": "ui-04-governance-panel",
+      "file": "UI04GovernancePanel.tsx",
+      "subframePageId": "e2d5fe5c-fecd-4d0a-ac8e-fabf5aa3dcb8",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-12T10:34:17.334Z",
+      "exportedFileName": "Ui04GovernancePanel.tsx",
+      "bytes": 17695,
+      "sha256": "bca19eb218f6920bbcd1c3979ff8610e7b48c65a63ce491756f0d012cabbe9c8",
+      "pulledAt": "2026-11-24T12:19:28.881Z"
+    },
+    "UI-05": {
+      "kind": "primary",
+      "id": "UI-05",
+      "title": "Data-retention console",
+      "slug": "ui-05-data-retention-console",
+      "file": "UI05DataRetentionConsole.tsx",
+      "subframePageId": "d8e14076-4fa8-45c7-97fd-6a1c33ddc42f",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-12T10:34:23.903Z",
+      "exportedFileName": "Ui05DataRetentionConsole.tsx",
+      "bytes": 15612,
+      "sha256": "84396bdaf7fa188d9e4ee5ab4cf3de924aeb992cc8cfab82df67a6c6b456a1d5",
+      "pulledAt": "2026-11-24T12:19:29.562Z"
+    },
+    "UI-06": {
+      "kind": "primary",
+      "id": "UI-06",
+      "title": "Stakeholder registry",
+      "slug": "ui-06-stakeholder-registry",
+      "file": "UI06StakeholderRegistry.tsx",
+      "subframePageId": "45e3e76c-e725-4621-8e78-50b53f15e6de",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui06StakeholderRegistry.tsx",
+      "bytes": 12034,
+      "sha256": "08a1fec026db0d2dc56d51f498abe6d5b795c7afe5c6d77da6ea59a1d26c7db6",
+      "pulledAt": "2026-11-24T12:19:30.195Z"
+    },
+    "UI-07": {
+      "kind": "primary",
+      "id": "UI-07",
+      "title": "Cross-workspace governance dashboard",
+      "slug": "ui-07-cross-workspace-governance-dashboard",
+      "file": "UI07CrossWorkspaceGovernanceDashboard.tsx",
+      "subframePageId": "fcbf283a-af93-4f4b-a250-76d892078731",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-20T11:04:26.340Z",
+      "exportedFileName": "Ui07CrossWorkspaceGovernanceDashboard.tsx",
+      "bytes": 14806,
+      "sha256": "2a71a9a7e808a31670a566aedb11195204a8924715facc5a74cd20a23be27465",
+      "pulledAt": "2026-11-24T12:19:30.652Z"
+    },
+    "UI-08": {
+      "kind": "primary",
+      "id": "UI-08",
+      "title": "Audit logs & session monitor",
+      "slug": "ui-08-audit-logs-session-monitor",
+      "file": "UI08AuditLogsSessionMonitor.tsx",
+      "subframePageId": "bb9a57dd-28df-4f92-af21-cd2b15424f5e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-13T16:28:29.289Z",
+      "exportedFileName": "Ui08AuditLogsSessionMonitor.tsx",
+      "bytes": 9803,
+      "sha256": "e621dc96dd8d633f37739a9549a9b2a392002ef645b417892c606fba33a9d6b0",
+      "pulledAt": "2026-11-24T12:19:31.161Z"
+    },
+    "UI-15": {
+      "kind": "primary",
+      "id": "UI-15",
+      "title": "Transformer runner",
+      "slug": "ui-15-transformer-runner",
+      "file": "UI15TransformerRunner.tsx",
+      "subframePageId": "8d4db5d6-ab94-4fd4-8c40-02c09c28e389",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-13T08:16:34.267Z",
+      "exportedFileName": "Ui15TransformerRunner.tsx",
+      "bytes": 7396,
+      "sha256": "1b88040b03296d1982d62077c1f4ac42d7bd33cd436d98114bb3302381b28b25",
+      "pulledAt": "2026-11-24T12:19:31.550Z"
+    },
+    "UI-11S": {
+      "kind": "primary",
+      "id": "UI-11S",
+      "title": "Ontology manager - select",
+      "slug": "ui-11s-ontology-manager-select",
+      "file": "UI11SOntologyManagerSelect.tsx",
+      "subframePageId": "dc9310db-d18d-4ca1-b692-978b321ca30e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-18T14:38:57.959Z",
+      "exportedFileName": "Ui11SOntologyManagerSelect.tsx",
+      "bytes": 38764,
+      "sha256": "565a39954c81cae92e91d6506a776ee957fe04cea7ebc710b69c39b6c063f041",
+      "pulledAt": "2026-11-24T12:19:32.139Z"
+    },
+    "UI-10": {
+      "kind": "primary",
+      "id": "UI-10",
+      "title": "Ingestion monitor",
+      "slug": "ui-10-ingestion-monitor",
+      "file": "UI10IngestionMonitor.tsx",
+      "subframePageId": "1a473d90-e707-4523-b7f9-9f48ed94f2de",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-15T15:19:39.207Z",
+      "exportedFileName": "Ui10IngestionMonitor.tsx",
+      "bytes": 22879,
+      "sha256": "b04028446c428eed674f005ba846791eaa7046b4a266aceab68be267ccc284f9",
+      "pulledAt": "2026-11-24T12:19:32.577Z"
+    },
+    "UI-17": {
+      "kind": "primary",
+      "id": "UI-17",
+      "title": "LLM Suggestion Panel",
+      "slug": "ui-17-llm-suggestion-panel",
+      "file": "UI17LLMSuggestionPanel.tsx",
+      "subframePageId": "4a2e1c04-d421-4798-b8ed-2a4497a33cb7",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-23T16:48:44.777Z",
+      "exportedFileName": "Ui17LlmSuggestionPanel.tsx",
+      "bytes": 24083,
+      "sha256": "5af31bbe3c88c6de1ac5b277523922b4cb1b1e70630ca7a1949baa1643a13237",
+      "pulledAt": "2026-11-24T12:19:33.014Z"
+    },
+    "UI-12": {
+      "kind": "primary",
+      "id": "UI-12",
+      "title": "Mapping editor",
+      "slug": "ui-12-mapping-editor",
+      "file": "UI12MappingEditor.tsx",
+      "subframePageId": "dcaaf4f6-1276-4c10-8a6e-7e1c9ca471b0",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-15T17:22:30.734Z",
+      "exportedFileName": "Ui12MappingEditor.tsx",
+      "bytes": 24933,
+      "sha256": "ce2746e83b59626359a96630617b260d6fb0a4d9e26108ce870991b474a27843",
+      "pulledAt": "2026-11-24T12:19:33.504Z"
+    },
+    "UI-18": {
+      "kind": "primary",
+      "id": "UI-18",
+      "title": "Wikidata resolver",
+      "slug": "ui-18-wikidata-resolver",
+      "file": "UI18WikidataResolver.tsx",
+      "subframePageId": "b0029176-7099-4b10-b0ee-47195efc4ae2",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-12T12:10:24.974Z",
+      "exportedFileName": "Ui18WikidataResolver.tsx",
+      "bytes": 10845,
+      "sha256": "9d188b4b5e51ccda9048be37ef358896db5a29ac1e89eda85ab974d88105ccb8",
+      "pulledAt": "2026-11-24T12:19:33.943Z"
+    },
+    "UI-16": {
+      "kind": "primary",
+      "id": "UI-16",
+      "title": "Staging review",
+      "slug": "ui-16-staging-review",
+      "file": "UI16StagingReview.tsx",
+      "subframePageId": "8a823949-209b-4209-9b48-781c6afdc846",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-12T12:18:40.892Z",
+      "exportedFileName": "Ui16StagingReview.tsx",
+      "bytes": 20805,
+      "sha256": "0878e72bd39c91bfd484587032bf561d366857496a117275006e809a11f25b05",
+      "pulledAt": "2026-11-24T12:19:34.747Z"
+    },
+    "UI-13": {
+      "kind": "primary",
+      "id": "UI-13",
+      "title": "SHACL shapes editor",
+      "slug": "ui-13-shacl-shapes-editor",
+      "file": "UI13SHACLShapesEditor.tsx",
+      "subframePageId": "c57ec3e2-5b69-4589-b887-e3d051707113",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-23T15:43:45.546Z",
+      "exportedFileName": "Ui13ShaclShapesEditor.tsx",
+      "bytes": 23303,
+      "sha256": "1c756675fac2a97220d5bf86a1cd8fd04c7b0832a283366d156dde4c01d11ea2",
+      "pulledAt": "2026-11-24T12:19:35.954Z"
+    },
+    "UI-22": {
+      "kind": "primary",
+      "id": "UI-22",
+      "title": "Objection management dashboard",
+      "slug": "ui-22-objection-management-dashboard",
+      "file": "UI22ObjectionManagementDashboard.tsx",
+      "subframePageId": "5ebcb9f4-b884-4d58-b40a-dc27dfa5e80b",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui22ObjectionManagementDashboard.tsx",
+      "bytes": 12355,
+      "sha256": "5f358839beb400e118d72a437c3c35ee4a9b2381068e807d2be89b71c1422703",
+      "pulledAt": "2026-11-24T12:19:36.416Z"
+    },
+    "UI-27": {
+      "kind": "primary",
+      "id": "UI-27",
+      "title": "Participation metrics & impact report",
+      "slug": "ui-27-participation-metrics-impact-report",
+      "file": "UI27ParticipationMetricsImpactReport.tsx",
+      "subframePageId": "15f6e0f6-98aa-40b8-b4a1-4630828d674c",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui27ParticipationMetricsImpactReport.tsx",
+      "bytes": 8833,
+      "sha256": "627ecbc962179f2e84e0b14d952d59e1c2fe7240f93185ddad86dde7827947ab",
+      "pulledAt": "2026-11-24T12:19:37.284Z"
+    },
+    "UI-38": {
+      "kind": "primary",
+      "id": "UI-38",
+      "title": "Provenance & polyvocality panel",
+      "slug": "ui-38-provenance-polyvocality-panel",
+      "file": "UI38ProvenancePolyvocalityPanel.tsx",
+      "subframePageId": "0ed70dac-34ea-4130-8b0b-c24d1f2e8dcf",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui38ProvenancePolyvocalityPanel.tsx",
+      "bytes": 11584,
+      "sha256": "42c9e3575e66843e0120d0b2fee63b1444aefd5a2b894cdcbe5c1d69906caf0d",
+      "pulledAt": "2026-11-24T12:19:37.757Z"
+    },
+    "UI-21": {
+      "kind": "primary",
+      "id": "UI-21",
+      "title": "Vocabulary review panel",
+      "slug": "ui-21-vocabulary-review-panel",
+      "file": "UI21VocabularyReviewPanel.tsx",
+      "subframePageId": "9aa874ff-be15-4138-a7f2-251103d4b84c",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui21VocabularyReviewPanel.tsx",
+      "bytes": 18541,
+      "sha256": "fd800d56074242233fce1ba92763a93d7a531a91cbf94a819307913660db9b44",
+      "pulledAt": "2026-11-24T12:19:38.245Z"
+    },
+    "UI-19": {
+      "kind": "primary",
+      "id": "UI-19",
+      "title": "Artifact exporter",
+      "slug": "ui-19-artifact-exporter",
+      "file": "UI19ArtifactExporter.tsx",
+      "subframePageId": "979c0943-c0c4-4fec-8094-472daf2ae65a",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui19ArtifactExporter.tsx",
+      "bytes": 16642,
+      "sha256": "9ca311e61c42ac6e7203a0438f6758ab7c276f18e63d5d0f286d486ff5b17eec",
+      "pulledAt": "2026-11-24T12:19:38.832Z"
+    },
+    "UI-26": {
+      "kind": "primary",
+      "id": "UI-26",
+      "title": "Bias evaluation dashboard",
+      "slug": "ui-26-bias-evaluation-dashboard",
+      "file": "UI26BiasEvaluationDashboard.tsx",
+      "subframePageId": "e49c6b47-54b5-45a2-b27f-cac52d5bd667",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui26BiasEvaluationDashboard.tsx",
+      "bytes": 13507,
+      "sha256": "cc74fbd491e8447426548ea9a7f8f92e737717946c37c2d84e765314fd486d20",
+      "pulledAt": "2026-11-24T12:19:39.473Z"
+    },
+    "UI-25": {
+      "kind": "primary",
+      "id": "UI-25",
+      "title": "Multichannel comparison tool",
+      "slug": "ui-25-multichannel-comparison-tool",
+      "file": "UI25MultichannelComparisonTool.tsx",
+      "subframePageId": "38096826-9281-44c5-acde-7bf689230e5e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui25MultichannelComparisonTool.tsx",
+      "bytes": 8872,
+      "sha256": "342a51e6cadd846cfec97a7c8007027f91fbc947eb213c3a4bbc60280581d1ef",
+      "pulledAt": "2026-11-24T12:19:39.922Z"
+    },
+    "UI-40": {
+      "kind": "primary",
+      "id": "UI-40",
+      "title": "Personalisation & adaptation settings",
+      "slug": "ui-40-personalisation-adaptation-settings",
+      "file": "UI40PersonalisationAdaptationSettings.tsx",
+      "subframePageId": "84cde30f-f3e8-4b70-b1ed-e26660b28094",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui40PersonalisationAdaptationSettings.tsx",
+      "bytes": 11582,
+      "sha256": "d24eafc98552bed925855df5ec2bc14f0a79f256226f2320f7cc406d09e85d15",
+      "pulledAt": "2026-11-24T12:19:40.368Z"
+    },
+    "UI-23": {
+      "kind": "primary",
+      "id": "UI-23",
+      "title": "EJ checklist operator",
+      "slug": "ui-23-ej-checklist-operator",
+      "file": "UI23EJChecklistOperator.tsx",
+      "subframePageId": "54a779e2-4e86-42c3-bdbb-f911f7ccf09a",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui23EjChecklistOperator.tsx",
+      "bytes": 6674,
+      "sha256": "8cbbd0270a58a9364ba1729a278027c66f84afcda828ac9091b12d215fee3265",
+      "pulledAt": "2026-11-24T12:19:40.826Z"
+    },
+    "UI-35": {
+      "kind": "primary",
+      "id": "UI-35",
+      "title": "Help & documentation system",
+      "slug": "ui-35-help-documentation-system",
+      "file": "UI35HelpDocumentationSystem.tsx",
+      "subframePageId": "9cb6272e-6064-410a-b3d9-b6d5bc691b8d",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui35HelpDocumentationSystem.tsx",
+      "bytes": 9080,
+      "sha256": "e90b9f957bb3fb31504e37439f1aea2e33bae2481993f88f8f006ec53515eff7",
+      "pulledAt": "2026-11-24T12:19:41.338Z"
+    },
+    "UI-09": {
+      "kind": "primary",
+      "id": "UI-09",
+      "title": "Source registration",
+      "slug": "ui-09-source-registration",
+      "file": "UI09SourceRegistration.tsx",
+      "subframePageId": "00f6afba-1e09-4b02-86e9-e22ceedfeafa",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-18T14:08:23.158Z",
+      "exportedFileName": "Ui09SourceRegistration.tsx",
+      "bytes": 21818,
+      "sha256": "7977d9259e0afff78ab89cea0359c215eaf7e618ce8075b874e0d1ab36eae2e2",
+      "pulledAt": "2026-11-24T12:19:41.986Z"
+    },
+    "UI-14": {
+      "kind": "primary",
+      "id": "UI-14",
+      "title": "Competency question registry",
+      "slug": "ui-14-competency-question-registry",
+      "file": "UI14CompetencyQuestionRegistry.tsx",
+      "subframePageId": "dbd3af75-6521-43bf-9afc-61f17297232c",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-23T16:34:34.006Z",
+      "exportedFileName": "Ui14CompetencyQuestionRegistry.tsx",
+      "bytes": 22475,
+      "sha256": "ab88416feeb390123e7a1252ac96599bcb6e257ebfef88222de0bc31c8da8ca1",
+      "pulledAt": "2026-11-24T12:19:42.580Z"
+    },
+    "UI-24": {
+      "kind": "primary",
+      "id": "UI-24",
+      "title": "Community workshop scheduler",
+      "slug": "ui-24-community-workshop-scheduler",
+      "file": "UI24CommunityWorkshopScheduler.tsx",
+      "subframePageId": "6e4d2faf-dae9-4c2f-8e91-2f2186a22a3c",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-03T10:00:14.476Z",
+      "exportedFileName": "Ui24CommunityWorkshopScheduler.tsx",
+      "bytes": 14218,
+      "sha256": "8d096f8fee4e2a725aceac4418c3ee7b18b9b9a01f350385cc04b0f40953968f",
+      "pulledAt": "2026-11-24T12:19:43.284Z"
+    },
+    "UI-20": {
+      "kind": "primary",
+      "id": "UI-20",
+      "title": "Absence registry",
+      "slug": "ui-20-absence-registry",
+      "file": "UI20AbsenceRegistry.tsx",
+      "subframePageId": "41a5f695-8190-4961-a7ef-498af64fd09d",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-13T08:30:34.962Z",
+      "exportedFileName": "Ui20AbsenceRegistry.tsx",
+      "bytes": 15675,
+      "sha256": "7c3e7600f017067f27520dbdf24a7e396f22974e2487b4a25ab10b2049275042",
+      "pulledAt": "2026-11-24T12:19:43.809Z"
+    },
+    "UI-30": {
+      "kind": "primary",
+      "id": "UI-30",
+      "title": "SPARQL editor",
+      "slug": "ui-30-sparql-editor",
+      "file": "UI30SPARQLEditor.tsx",
+      "subframePageId": "b00b1b57-8830-45e5-b6f8-7fb73a8df4ab",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui30SparqlEditor.tsx",
+      "bytes": 11755,
+      "sha256": "b84fb059b96636e9e70f604504273818ec183be2925a3bd8b52904552bce5fe9",
+      "pulledAt": "2026-11-24T12:19:44.694Z"
+    },
+    "UI-29": {
+      "kind": "primary",
+      "id": "UI-29",
+      "title": "Visual query builder",
+      "slug": "ui-29-visual-query-builder",
+      "file": "UI29VisualQueryBuilder.tsx",
+      "subframePageId": "b4466ca0-836c-45c4-9691-49f622265263",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui29VisualQueryBuilder.tsx",
+      "bytes": 15084,
+      "sha256": "3c9f9218c7b163975ced0892d39fbee15f6a3cb0e51555d0f63f436c806cefa4",
+      "pulledAt": "2026-11-24T12:19:45.139Z"
+    },
+    "UI-31": {
+      "kind": "primary",
+      "id": "UI-31",
+      "title": "NL chat",
+      "slug": "ui-31-nl-chat",
+      "file": "UI31NLChat.tsx",
+      "subframePageId": "6f3a91ba-8892-40bb-8d5e-cd73266dc1fe",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui31NlChat.tsx",
+      "bytes": 4034,
+      "sha256": "83658486caf4fadb3cbad7d6abbbf7d8912d85bb5930b310e0664d6002f00f1d",
+      "pulledAt": "2026-11-24T12:19:45.897Z"
+    },
+    "UI-33": {
+      "kind": "primary",
+      "id": "UI-33",
+      "title": "Document corpus",
+      "slug": "ui-33-document-corpus",
+      "file": "UI33DocumentCorpus.tsx",
+      "subframePageId": "1d8902b1-29ba-4b1e-9d96-aa9daa9f8a69",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui33DocumentCorpus.tsx",
+      "bytes": 12633,
+      "sha256": "c9b41dde3246f538c4ae9382e43ed524573dd292bf0e79eabc9a9fc07daa021d",
+      "pulledAt": "2026-11-24T12:19:46.348Z"
+    },
+    "UI-39": {
+      "kind": "primary",
+      "id": "UI-39",
+      "title": "Pipeline observability dashboard",
+      "slug": "ui-39-pipeline-observability-dashboard",
+      "file": "UI39PipelineObservabilityDashboard.tsx",
+      "subframePageId": "c20b094d-8b3e-497c-b5ec-5a43e6e17d75",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui39PipelineObservabilityDashboard.tsx",
+      "bytes": 17161,
+      "sha256": "977d55dbd44be6cca9e344e53b371f1eaf562617287fdde6eb711b265d8e0436",
+      "pulledAt": "2026-11-24T12:19:46.804Z"
+    },
+    "UI-32": {
+      "kind": "primary",
+      "id": "UI-32",
+      "title": "Collection browser",
+      "slug": "ui-32-collection-browser",
+      "file": "UI32CollectionBrowser.tsx",
+      "subframePageId": "5b932259-565e-4d8d-bce6-02fb2f39f21e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui32CollectionBrowser.tsx",
+      "bytes": 8940,
+      "sha256": "e6ae83edffbdb757d34dce82ef83bcebe95774cba910258dd02112ae3ecb62a6",
+      "pulledAt": "2026-11-24T12:19:47.208Z"
+    },
+    "UI-36": {
+      "kind": "primary",
+      "id": "UI-36",
+      "title": "Bug & feature request form",
+      "slug": "ui-36-bug-feature-request-form",
+      "file": "UI36BugFeatureRequestForm.tsx",
+      "subframePageId": "69510ea8-58da-4719-8464-9b60f4bebad4",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui36BugFeatureRequestForm.tsx",
+      "bytes": 5165,
+      "sha256": "bd2cc3eb8118d634357f9f8debf6975078732725394cbf8c3802bd3971674e68",
+      "pulledAt": "2026-11-24T12:19:47.681Z"
+    },
+    "UI-34": {
+      "kind": "primary",
+      "id": "UI-34",
+      "title": "Map view",
+      "slug": "ui-34-map-view",
+      "file": "UI34MapView.tsx",
+      "subframePageId": "518a3009-3b2b-4cba-89ea-24d1e8396362",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-02T10:44:45.004Z",
+      "exportedFileName": "Ui34MapView.tsx",
+      "bytes": 7051,
+      "sha256": "993182dc4758db92ed79d52d5b03af25edc9e060600490b378fe3f1398129b75",
+      "pulledAt": "2026-11-24T12:19:48.139Z"
+    },
+    "UI-14.1": {
+      "kind": "secondary",
+      "id": "UI-14.1",
+      "title": "CQ detail",
+      "slug": "ui-14-1-cq-detail",
+      "file": "UI141CQDetail.tsx",
+      "subframePageId": "473b1c5e-2011-4b53-8187-9ac7f0227340",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui141CqDetail.tsx",
+      "bytes": 12098,
+      "sha256": "50f35b40e4fe1c0345cce71ea6bc89453ac5fc1e65f18cd0f1793a0222ddbbf0",
+      "pulledAt": "2026-11-24T12:19:48.710Z"
+    },
+    "UI-14.2": {
+      "kind": "secondary",
+      "id": "UI-14.2",
+      "title": "New CQ",
+      "slug": "ui-14-2-new-cq",
+      "file": "UI142NewCQ.tsx",
+      "subframePageId": "b2975d44-7e84-44a6-88f4-0353c9b69fc9",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui142NewCq.tsx",
+      "bytes": 7662,
+      "sha256": "1320c0f0a81de7713c3fe63a31e16659b9fb91ed7ed1d61560b09960a7ec0db8",
+      "pulledAt": "2026-11-24T12:19:49.222Z"
+    },
+    "UI-02.1": {
+      "kind": "secondary",
+      "id": "UI-02.1",
+      "title": "Inspect workspace",
+      "slug": "ui-02-1-inspect-workspace",
+      "file": "UI021InspectWorkspace.tsx",
+      "subframePageId": "9864b6cb-2074-4593-a870-6e1ed3ea6470",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui021InspectWorkspace.tsx",
+      "bytes": 5621,
+      "sha256": "01cd06a5858810634de92ea94d1deaade7eaa5794289d9c9ad979ddf7997fcf2",
+      "pulledAt": "2026-11-24T12:19:49.702Z"
+    },
+    "UI-06.1": {
+      "kind": "secondary",
+      "id": "UI-06.1",
+      "title": "Add stakeholder",
+      "slug": "ui-06-1-add-stakeholder",
+      "file": "UI061AddStakeholder.tsx",
+      "subframePageId": "f0eb8b8f-9c7c-440d-b6dc-21e03159df46",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui061AddStakeholder.tsx",
+      "bytes": 4301,
+      "sha256": "d789a5037800c6b7737b6ccdca3dae0d4f167ca9c3fce6af6384dc8aa18cc044",
+      "pulledAt": "2026-11-24T12:19:50.116Z"
+    },
+    "UI-12.1": {
+      "kind": "secondary",
+      "id": "UI-12.1",
+      "title": "Edit mapping rule",
+      "slug": "ui-12-1-edit-mapping-rule",
+      "file": "UI121EditMappingRule.tsx",
+      "subframePageId": "23926e9b-8e97-4c86-b834-14421548879e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui121EditMappingRule.tsx",
+      "bytes": 4492,
+      "sha256": "b9c0da428add2264f43b0081a5e5615b0cf5cfe20d9e16d78d3c34f18d064764",
+      "pulledAt": "2026-11-24T12:19:50.559Z"
+    },
+    "UI-11.2": {
+      "kind": "secondary",
+      "id": "UI-11.2",
+      "title": "Add class",
+      "slug": "ui-11-2-add-class",
+      "file": "UI112AddClass.tsx",
+      "subframePageId": "e2a9d096-f426-499d-955d-425d1c948e01",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-15T15:48:50.540Z",
+      "exportedFileName": "Ui112AddClass.tsx",
+      "bytes": 3093,
+      "sha256": "bf7b978cd398cd46252b816fc55ad6540a2cd7a835cfbc12681d3e11630498a8",
+      "pulledAt": "2026-11-24T12:19:51.067Z"
+    },
+    "UI-02.2": {
+      "kind": "secondary",
+      "id": "UI-02.2",
+      "title": "Create workspace",
+      "slug": "ui-02-2-create-workspace",
+      "file": "UI022CreateWorkspace.tsx",
+      "subframePageId": "dae34405-ffe2-40ed-82d3-1a667edc843a",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui022CreateWorkspace.tsx",
+      "bytes": 2978,
+      "sha256": "059150e74af5e6e8622a1fc73aa89a668e9c7d39e0bdd7be7e9d90e2fe41f95b",
+      "pulledAt": "2026-11-24T12:19:51.576Z"
+    },
+    "UI-08.1": {
+      "kind": "secondary",
+      "id": "UI-08.1",
+      "title": "Export logs",
+      "slug": "ui-08-1-export-logs",
+      "file": "UI081ExportLogs.tsx",
+      "subframePageId": "30c9de75-c8a3-424b-84f5-3c30c928c5ae",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui081ExportLogs.tsx",
+      "bytes": 2848,
+      "sha256": "695df43656cf2e4729c99f886ffa03c2a048ac1987bf1bff7aba86af155df12d",
+      "pulledAt": "2026-11-24T12:19:52.072Z"
+    },
+    "UI-06.2": {
+      "kind": "secondary",
+      "id": "UI-06.2",
+      "title": "Export",
+      "slug": "ui-06-2-export",
+      "file": "UI062Export.tsx",
+      "subframePageId": "91eede36-a833-4b3d-98a0-11533abf4608",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui062Export.tsx",
+      "bytes": 3322,
+      "sha256": "574fc0c5a855f8b735832ccbb160f5694a7f7196a63fad7efdd89202e3e26ab7",
+      "pulledAt": "2026-11-24T12:19:52.601Z"
+    },
+    "UI-04.1": {
+      "kind": "secondary",
+      "id": "UI-04.1",
+      "title": "New policy",
+      "slug": "ui-04-1-new-policy",
+      "file": "UI041NewPolicy.tsx",
+      "subframePageId": "b5ca15ee-ff9a-4784-adac-bc57e3c322f6",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui041NewPolicy.tsx",
+      "bytes": 4100,
+      "sha256": "9045bdf5bbe394eff175e9490a60016e2114e5dbb4a0f231c86bee582024531f",
+      "pulledAt": "2026-11-24T12:19:53.103Z"
+    },
+    "UI-05.2": {
+      "kind": "secondary",
+      "id": "UI-05.2",
+      "title": "Edit retention rule",
+      "slug": "ui-05-2-edit-retention-rule",
+      "file": "UI052EditRetentionRule.tsx",
+      "subframePageId": "71b3493a-1f32-492d-bf09-219adccc2d07",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui052EditRetentionRule.tsx",
+      "bytes": 2922,
+      "sha256": "4e471969d4f099138ae262bcfbc4b66562b4b91da6c93265d7e147497e090f27",
+      "pulledAt": "2026-11-24T12:19:53.625Z"
+    },
+    "UI-06.3": {
+      "kind": "secondary",
+      "id": "UI-06.3",
+      "title": "View stakeholder",
+      "slug": "ui-06-3-view-stakeholder",
+      "file": "UI063ViewStakeholder.tsx",
+      "subframePageId": "dc8f054b-67ea-4025-b33d-729c1a0c239f",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui063ViewStakeholder.tsx",
+      "bytes": 5618,
+      "sha256": "a9ff7b6c15f68d1aa832a03456973e4ca322c1f8052ca7fae0acd7edea2f37bd",
+      "pulledAt": "2026-11-24T12:19:54.139Z"
+    },
+    "UI-13.1": {
+      "kind": "secondary",
+      "id": "UI-13.1",
+      "title": "Edit shape",
+      "slug": "ui-13-1-edit-shape",
+      "file": "UI131EditShape.tsx",
+      "subframePageId": "3ef504d7-9af3-463f-961b-3365062cf9ac",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui131EditShape.tsx",
+      "bytes": 3999,
+      "sha256": "ff2587f6dd5af85cbc5524da9416f238bc1ee00b1d16f83711725623005521f0",
+      "pulledAt": "2026-11-16T15:59:21.000Z"
+    },
+    "UI-07.1": {
+      "kind": "secondary",
+      "id": "UI-07.1",
+      "title": "View governance event",
+      "slug": "ui-07-1-view-governance-event",
+      "file": "UI071ViewGovernanceEvent.tsx",
+      "subframePageId": "9d809a57-576d-4e26-8495-9f721b5a76b0",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui071ViewGovernanceEvent.tsx",
+      "bytes": 4880,
+      "sha256": "f02ea420469230b6e2c2b0c3b69bd5f49f5d601a86c7f18c2d2806691eccef10",
+      "pulledAt": "2026-11-24T12:19:54.612Z"
+    },
+    "UI-01.1": {
+      "kind": "secondary",
+      "id": "UI-01.1",
+      "title": "Invite user",
+      "slug": "ui-01-1-invite-user",
+      "file": "UI011InviteUser.tsx",
+      "subframePageId": "94e22cd5-2f37-4baf-9ffe-e9d435ef3f28",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui011InviteUser.tsx",
+      "bytes": 3678,
+      "sha256": "6bc9cf478f46054ccb225b9dc0eba645615d02ca2f206ce28371af430c4e51c3",
+      "pulledAt": "2026-11-24T12:19:55.030Z"
+    },
+    "UI-05.1": {
+      "kind": "secondary",
+      "id": "UI-05.1",
+      "title": "Run retention sweep",
+      "slug": "ui-05-1-run-retention-sweep",
+      "file": "UI051RunRetentionSweep.tsx",
+      "subframePageId": "a6568e57-ca7f-484d-83a6-dad4a2da6834",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui051RunRetentionSweep.tsx",
+      "bytes": 2369,
+      "sha256": "efddd8bf172dc788f13025af38dc2cd3e5c73a7bfaf3daf720ec5353cd741c6f",
+      "pulledAt": "2026-11-24T12:19:55.619Z"
+    },
+    "UI-11.1": {
+      "kind": "secondary",
+      "id": "UI-11.1",
+      "title": "Edit property",
+      "slug": "ui-11-1-edit-property",
+      "file": "UI111EditProperty.tsx",
+      "subframePageId": "0e444578-a1d3-40c3-b67d-d14c93e1a604",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-15T15:49:11.688Z",
+      "exportedFileName": "Ui111EditProperty.tsx",
+      "bytes": 3611,
+      "sha256": "d91300811204d6b500247c16cde29eaafaab8f6b53ef92314f087969abb41565",
+      "pulledAt": "2026-11-24T12:19:56.528Z"
+    },
+    "UI-04.2": {
+      "kind": "secondary",
+      "id": "UI-04.2",
+      "title": "Review policy",
+      "slug": "ui-04-2-review-policy",
+      "file": "UI042ReviewPolicy.tsx",
+      "subframePageId": "451695a9-8d17-4d65-858f-248a11ece27c",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui042ReviewPolicy.tsx",
+      "bytes": 5124,
+      "sha256": "3c222e6069fa6e98ee6d629998f18de5f58c61de2f0b08d4c1eaee508cf4ff74",
+      "pulledAt": "2026-11-24T12:19:56.961Z"
+    },
+    "UI-08.2": {
+      "kind": "secondary",
+      "id": "UI-08.2",
+      "title": "Revoke session",
+      "slug": "ui-08-2-revoke-session",
+      "file": "UI082RevokeSession.tsx",
+      "subframePageId": "3746ab74-98cb-4304-810c-3a01a976cb1c",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui082RevokeSession.tsx",
+      "bytes": 3228,
+      "sha256": "e6a9deb98ebdaaedefdca140c1d09c405c1abc23fbb7c27923e143e0e1f3af4f",
+      "pulledAt": "2026-11-24T12:19:57.429Z"
+    },
+    "UI-34.1": {
+      "kind": "secondary",
+      "id": "UI-34.1",
+      "title": "Explore related places",
+      "slug": "ui-34-1-explore-related-places",
+      "file": "UI341ExploreRelatedPlaces.tsx",
+      "subframePageId": "729a7412-c7e6-4c2e-b3e7-47a2e1d6bed3",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui341ExploreRelatedPlaces.tsx",
+      "bytes": 5424,
+      "sha256": "3a7814091f1dda53b087f4f593ea86b144ca7821a8399aab5e206548ee7a0ea2",
+      "pulledAt": "2026-11-24T12:19:57.873Z"
+    },
+    "UI-33.1": {
+      "kind": "secondary",
+      "id": "UI-33.1",
+      "title": "Upload document",
+      "slug": "ui-33-1-upload-document",
+      "file": "UI331UploadDocument.tsx",
+      "subframePageId": "d3b8458e-1407-432f-8f6b-a7080992e293",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui331UploadDocument.tsx",
+      "bytes": 3551,
+      "sha256": "e5980d036080c2f77283c735785d1115c4a0ca1c3e23631b17d76d339d3b9394",
+      "pulledAt": "2026-11-24T12:19:58.295Z"
+    },
+    "UI-35.1": {
+      "kind": "secondary",
+      "id": "UI-35.1",
+      "title": "Getting started",
+      "slug": "ui-35-1-getting-started",
+      "file": "UI351GettingStarted.tsx",
+      "subframePageId": "9f87e5e7-3b28-490f-910e-87d685d5ac33",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui351GettingStarted.tsx",
+      "bytes": 3510,
+      "sha256": "ccadd66cca4fc2a97aa84fc175433b53e2647081e8444418e48e60be3c42aaa1",
+      "pulledAt": "2026-11-24T12:19:58.706Z"
+    },
+    "UI-30.1": {
+      "kind": "secondary",
+      "id": "UI-30.1",
+      "title": "Save query",
+      "slug": "ui-30-1-save-query",
+      "file": "UI301SaveQuery.tsx",
+      "subframePageId": "415bd2ae-aa45-48e5-a145-18a0db2f12bb",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui301SaveQuery.tsx",
+      "bytes": 3412,
+      "sha256": "965f3693810ab8f6f8c1ded0d8fa6bd29b459813bac81e02f3834c070681d62f",
+      "pulledAt": "2026-11-24T12:19:59.117Z"
+    },
+    "UI-22.2": {
+      "kind": "secondary",
+      "id": "UI-22.2",
+      "title": "Reclassify objection",
+      "slug": "ui-22-2-reclassify-objection",
+      "file": "UI222ReclassifyObjection.tsx",
+      "subframePageId": "b2d8799a-6572-4a52-b43a-d36281af2baa",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui222ReclassifyObjection.tsx",
+      "bytes": 3199,
+      "sha256": "4e51a7182415e3b175856edcfe5a76d314093b38d8aae8dd765f08503bca0de7",
+      "pulledAt": "2026-11-24T12:19:59.738Z"
+    },
+    "UI-30.2": {
+      "kind": "secondary",
+      "id": "UI-30.2",
+      "title": "Compare with UI query",
+      "slug": "ui-30-2-compare-with-ui-query",
+      "file": "UI302CompareWithUIQuery.tsx",
+      "subframePageId": "04714ca1-d55b-467a-b39a-9841636a2a53",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui302CompareWithUiQuery.tsx",
+      "bytes": 7201,
+      "sha256": "4caac0d71f3728ff5bb634ff5108e5ae6c9e3074d47395a7b7fb274f69c5ac3c",
+      "pulledAt": "2026-11-24T12:20:00.149Z"
+    },
+    "UI-35.3": {
+      "kind": "secondary",
+      "id": "UI-35.3",
+      "title": "The KG pipeline",
+      "slug": "ui-35-3-the-kg-pipeline",
+      "file": "UI353TheKGPipeline.tsx",
+      "subframePageId": "65ded905-a980-4e28-99f4-fcf6fe98c85b",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui353TheKgPipeline.tsx",
+      "bytes": 5790,
+      "sha256": "66a75430e632137ee0a14d55d9f7c20e7d54cdcf4a0ec232128d6939af6d5849",
+      "pulledAt": "2026-11-24T12:20:00.693Z"
+    },
+    "UI-23.1": {
+      "kind": "secondary",
+      "id": "UI-23.1",
+      "title": "Publish",
+      "slug": "ui-23-1-publish",
+      "file": "UI231Publish.tsx",
+      "subframePageId": "957d2b55-e13a-4975-bd9d-ecb6c6906e24",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui231Publish.tsx",
+      "bytes": 3095,
+      "sha256": "9715edb33278d8757bfe11ef6ab8f3f19b46828e3dfefe2aab10a9eead5f852c",
+      "pulledAt": "2026-11-24T12:20:01.201Z"
+    },
+    "UI-35.2": {
+      "kind": "secondary",
+      "id": "UI-35.2",
+      "title": "Roles & permissions",
+      "slug": "ui-35-2-roles-permissions",
+      "file": "UI352RolesPermissions.tsx",
+      "subframePageId": "f00b648e-6c2d-41c1-b98c-4b29f9e5ffc6",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui352RolesPermissions.tsx",
+      "bytes": 5235,
+      "sha256": "5e20faf5e288289c3b853cc265803950804b3b2489f508026b4849d62821ce1d",
+      "pulledAt": "2026-11-24T12:20:01.675Z"
+    },
+    "UI-40.1": {
+      "kind": "secondary",
+      "id": "UI-40.1",
+      "title": "Clear history",
+      "slug": "ui-40-1-clear-history",
+      "file": "UI401ClearHistory.tsx",
+      "subframePageId": "4ef5d3e3-7c8f-41d9-8690-583bd9b7abb9",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui401ClearHistory.tsx",
+      "bytes": 2340,
+      "sha256": "3e3a94b4c7b7da5d40b1e42f4d92253a6ed119a2041689d45575e39b73f30135",
+      "pulledAt": "2026-11-24T12:20:02.103Z"
+    },
+    "UI-20.1": {
+      "kind": "secondary",
+      "id": "UI-20.1",
+      "title": "View absence",
+      "slug": "ui-20-1-view-absence",
+      "file": "UI201ViewAbsence.tsx",
+      "subframePageId": "497deec0-d44a-4134-a0b4-2e541bb054eb",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui201ViewAbsence.tsx",
+      "bytes": 4470,
+      "sha256": "88ab504a9d431458479f515ae98ca28b8c589a640f3f7491a902cf6d600e8b85",
+      "pulledAt": "2026-11-24T12:20:02.636Z"
+    },
+    "UI-21.2": {
+      "kind": "secondary",
+      "id": "UI-21.2",
+      "title": "Review term",
+      "slug": "ui-21-2-review-term",
+      "file": "UI212ReviewTerm.tsx",
+      "subframePageId": "274f17d9-612c-4331-a422-5740d23832a1",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui212ReviewTerm.tsx",
+      "bytes": 5335,
+      "sha256": "296ef6d471628716a465d22dac21b4039d155e0f699b973de87d03d9e801efb7",
+      "pulledAt": "2026-11-24T12:20:03.252Z"
+    },
+    "UI-33.2": {
+      "kind": "secondary",
+      "id": "UI-33.2",
+      "title": "Document detail",
+      "slug": "ui-33-2-document-detail",
+      "file": "UI332DocumentDetail.tsx",
+      "subframePageId": "bd5aa833-2c27-4ad7-a7b3-16c6376fc607",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui332DocumentDetail.tsx",
+      "bytes": 3022,
+      "sha256": "aeec0d7b03870b7b3c53670e81890582a7724525f1f31b712e90152dbcc358e0",
+      "pulledAt": "2026-11-24T12:20:04.157Z"
+    },
+    "UI-35.5": {
+      "kind": "secondary",
+      "id": "UI-35.5",
+      "title": "Contact support",
+      "slug": "ui-35-5-contact-support",
+      "file": "UI355ContactSupport.tsx",
+      "subframePageId": "21e22465-0793-4ab1-af25-d87858fcc248",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui355ContactSupport.tsx",
+      "bytes": 2754,
+      "sha256": "75db32913af4575ec271a7d2729f793d1fb9eeff4ecd7d4d80162feeb1983589",
+      "pulledAt": "2026-11-24T12:20:04.586Z"
+    },
+    "UI-16.2": {
+      "kind": "secondary",
+      "id": "UI-16.2",
+      "title": "Approve and publish",
+      "slug": "ui-16-2-approve-and-publish",
+      "file": "UI162ApproveAndPublish.tsx",
+      "subframePageId": "b2764bcf-efe9-432f-9f66-7d3c79f5f5ff",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui162ApproveAndPublish.tsx",
+      "bytes": 3769,
+      "sha256": "7c64f47d07f678048f238d502360b1f2c35640b646bf640ce1e83aa65a513cef",
+      "pulledAt": "2026-11-24T12:20:05.007Z"
+    },
+    "UI-18.1": {
+      "kind": "secondary",
+      "id": "UI-18.1",
+      "title": "Edit alias",
+      "slug": "ui-18-1-edit-alias",
+      "file": "UI181EditAlias.tsx",
+      "subframePageId": "2b2effc5-8dbe-45d8-af8f-5eb2da9226c0",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui181EditAlias.tsx",
+      "bytes": 3389,
+      "sha256": "a36b4da69c384184b1af751a181d125506838e6d094f910ae9a60d2e88a2c40b",
+      "pulledAt": "2026-11-24T12:20:05.424Z"
+    },
+    "UI-17.2": {
+      "kind": "secondary",
+      "id": "UI-17.2",
+      "title": "Review suggestion (LLM)",
+      "slug": "ui-17-2-review-suggestion-llm",
+      "file": "UI172ReviewSuggestionLLM.tsx",
+      "subframePageId": "3458f6d8-24e2-4d0f-88cd-3090d786762d",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui172ReviewSuggestionLlm.tsx",
+      "bytes": 4867,
+      "sha256": "ce089950881e4d448bdb896ead56f74f1ef00fc0345aecf1314ee411b8bc7aad",
+      "pulledAt": "2026-11-24T12:20:05.869Z"
+    },
+    "UI-35.4": {
+      "kind": "secondary",
+      "id": "UI-35.4",
+      "title": "Glossary",
+      "slug": "ui-35-4-glossary",
+      "file": "UI354Glossary.tsx",
+      "subframePageId": "a734e73f-2cc0-4758-bd0f-e768cf3c4f3e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui354Glossary.tsx",
+      "bytes": 4060,
+      "sha256": "7be0c0dad01a6ac84682c617b98b816d8995a23bd5b744249eae149a7801fde6",
+      "pulledAt": "2026-11-24T12:20:06.352Z"
+    },
+    "UI-24.1": {
+      "kind": "secondary",
+      "id": "UI-24.1",
+      "title": "Edit workshop",
+      "slug": "ui-24-1-edit-workshop",
+      "file": "UI241EditWorkshop.tsx",
+      "subframePageId": "501137e8-9eb2-46c6-9f21-92edfacec18a",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui241EditWorkshop.tsx",
+      "bytes": 2077,
+      "sha256": "49574f3c7a821b4c1693f0526c973cae75c6222916e54be6095a489d2679c09c",
+      "pulledAt": "2026-11-24T12:20:06.735Z"
+    },
+    "UI-16.1": {
+      "kind": "secondary",
+      "id": "UI-16.1",
+      "title": "Approve batch",
+      "slug": "ui-16-1-approve-batch",
+      "file": "UI161ApproveBatch.tsx",
+      "subframePageId": "7e8a612b-8b0a-4e4f-919d-e3f13a32f872",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui161ApproveBatch.tsx",
+      "bytes": 4093,
+      "sha256": "39675bcffbdd47cc1c449ce5b841b835a2a3a3bf87b0254f9c8ee3e385a3a8b2",
+      "pulledAt": "2026-11-24T12:20:07.161Z"
+    },
+    "UI-21.1": {
+      "kind": "secondary",
+      "id": "UI-21.1",
+      "title": "Flag new term",
+      "slug": "ui-21-1-flag-new-term",
+      "file": "UI211FlagNewTerm.tsx",
+      "subframePageId": "fdbd0d11-04a8-4b28-b3d6-e68892907b40",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui211FlagNewTerm.tsx",
+      "bytes": 5400,
+      "sha256": "adb056993e842769556f6bf2108aacd0788e84279c176627c1fbc4f0727888a6",
+      "pulledAt": "2026-11-24T12:20:07.620Z"
+    },
+    "UI-28.1": {
+      "kind": "secondary",
+      "id": "UI-28.1",
+      "title": "Entity search",
+      "slug": "ui-28-1-entity-search",
+      "file": "UI281EntitySearch.tsx",
+      "subframePageId": "d447fd9c-fcb3-4bda-b36a-cfbcbf72b616",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui281EntitySearch.tsx",
+      "bytes": 8063,
+      "sha256": "61ce509b48536f94cabdd5bd6e0b9fffd76a5520b99577627f1bdbabc86831e9",
+      "pulledAt": "2026-11-24T12:20:08.165Z"
+    },
+    "UI-22.1": {
+      "kind": "secondary",
+      "id": "UI-22.1",
+      "title": "View document",
+      "slug": "ui-22-1-view-document",
+      "file": "UI221ViewDocument.tsx",
+      "subframePageId": "998cc047-e37a-415b-958c-9eb075304ac0",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui221ViewDocument.tsx",
+      "bytes": 2637,
+      "sha256": "57eb00c506f22467684fd85d663ce3780d2c686981ee7dc2b776722cadc03027",
+      "pulledAt": "2026-11-24T12:20:08.586Z"
+    },
+    "UI-32.1": {
+      "kind": "secondary",
+      "id": "UI-32.1",
+      "title": "Collection detail",
+      "slug": "ui-32-1-collection-detail",
+      "file": "UI321CollectionDetail.tsx",
+      "subframePageId": "f5f4614c-8a63-4aa5-a28e-eb610dbd3ac8",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui321CollectionDetail.tsx",
+      "bytes": 1088,
+      "sha256": "142469d95250270bf918adad6d7046e233e463a97ddd81faf342f9280731259e",
+      "pulledAt": "2026-11-24T12:20:09.008Z"
+    },
+    "UI-17.1": {
+      "kind": "secondary",
+      "id": "UI-17.1",
+      "title": "Review suggestion",
+      "slug": "ui-17-1-review-suggestion",
+      "file": "UI171ReviewSuggestion.tsx",
+      "subframePageId": "626f8e91-7e3c-482d-ba6a-435309364669",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui171ReviewSuggestion.tsx",
+      "bytes": 3551,
+      "sha256": "ca19f7c2b9d5216ec945c981556d65dc153c1c99de2215077fbfc322a217f204",
+      "pulledAt": "2026-11-24T12:20:09.474Z"
+    },
+    "UI-27.1": {
+      "kind": "secondary",
+      "id": "UI-27.1",
+      "title": "Generate impact report",
+      "slug": "ui-27-1-generate-impact-report",
+      "file": "UI271GenerateImpactReport.tsx",
+      "subframePageId": "8765e165-aa0a-4c52-856f-16d31bd0c0d5",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui271GenerateImpactReport.tsx",
+      "bytes": 6013,
+      "sha256": "6d23d596e2974e81c6f156ed53f1f74dc424e61e65d726181d996e0aee69c575",
+      "pulledAt": "2026-11-24T12:20:09.915Z"
+    },
+    "UI-03.1": {
+      "kind": "secondary",
+      "id": "UI-03.1",
+      "title": "Save integration settings",
+      "slug": "ui-03-1-save-integration-settings",
+      "file": "UI031SaveIntegrationSettings.tsx",
+      "subframePageId": "89b03091-b1de-45ac-b0bf-877c149040c2",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui031SaveIntegrationSettings.tsx",
+      "bytes": 3225,
+      "sha256": "14471723ca6e666eac0abc20d4191be42fa27c2a1d8ef279f5268d18c3d7a308",
+      "pulledAt": "2026-11-24T12:20:10.363Z"
+    },
+    "UI-03.2": {
+      "kind": "secondary",
+      "id": "UI-03.2",
+      "title": "Discard changes",
+      "slug": "ui-03-2-discard-changes",
+      "file": "UI032DiscardChanges.tsx",
+      "subframePageId": "a128a0d7-ab69-44af-b590-097b7fcc44e0",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui032DiscardChanges.tsx",
+      "bytes": 1807,
+      "sha256": "dc2f68ca493d1af6755497899d0edfde5defc35d80ca89d29f1ae5ea91b86a7c",
+      "pulledAt": "2026-11-24T12:20:11.284Z"
+    },
+    "UI-25.1": {
+      "kind": "secondary",
+      "id": "UI-25.1",
+      "title": "Comparison result",
+      "slug": "ui-25-1-comparison-result",
+      "file": "UI251ComparisonResult.tsx",
+      "subframePageId": "64bc21a5-d1c6-48cf-be9f-de21c9facfd9",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui251ComparisonResult.tsx",
+      "bytes": 5680,
+      "sha256": "8700e102f90f6866f1b526085d6184290c868852561cd1144859f336dd069fa0",
+      "pulledAt": "2026-11-24T12:20:12.137Z"
+    },
+    "UI-15.1": {
+      "kind": "secondary",
+      "id": "UI-15.1",
+      "title": "Run transformation",
+      "slug": "ui-15-1-run-transformation",
+      "file": "UI151RunTransformation.tsx",
+      "subframePageId": "56a42e3e-e47f-4f2b-a72d-b9d22e727e03",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui151RunTransformation.tsx",
+      "bytes": 3621,
+      "sha256": "fd951aef25c2c0358e2f1cb7365a8d96a3473f9695574148ad0cf45e21f87437",
+      "pulledAt": "2026-11-24T12:20:13.227Z"
+    },
+    "UI-26.1": {
+      "kind": "secondary",
+      "id": "UI-26.1",
+      "title": "Metric detail",
+      "slug": "ui-26-1-metric-detail",
+      "file": "UI261MetricDetail.tsx",
+      "subframePageId": "d27a42a5-b0e3-4988-96a4-e2d9a4828671",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui261MetricDetail.tsx",
+      "bytes": 5380,
+      "sha256": "a3eb568f975e38c7d63f9cabac03b16d40723d8b97b1f43b49d062b0812ab100",
+      "pulledAt": "2026-11-24T12:20:13.667Z"
+    },
+    "UI-15.2": {
+      "kind": "secondary",
+      "id": "UI-15.2",
+      "title": "Dry run report",
+      "slug": "ui-15-2-dry-run-report",
+      "file": "UI152DryRunReport.tsx",
+      "subframePageId": "9ff02e0c-d654-4d49-a957-552b7bb137eb",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui152DryRunReport.tsx",
+      "bytes": 5788,
+      "sha256": "0744228b87cda41ae01927a316c16530e47f16a9d1186a4e0dad052011370aa1",
+      "pulledAt": "2026-11-24T12:20:14.154Z"
+    },
+    "UI-19.1": {
+      "kind": "secondary",
+      "id": "UI-19.1",
+      "title": "Export run",
+      "slug": "ui-19-1-export-run",
+      "file": "UI191ExportRun.tsx",
+      "subframePageId": "0148adb5-cd62-4ea4-a4b2-623228a23a61",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui191ExportRun.tsx",
+      "bytes": 2162,
+      "sha256": "a23dc3812df28d002ea1b77cea7d589f574b40abeb2506d44a3639855a46ca13",
+      "pulledAt": "2026-11-24T12:20:14.572Z"
+    },
+    "UI-29.1": {
+      "kind": "secondary",
+      "id": "UI-29.1",
+      "title": "Condition editor",
+      "slug": "ui-29-1-condition-editor",
+      "file": "UI291ConditionEditor.tsx",
+      "subframePageId": "cfa89a5b-b087-4428-b38c-d7e6045d1de1",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui291ConditionEditor.tsx",
+      "bytes": 3835,
+      "sha256": "19982f91bc609ba354889cd96647a25460c5f5321f26510560858208741253ca",
+      "pulledAt": "2026-11-24T12:20:14.984Z"
+    },
+    "UI-19.2": {
+      "kind": "secondary",
+      "id": "UI-19.2",
+      "title": "Artifact detail",
+      "slug": "ui-19-2-artifact-detail",
+      "file": "UI192ArtifactDetail.tsx",
+      "subframePageId": "d9121099-c0a8-43ae-8541-1540182da3e0",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui192ArtifactDetail.tsx",
+      "bytes": 3960,
+      "sha256": "9cc55579ec558879ad60f63df78e35731b901eacd1e01bb4d09db52ced1aa5cb",
+      "pulledAt": "2026-11-24T12:20:15.517Z"
+    },
+    "UI-29.2": {
+      "kind": "secondary",
+      "id": "UI-29.2",
+      "title": "Query run results",
+      "slug": "ui-29-2-query-run-results",
+      "file": "UI292QueryRunResults.tsx",
+      "subframePageId": "5c79ef29-e91e-46f6-8e75-faf0a66252f4",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui292QueryRunResults.tsx",
+      "bytes": 4669,
+      "sha256": "c8a57d2d83d182deb24c2448f5c741829bdc172d73fc0003696577cb0538021f",
+      "pulledAt": "2026-11-24T12:20:15.993Z"
+    },
+    "UI-31.1": {
+      "kind": "secondary",
+      "id": "UI-31.1",
+      "title": "Source citation",
+      "slug": "ui-31-1-source-citation",
+      "file": "UI311SourceCitation.tsx",
+      "subframePageId": "b899196a-4cde-485b-ac19-da9cd9eb6b1b",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui311SourceCitation.tsx",
+      "bytes": 4320,
+      "sha256": "e5e7c3265ac0bf7caa05fb0de49c66195347097513b6679b47f1dbc340959776",
+      "pulledAt": "2026-11-24T12:20:16.461Z"
+    },
+    "UI-31.2": {
+      "kind": "secondary",
+      "id": "UI-31.2",
+      "title": "Grounding trace",
+      "slug": "ui-31-2-grounding-trace",
+      "file": "UI312GroundingTrace.tsx",
+      "subframePageId": "e0f361a5-2acf-4bd3-9d2e-4b458f7373c0",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui312GroundingTrace.tsx",
+      "bytes": 3317,
+      "sha256": "cb01f855b95e1e41459654032386c56a1c635c263924021d1bd25eb448f6a6db",
+      "pulledAt": "2026-11-24T12:20:16.886Z"
+    },
+    "UI-36.1": {
+      "kind": "secondary",
+      "id": "UI-36.1",
+      "title": "Submission receipt",
+      "slug": "ui-36-1-submission-receipt",
+      "file": "UI361SubmissionReceipt.tsx",
+      "subframePageId": "4ec292db-c7f2-43b1-a096-e2fee86ca940",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui361SubmissionReceipt.tsx",
+      "bytes": 3880,
+      "sha256": "042b97277e95358eee459b2d6d64ddae2183c84046e049a1eb578e05cc5a7618",
+      "pulledAt": "2026-11-24T12:20:17.509Z"
+    },
+    "UI-38.1": {
+      "kind": "secondary",
+      "id": "UI-38.1",
+      "title": "Statement provenance",
+      "slug": "ui-38-1-statement-provenance",
+      "file": "UI381StatementProvenance.tsx",
+      "subframePageId": "83eb38f3-4342-45cf-ad42-164db92963f7",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui381StatementProvenance.tsx",
+      "bytes": 4521,
+      "sha256": "a059e23796469d32940fe0ce04d780fc47d86569914b0ec171ea713cc59fbb11",
+      "pulledAt": "2026-11-24T12:20:17.949Z"
+    },
+    "UI-39.1": {
+      "kind": "secondary",
+      "id": "UI-39.1",
+      "title": "Stage detail",
+      "slug": "ui-39-1-stage-detail",
+      "file": "UI391StageDetail.tsx",
+      "subframePageId": "1d706ea0-c06c-44ca-af16-4b7a86b2da94",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui391StageDetail.tsx",
+      "bytes": 5045,
+      "sha256": "ff8b375e187431594e3a06cb4c0bfc25fb8fe5e1b318f6b92c0673c41cbc3ec7",
+      "pulledAt": "2026-11-24T12:20:18.510Z"
+    },
+    "UI-09.2": {
+      "kind": "secondary",
+      "id": "UI-09.2",
+      "title": "Edit source",
+      "slug": "ui-09-2-edit-source",
+      "file": "UI092EditSource.tsx",
+      "subframePageId": "62f80294-bc21-48bd-b11d-882fbfefc54f",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui092EditSource.tsx",
+      "bytes": 4392,
+      "sha256": "0561d0a47e2a1104135e752289cf19e7abfa3359be6bddc37e7dfde0651951d4",
+      "pulledAt": "2026-11-24T12:20:19.033Z"
+    },
+    "UI-10.2": {
+      "kind": "secondary",
+      "id": "UI-10.2",
+      "title": "Retry or escalate run",
+      "slug": "ui-10-2-retry-or-escalate-run",
+      "file": "UI102RetryOrEscalateRun.tsx",
+      "subframePageId": "b3559ed7-486a-4495-b338-2ed1804d8832",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-13T19:27:03.351Z",
+      "exportedFileName": "Ui102RetryOrEscalateRun.tsx",
+      "bytes": 3308,
+      "sha256": "2a6a22007e229dd9efe95cd53bfd140befe72001a97116e28c4185af2bf564ae",
+      "pulledAt": "2026-11-24T12:20:19.471Z"
+    },
+    "UI-11.3": {
+      "kind": "secondary",
+      "id": "UI-11.3",
+      "title": "Mapping code inspector",
+      "slug": "ui-11-3-mapping-code-inspector",
+      "file": "UI113MappingCodeInspector.tsx",
+      "subframePageId": "4104ac90-399d-43ca-8170-a02f497b91f8",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui113MappingCodeInspector.tsx",
+      "bytes": 6118,
+      "sha256": "88824cd09d2f43e6753782462cdcad2dab2bb2c679c358bb4054b30979e008c4",
+      "pulledAt": "2026-11-24T12:20:19.949Z"
+    },
+    "UI-11.4": {
+      "kind": "secondary",
+      "id": "UI-11.4",
+      "title": "Ontology import and export",
+      "slug": "ui-11-4-ontology-import-and-export",
+      "file": "UI114OntologyImportAndExport.tsx",
+      "subframePageId": "db441a07-e927-46ac-97cb-af6617ff14ee",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-15T15:48:09.620Z",
+      "exportedFileName": "Ui114OntologyImportAndExport.tsx",
+      "bytes": 3889,
+      "sha256": "adc1bfa7152987e4c7681f7367d3baecae4330176302c2507bca2c238058ecd0",
+      "pulledAt": "2026-11-24T12:20:20.448Z"
+    },
+    "UI-11.5": {
+      "kind": "secondary",
+      "id": "UI-11.5",
+      "title": "Reasoner and OOPS runner",
+      "slug": "ui-11-5-reasoner-and-oops-runner",
+      "file": "UI115ReasonerAndOOPSRunner.tsx",
+      "subframePageId": "24695f4d-bdf9-418f-a93d-510e237acd59",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-15T16:18:29.143Z",
+      "exportedFileName": "Ui115ReasonerAndOopsRunner.tsx",
+      "bytes": 14696,
+      "sha256": "b46df5b89aadaf253a5efdfce3eaa3ffb4c4c0a860d92c1f930ee6c1d060ff80",
+      "pulledAt": "2026-11-24T12:20:20.895Z"
+    },
+    "UI-12.2": {
+      "kind": "secondary",
+      "id": "UI-12.2",
+      "title": "Conflict adjudication",
+      "slug": "ui-12-2-conflict-adjudication",
+      "file": "UI122ConflictAdjudication.tsx",
+      "subframePageId": "53edfb1c-89f1-4be4-8723-fac6a27c0923",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-23T17:08:55.773Z",
+      "exportedFileName": "Ui122ConflictAdjudication.tsx",
+      "bytes": 4808,
+      "sha256": "44f65aea24447206298e4a556cd55640fc723b0193919287961b77ada70d6d31",
+      "pulledAt": "2026-11-24T12:20:21.319Z"
+    },
+    "UI-13.2": {
+      "kind": "secondary",
+      "id": "UI-13.2",
+      "title": "Validation report",
+      "slug": "ui-13-2-validation-report",
+      "file": "UI132ValidationReport.tsx",
+      "subframePageId": "f5f4fb52-4084-41c0-ac75-3e0e4e4f14fd",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-15T14:31:27.457Z",
+      "exportedFileName": "Ui132ValidationReport.tsx",
+      "bytes": 8074,
+      "sha256": "0e812505d1ef382b39ccd5b8fcded99193c84ef85552657909ecdfe25c4cd888",
+      "pulledAt": "2026-11-16T15:59:43.998Z"
+    },
+    "UI-16.3": {
+      "kind": "secondary",
+      "id": "UI-16.3",
+      "title": "Reject triple with reason",
+      "slug": "ui-16-3-reject-triple-with-reason",
+      "file": "UI163RejectTripleWithReason.tsx",
+      "subframePageId": "1dea2bac-f888-44c4-9d8b-1f389f18e447",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-23T16:41:38.968Z",
+      "exportedFileName": "Ui163RejectTripleWithReason.tsx",
+      "bytes": 3958,
+      "sha256": "25697d8035a765dc8fd0d5a0dfbef5d0a939e52fa3ffcdcc181708dee9cb1778",
+      "pulledAt": "2026-11-24T12:20:22.168Z"
+    },
+    "UI-16.4": {
+      "kind": "secondary",
+      "id": "UI-16.4",
+      "title": "SHACL report and job cancel",
+      "slug": "ui-16-4-shacl-report-and-job-cancel",
+      "file": "UI164SHACLReportAndJobCancel.tsx",
+      "subframePageId": "9902fd2c-40a1-4dad-bb9d-217b4fb118e8",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui164ShaclReportAndJobCancel.tsx",
+      "bytes": 6714,
+      "sha256": "bb5ba9a55673f03bf9b7d7c00f8a3c90d5b5022d49b6eb2319bf2aaffd5fcf17",
+      "pulledAt": "2026-11-24T12:20:23.091Z"
+    },
+    "UI-17.3": {
+      "kind": "secondary",
+      "id": "UI-17.3",
+      "title": "Reasoning trace",
+      "slug": "ui-17-3-reasoning-trace",
+      "file": "UI173ReasoningTrace.tsx",
+      "subframePageId": "0b6652a8-1fe4-44c8-aee5-44996e71c8dd",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui173ReasoningTrace.tsx",
+      "bytes": 7570,
+      "sha256": "dd81709468314d9c57acd826b3aee18664511d422104402e2a7d64950c930b6b",
+      "pulledAt": "2026-11-24T12:20:23.528Z"
+    },
+    "UI-18.2": {
+      "kind": "secondary",
+      "id": "UI-18.2",
+      "title": "Candidate comparison",
+      "slug": "ui-18-2-candidate-comparison",
+      "file": "UI182CandidateComparison.tsx",
+      "subframePageId": "c1dee1c2-07a9-47f6-aba4-b6dc2353553e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui182CandidateComparison.tsx",
+      "bytes": 7819,
+      "sha256": "195e4269d243fb4449350156dea418c70cc5f2308818ebf2a8bf5d26d42ce99d",
+      "pulledAt": "2026-11-24T12:20:24.352Z"
+    },
+    "UI-20.2": {
+      "kind": "secondary",
+      "id": "UI-20.2",
+      "title": "Register absence gap",
+      "slug": "ui-20-2-register-absence-gap",
+      "file": "UI202RegisterAbsenceGap.tsx",
+      "subframePageId": "46ef2af8-f957-4d06-a253-b512bdb0bb1d",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui202RegisterAbsenceGap.tsx",
+      "bytes": 5226,
+      "sha256": "e1cae63574f4ac2b7b1cb4ad264981b42b93e559efd14cd7147379fa7cda0ee7",
+      "pulledAt": "2026-11-24T12:20:24.846Z"
+    },
+    "UI-38.2": {
+      "kind": "secondary",
+      "id": "UI-38.2",
+      "title": "Dual-voice diff",
+      "slug": "ui-38-2-dual-voice-diff",
+      "file": "UI382DualVoiceDiff.tsx",
+      "subframePageId": "26a3be4d-0f6c-4c11-8dc1-b68105c8c6cf",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui382DualVoiceDiff.tsx",
+      "bytes": 8600,
+      "sha256": "dc9cadd3d1a2f1505b4978a4aa04ab676d98a869a58f1e2e48428882be9fab7b",
+      "pulledAt": "2026-11-24T12:20:25.251Z"
+    },
+    "UI-39.2": {
+      "kind": "secondary",
+      "id": "UI-39.2",
+      "title": "Alert action",
+      "slug": "ui-39-2-alert-action",
+      "file": "UI392AlertAction.tsx",
+      "subframePageId": "f8616f66-cf73-447d-94c9-770bce19fce8",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui392AlertAction.tsx",
+      "bytes": 4523,
+      "sha256": "aecae7458951aa0088ed9f9d34db647602f12e04341f2c4ec356345651d9f101",
+      "pulledAt": "2026-11-24T12:20:25.730Z"
+    },
+    "UI-01.2": {
+      "kind": "secondary",
+      "id": "UI-01.2",
+      "title": "Edit role and workspace access",
+      "slug": "ui-01-2-edit-role-and-workspace-access",
+      "file": "UI012EditRoleAndWorkspaceAccess.tsx",
+      "subframePageId": "ea29d1f7-7ce6-457f-8773-783f414d4597",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui012EditRoleAndWorkspaceAccess.tsx",
+      "bytes": 3775,
+      "sha256": "bf089ebe7396f87201fe62eed3f206c11611954913b29660c0a523fd0cc46d6c",
+      "pulledAt": "2026-11-24T12:20:26.200Z"
+    },
+    "UI-01.3": {
+      "kind": "secondary",
+      "id": "UI-01.3",
+      "title": "Authentication policy",
+      "slug": "ui-01-3-authentication-policy",
+      "file": "UI013AuthenticationPolicy.tsx",
+      "subframePageId": "7c2b90d8-c712-4cd2-b4dc-04772ccb1c3e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui013AuthenticationPolicy.tsx",
+      "bytes": 4456,
+      "sha256": "22bfcaf48f0e42683b6fba14c6bd286bb6bd6cc871212e65a3efa77a1891abba",
+      "pulledAt": "2026-11-24T12:20:26.621Z"
+    },
+    "UI-02.3": {
+      "kind": "secondary",
+      "id": "UI-02.3",
+      "title": "Edit workspace and membership",
+      "slug": "ui-02-3-edit-workspace-and-membership",
+      "file": "UI023EditWorkspaceAndMembership.tsx",
+      "subframePageId": "c31ea53b-64dd-4010-a8ec-19888ba5bdd4",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui023EditWorkspaceAndMembership.tsx",
+      "bytes": 3886,
+      "sha256": "6ecb90195fef6c43ef07685f917522b660d9a6811a5320027d30fec42f70b8eb",
+      "pulledAt": "2026-11-24T12:20:27.031Z"
+    },
+    "UI-02.4": {
+      "kind": "secondary",
+      "id": "UI-02.4",
+      "title": "Sovereignty and quota settings",
+      "slug": "ui-02-4-sovereignty-and-quota-settings",
+      "file": "UI024SovereigntyAndQuotaSettings.tsx",
+      "subframePageId": "b0202e8a-ba5e-4f95-832f-8596132a7502",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui024SovereigntyAndQuotaSettings.tsx",
+      "bytes": 4596,
+      "sha256": "c1f7c7450fc1cf5a93085ead346c9ff9bd26f09f885b2267c7c9ca509f574c9d",
+      "pulledAt": "2026-11-24T12:20:27.632Z"
+    },
+    "UI-04.3": {
+      "kind": "secondary",
+      "id": "UI-04.3",
+      "title": "Authority matrix editor",
+      "slug": "ui-04-3-authority-matrix-editor",
+      "file": "UI043AuthorityMatrixEditor.tsx",
+      "subframePageId": "769eb953-ca43-4517-93b4-052b37296e76",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui043AuthorityMatrixEditor.tsx",
+      "bytes": 5462,
+      "sha256": "9adbe3115da883666d8bd407a4b8cb409bfbc2eec48002d0c077d79f4015c44e",
+      "pulledAt": "2026-11-24T12:20:28.094Z"
+    },
+    "UI-04.4": {
+      "kind": "secondary",
+      "id": "UI-04.4",
+      "title": "Consent and GDPR view",
+      "slug": "ui-04-4-consent-and-gdpr-view",
+      "file": "UI044ConsentAndGDPRView.tsx",
+      "subframePageId": "8722afd7-52e5-480c-a9f5-9115808df52b",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui044ConsentAndGdprView.tsx",
+      "bytes": 8212,
+      "sha256": "562e2e23cf72576ad8318c9552d4595aa8ab271863b58a6756d3e1e9eaa02c64",
+      "pulledAt": "2026-11-24T12:20:28.535Z"
+    },
+    "UI-06.4": {
+      "kind": "secondary",
+      "id": "UI-06.4",
+      "title": "Edit stakeholder record",
+      "slug": "ui-06-4-edit-stakeholder-record",
+      "file": "UI064EditStakeholderRecord.tsx",
+      "subframePageId": "8177f08c-382b-4133-8678-6fe1add81415",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui064EditStakeholderRecord.tsx",
+      "bytes": 3718,
+      "sha256": "3da902ef1899e42f5f7b5dba0e8f73aa34591b28fad787def17c4221fac9fefb",
+      "pulledAt": "2026-11-24T12:20:29.050Z"
+    },
+    "UI-07.2": {
+      "kind": "secondary",
+      "id": "UI-07.2",
+      "title": "Assign or escalate event",
+      "slug": "ui-07-2-assign-or-escalate-event",
+      "file": "UI072AssignOrEscalateEvent.tsx",
+      "subframePageId": "024f1347-ff21-4539-a7fb-eb04bf50bd79",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui072AssignOrEscalateEvent.tsx",
+      "bytes": 3508,
+      "sha256": "2bb1bc2702783d1fbbb66dc4733ccbfa933d8665107f0fbd5d64dc83015ab0e8",
+      "pulledAt": "2026-11-24T12:20:29.482Z"
+    },
+    "UI-08.3": {
+      "kind": "secondary",
+      "id": "UI-08.3",
+      "title": "Event detail",
+      "slug": "ui-08-3-event-detail",
+      "file": "UI083EventDetail.tsx",
+      "subframePageId": "ca5e574b-bfd5-4bb7-8e3b-f8ce4d38b8c7",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui083EventDetail.tsx",
+      "bytes": 5535,
+      "sha256": "4d88b1e77b0362a7eb2c3f8f2866a8633904171950d2e2fa0e54daa3c47c78ce",
+      "pulledAt": "2026-11-24T12:20:29.891Z"
+    },
+    "UI-21.3": {
+      "kind": "secondary",
+      "id": "UI-21.3",
+      "title": "Escalate to community review",
+      "slug": "ui-21-3-escalate-to-community-review",
+      "file": "UI213EscalateToCommunityReview.tsx",
+      "subframePageId": "2340a1d6-f9cd-459b-8369-87abede0d64c",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui213EscalateToCommunityReview.tsx",
+      "bytes": 4060,
+      "sha256": "0f9cf908f808b3f258878495cc82886acdd179ef44df4ddaf1bb0a85245f257e",
+      "pulledAt": "2026-11-24T12:20:30.330Z"
+    },
+    "UI-22.3": {
+      "kind": "secondary",
+      "id": "UI-22.3",
+      "title": "Rejection rationale",
+      "slug": "ui-22-3-rejection-rationale",
+      "file": "UI223RejectionRationale.tsx",
+      "subframePageId": "1d9ab23c-a0a6-4cba-8be3-85b2a44bde48",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui223RejectionRationale.tsx",
+      "bytes": 3706,
+      "sha256": "24623edf7d4a202b7ac7a8916a9d55adad6c102b4929163df621c013938e9dfb",
+      "pulledAt": "2026-11-24T12:20:30.794Z"
+    },
+    "UI-24.2": {
+      "kind": "secondary",
+      "id": "UI-24.2",
+      "title": "Schedule new workshop",
+      "slug": "ui-24-2-schedule-new-workshop",
+      "file": "UI242ScheduleNewWorkshop.tsx",
+      "subframePageId": "759f9778-a405-47e6-a520-5412aafff174",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui242ScheduleNewWorkshop.tsx",
+      "bytes": 3629,
+      "sha256": "63b6607a1e1d3c1290e2a8d05d68c98840dc47c32f2526f77b4b51f480574f2a",
+      "pulledAt": "2026-11-24T12:20:31.292Z"
+    },
+    "UI-25.2": {
+      "kind": "secondary",
+      "id": "UI-25.2",
+      "title": "Divergence report",
+      "slug": "ui-25-2-divergence-report",
+      "file": "UI252DivergenceReport.tsx",
+      "subframePageId": "8a2650fa-5b9e-46b0-b012-6c5ed7b73f4f",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui252DivergenceReport.tsx",
+      "bytes": 7894,
+      "sha256": "6de06c604f68046904ea7edb824f787de77a316a6bc98a488a34406a9189c00f",
+      "pulledAt": "2026-11-24T12:20:31.730Z"
+    },
+    "UI-26.2": {
+      "kind": "secondary",
+      "id": "UI-26.2",
+      "title": "Assign mitigation",
+      "slug": "ui-26-2-assign-mitigation",
+      "file": "UI262AssignMitigation.tsx",
+      "subframePageId": "bf9d920f-5e2e-40a3-ae1a-b26e29e9546f",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui262AssignMitigation.tsx",
+      "bytes": 4058,
+      "sha256": "cdb75bd7912ede825bcde821a0cb188a67393995ff40519d3f6a4c03107029d0",
+      "pulledAt": "2026-11-24T12:20:32.146Z"
+    },
+    "UI-28.2": {
+      "kind": "secondary",
+      "id": "UI-28.2",
+      "title": "Entity detail",
+      "slug": "ui-28-2-entity-detail",
+      "file": "UI282EntityDetail.tsx",
+      "subframePageId": "f1e870d5-82cb-48cf-808c-89cc395cf1c1",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui282EntityDetail.tsx",
+      "bytes": 7875,
+      "sha256": "0070f77ef91d2a0612dcbf938e8e18f481ace30c4a4e5f1b40ad439d6120dafc",
+      "pulledAt": "2026-11-24T12:20:32.585Z"
+    },
+    "UI-28.3": {
+      "kind": "secondary",
+      "id": "UI-28.3",
+      "title": "Objection form",
+      "slug": "ui-28-3-objection-form",
+      "file": "UI283ObjectionForm.tsx",
+      "subframePageId": "084f7024-a00f-42e0-867e-7b3d949022e7",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui283ObjectionForm.tsx",
+      "bytes": 4119,
+      "sha256": "2cb87652c68187d09e05da4f0924497817fd431eeb856d0b2b63e578d09e3fee",
+      "pulledAt": "2026-11-24T12:20:33.006Z"
+    },
+    "UI-28.4": {
+      "kind": "secondary",
+      "id": "UI-28.4",
+      "title": "Llinatge panel",
+      "slug": "ui-28-4-llinatge-panel",
+      "file": "UI284LlinatgePanel.tsx",
+      "subframePageId": "b8a42045-9c38-4cc7-a9eb-2b7f7513b8ac",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui284LlinatgePanel.tsx",
+      "bytes": 5660,
+      "sha256": "32d4c46ce62feb7194e67fef0b5c5b2703c29b6e3ac104a423fe31d041f05ac0",
+      "pulledAt": "2026-11-24T12:20:33.489Z"
+    },
+    "UI-31.3": {
+      "kind": "secondary",
+      "id": "UI-31.3",
+      "title": "First-steps guide",
+      "slug": "ui-31-3-first-steps-guide",
+      "file": "UI313FirstStepsGuide.tsx",
+      "subframePageId": "c4f95ba6-81e1-4caf-9afb-9f0b10d91939",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui313FirstStepsGuide.tsx",
+      "bytes": 5185,
+      "sha256": "653ffbef2c5dd0ae552c862c01c0fabb3acffd83996bf61e8d7267b6672c12f3",
+      "pulledAt": "2026-11-24T12:20:34.068Z"
+    },
+    "UI-34.2": {
+      "kind": "secondary",
+      "id": "UI-34.2",
+      "title": "Place detail",
+      "slug": "ui-34-2-place-detail",
+      "file": "UI342PlaceDetail.tsx",
+      "subframePageId": "972b0301-0060-417a-8b35-42a449f3852d",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui342PlaceDetail.tsx",
+      "bytes": 6412,
+      "sha256": "bbffbc934d14cb16a6d68111b4b7961d95b6bcbb87a5df9918b3fb98b8a3c101",
+      "pulledAt": "2026-11-24T12:20:34.528Z"
+    },
+    "UI-35.6": {
+      "kind": "secondary",
+      "id": "UI-35.6",
+      "title": "FAQ",
+      "slug": "ui-35-6-faq",
+      "file": "UI356FAQ.tsx",
+      "subframePageId": "a8ea0cb8-daf7-4115-af92-89b2b0961515",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui356Faq.tsx",
+      "bytes": 4682,
+      "sha256": "f23c6ffd5fcf775c983315c7e5333fc7a677bb3294a5937ab14a5cd34b107045",
+      "pulledAt": "2026-11-24T12:20:34.971Z"
+    },
+    "UI-35.7": {
+      "kind": "secondary",
+      "id": "UI-35.7",
+      "title": "Video index",
+      "slug": "ui-35-7-video-index",
+      "file": "UI357VideoIndex.tsx",
+      "subframePageId": "3ff5f017-42ec-4c1f-bb5c-e45cac4f5e1f",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui357VideoIndex.tsx",
+      "bytes": 6254,
+      "sha256": "45b1e2293e73b5005fcc148746b1e1fd8eefbcfea3dfef445d1f07aa221ce15f",
+      "pulledAt": "2026-11-24T12:20:35.401Z"
+    },
+    "UI-35.8": {
+      "kind": "secondary",
+      "id": "UI-35.8",
+      "title": "Changelog",
+      "slug": "ui-35-8-changelog",
+      "file": "UI358Changelog.tsx",
+      "subframePageId": "a4c950b2-ea4c-4d7b-9f0d-ad6cf94caf90",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui358Changelog.tsx",
+      "bytes": 4463,
+      "sha256": "13a3a94153f50b70c582244f313a736895a7bb24e046b42f2baa792ec1d98333",
+      "pulledAt": "2026-11-24T12:20:35.866Z"
+    },
+    "UI-35.9": {
+      "kind": "secondary",
+      "id": "UI-35.9",
+      "title": "Keyboard shortcuts",
+      "slug": "ui-35-9-keyboard-shortcuts",
+      "file": "UI359KeyboardShortcuts.tsx",
+      "subframePageId": "79c2b446-68d2-4f17-84ce-065ee1d40cfe",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui359KeyboardShortcuts.tsx",
+      "bytes": 8203,
+      "sha256": "2db8a5908e3c61bf552acfd6c27b431b404973985430e2e565798230de3986e0",
+      "pulledAt": "2026-11-24T12:20:36.329Z"
+    },
+    "UI-37.1": {
+      "kind": "secondary",
+      "id": "UI-37.1",
+      "title": "Header and lateral navigation",
+      "slug": "ui-37-1-header-and-lateral-navigation",
+      "file": "UI371HeaderAndLateralNavigation.tsx",
+      "subframePageId": "3eedf191-e552-4fc2-b525-07a64add6e3f",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-13T14:44:18.882Z",
+      "exportedFileName": "Ui371HeaderAndLateralNavigation.tsx",
+      "bytes": 4823,
+      "sha256": "90643f60f4b44d72cfbcc604c7508718e973532ba701818d1a5b24a8f12a40bc",
+      "pulledAt": "2026-11-24T12:20:36.752Z"
+    },
+    "UI-37.2": {
+      "kind": "secondary",
+      "id": "UI-37.2",
+      "title": "Footer",
+      "slug": "ui-37-2-footer",
+      "file": "UI372Footer.tsx",
+      "subframePageId": "2c3a94a0-05d5-4e6b-b926-22278b1d872e",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-13T14:46:37.367Z",
+      "exportedFileName": "Ui372Footer.tsx",
+      "bytes": 3141,
+      "sha256": "22aaacabf40471ba0830eec102fb5388832bc882c4e3363765e4efe3f8ba722d",
+      "pulledAt": "2026-11-24T12:20:37.501Z"
+    },
+    "UI-37.3": {
+      "kind": "secondary",
+      "id": "UI-37.3",
+      "title": "Breadcrumbs",
+      "slug": "ui-37-3-breadcrumbs",
+      "file": "UI373Breadcrumbs.tsx",
+      "subframePageId": "fef5ad48-1b49-46fa-b859-06817cdec9e5",
+      "canvasName": "General UIs",
+      "lastModifiedAt": null,
+      "exportedFileName": "Ui373Breadcrumbs.tsx",
+      "bytes": 4318,
+      "sha256": "34f838e134ae137b6ce6bbf264251da29f5f40edb8d4ac187cfb0f6544353973",
+      "pulledAt": "2026-11-24T12:20:38.068Z"
+    },
+    "UI-37.4": {
+      "kind": "secondary",
+      "id": "UI-37.4",
+      "title": "Language picker",
+      "slug": "ui-37-4-language-picker",
+      "file": "UI374LanguagePicker.tsx",
+      "subframePageId": "ceac0468-5717-4f98-ae90-9c9d1daa6d0d",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-13T15:11:37.196Z",
+      "exportedFileName": "Ui374LanguagePicker.tsx",
+      "bytes": 3459,
+      "sha256": "06d4d65ab10e5bb5f3aa3569991a2bc79f7c874ab0898b50b5c90e732542da9e",
+      "pulledAt": "2026-11-24T12:20:38.578Z"
+    },
+    "UI-37.6.1": {
+      "kind": "secondary",
+      "id": "UI-37.6.1",
+      "title": "General operation - Coordinator alone",
+      "slug": "ui-37-6-1-general-operation-coordinator-alone",
+      "file": "UI3761GeneralOperationCoordinatorAlone.tsx",
+      "subframePageId": "eb7e0e63-a595-4ccc-af33-8152143c989a",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-16T14:01:57.589Z",
+      "exportedFileName": "Ui3761GeneralOperationCoordinatorAlone.tsx",
+      "bytes": 26170,
+      "sha256": "c95c6428ff46574671d4cee776302a494e5d75459b165f4cb8aded0413430b09",
+      "pulledAt": "2026-11-24T12:20:39.606Z"
+    },
+    "UI-11C": {
+      "kind": "primary",
+      "id": "UI-11C",
+      "title": "Ontology manager - create",
+      "slug": "ui-11c-ontology-manager-create",
+      "file": "UI11COntologyManagerCreate.tsx",
+      "subframePageId": "48bbe24e-0116-4df9-8037-baf444bac1b3",
+      "canvasName": "General UIs",
+      "lastModifiedAt": "2026-11-18T14:36:58.516Z",
+      "exportedFileName": "Ui11COntologyManagerCreate.tsx",
+      "bytes": 54577,
+      "sha256": "ce5780b78e52293d0bfdd79781666da8bb694128c430274028b97947d0dd78e4",
+      "pulledAt": "2026-11-24T12:20:41.396Z"
+    }
+  },
+  "theme": {
+    "theme": {
+      "id": "63a46224-9710-49b9-a5f1-8bf73ec2c579",
+      "name": "Default",
+      "isDefault": true,
+      "themeStyle": "light",
+      "hasDarkMode": true,
+      "defaults": {
+        "fontFamily": "IBM Plex Sans",
+        "textColor": {
+          "alias": "Default Font"
+        }
+      },
+      "folders": [
+        {
+          "name": "Brand",
+          "colors": [
+            {
+              "id": "276cde42-c89a-5472-8f77-c393d2133f65",
+              "name": "Brand 50",
+              "slug": "brand-50",
+              "folder": "Brand",
+              "value": "#d0cb93",
+              "valueDark": "#2f2c04"
+            },
+            {
+              "id": "0cf00c86-a8f2-5e7b-b628-8df4c8e22994",
+              "name": "Brand 100",
+              "slug": "brand-100",
+              "folder": "Brand",
+              "value": "#b6c091",
+              "valueDark": "#293305"
+            },
+            {
+              "id": "7691b384-7253-5f6e-847f-b131f007723a",
+              "name": "Brand 200",
+              "slug": "brand-200",
+              "folder": "Brand",
+              "value": "#aeb384",
+              "valueDark": "#475106"
+            },
+            {
+              "id": "66464d88-ed38-5d58-ac7d-be2322b2711d",
+              "name": "Brand 300",
+              "slug": "brand-300",
+              "folder": "Brand",
+              "value": "#c79f6f",
+              "valueDark": "#54340d"
+            },
+            {
+              "id": "4c7baa06-d7f0-5ded-b53c-3953a2e85871",
+              "name": "Brand 400",
+              "slug": "brand-400",
+              "folder": "Brand",
+              "value": "#d2724f",
+              "valueDark": "#db6d48"
+            },
+            {
+              "id": "6228fef5-2dec-5b0e-bb74-442bb2e22f32",
+              "name": "Brand 500",
+              "slug": "brand-500",
+              "folder": "Brand",
+              "value": "#cc2747",
+              "valueDark": "#c72948"
+            },
+            {
+              "id": "7883dba1-07c2-5c5b-8ba0-4be45ed88ee4",
+              "name": "Brand 600",
+              "slug": "brand-600",
+              "folder": "Brand",
+              "value": "#a82551",
+              "valueDark": "#941e48"
+            },
+            {
+              "id": "6149af99-3505-517f-a49d-c852818382f9",
+              "name": "Brand 700",
+              "slug": "brand-700",
+              "folder": "Brand",
+              "value": "#842352",
+              "valueDark": null
+            },
+            {
+              "id": "b659f908-ee61-55ed-b3ac-86b62e541e79",
+              "name": "Brand 800",
+              "slug": "brand-800",
+              "folder": "Brand",
+              "value": "#62204b",
+              "valueDark": "#b43c8e"
+            },
+            {
+              "id": "949921a8-337b-51f7-9597-642846d455e8",
+              "name": "Brand 900",
+              "slug": "brand-900",
+              "folder": "Brand",
+              "value": "#431b3d",
+              "valueDark": "#9e428d"
+            }
+          ]
+        },
+        {
+          "name": "Neutral",
+          "colors": [
+            {
+              "id": "b0c83cdf-ed22-54be-9bc9-fb8b1993025f",
+              "name": "Neutral 0",
+              "slug": "neutral-0",
+              "folder": "Neutral",
+              "value": "#ffffff",
+              "valueDark": "#110f0d"
+            },
+            {
+              "id": "3592d70a-f029-5315-ad58-b45a2a94a56c",
+              "name": "Neutral 50",
+              "slug": "neutral-50",
+              "folder": "Neutral",
+              "value": "#fafbf1",
+              "valueDark": "#191714"
+            },
+            {
+              "id": "baf728fb-606a-51dd-a86c-7cb957e2e7bb",
+              "name": "Neutral 100",
+              "slug": "neutral-100",
+              "folder": "Neutral",
+              "value": "#f3f4eb",
+              "valueDark": "#23201c"
+            },
+            {
+              "id": "5ea0c368-ed32-5bf7-ae6c-563cfd2c9110",
+              "name": "Neutral 200",
+              "slug": "neutral-200",
+              "folder": "Neutral",
+              "value": "#e6e7df",
+              "valueDark": "#2e2b27"
+            },
+            {
+              "id": "30c32315-b8bb-5c34-95a7-06b48d9c8a1f",
+              "name": "Neutral 300",
+              "slug": "neutral-300",
+              "folder": "Neutral",
+              "value": "#d6d7cf",
+              "valueDark": "#403c37"
+            },
+            {
+              "id": "e6265b0d-8a0a-5597-b194-8f4ae714b5fb",
+              "name": "Neutral 400",
+              "slug": "neutral-400",
+              "folder": "Neutral",
+              "value": "#bdbeb7",
+              "valueDark": "#57534e"
+            },
+            {
+              "id": "90aca9ab-e23c-5d1b-89e2-ec7b11c35892",
+              "name": "Neutral 500",
+              "slug": "neutral-500",
+              "folder": "Neutral",
+              "value": "#9e9f99",
+              "valueDark": "#716c68"
+            },
+            {
+              "id": "0132dd1e-abbd-5223-8f87-083226eb9628",
+              "name": "Neutral 600",
+              "slug": "neutral-600",
+              "folder": "Neutral",
+              "value": "#80817b",
+              "valueDark": "#8e8a85"
+            },
+            {
+              "id": "65afaecd-0a5b-5a04-9c63-fdba78cc5b89",
+              "name": "Neutral 700",
+              "slug": "neutral-700",
+              "folder": "Neutral",
+              "value": "#63645f",
+              "valueDark": "#aca9a5"
+            },
+            {
+              "id": "410b805e-72d6-50ad-b06b-fc904894281a",
+              "name": "Neutral 800",
+              "slug": "neutral-800",
+              "folder": "Neutral",
+              "value": "#484844",
+              "valueDark": "#c8c5c1"
+            },
+            {
+              "id": "f9ac125a-131f-5495-8f1a-3d062fe2de41",
+              "name": "Neutral 900",
+              "slug": "neutral-900",
+              "folder": "Neutral",
+              "value": "#2e2e2b",
+              "valueDark": "#e2dfdc"
+            },
+            {
+              "id": "719fc763-6b77-58f0-a996-888979b87494",
+              "name": "Neutral 950",
+              "slug": "neutral-950",
+              "folder": "Neutral",
+              "value": "#1a1b19",
+              "valueDark": "#f5f3f1"
+            }
+          ]
+        },
+        {
+          "name": "Error",
+          "colors": [
+            {
+              "id": "6037abfc-9103-5b7a-a82f-6080cbbf7855",
+              "name": "Error 50",
+              "slug": "error-50",
+              "folder": "Error",
+              "value": "#dcc2b1",
+              "valueDark": "#2c2119"
+            },
+            {
+              "id": "ef5feea2-8c2d-5d14-8dae-c7a019ed8bc4",
+              "name": "Error 100",
+              "slug": "error-100",
+              "folder": "Error",
+              "value": "#dcaf90",
+              "valueDark": "#3a2a20"
+            },
+            {
+              "id": "122fb99c-488d-5d2b-8f36-065142bb79d2",
+              "name": "Error 200",
+              "slug": "error-200",
+              "folder": "Error",
+              "value": "#e19d6b",
+              "valueDark": "#483325"
+            },
+            {
+              "id": "1d92c2c0-3dcb-58a5-bbe2-a422bcb427ee",
+              "name": "Error 300",
+              "slug": "error-300",
+              "folder": "Error",
+              "value": "#e98d44",
+              "valueDark": "#593e2b"
+            },
+            {
+              "id": "49d353ba-9d2c-5bbc-b8bb-60c373f527e8",
+              "name": "Error 400",
+              "slug": "error-400",
+              "folder": "Error",
+              "value": "#dd6d00",
+              "valueDark": "#a27453"
+            },
+            {
+              "id": "84744baa-1e80-5a30-b0ab-f2bc79f9107f",
+              "name": "Error 500",
+              "slug": "error-500",
+              "folder": "Error",
+              "value": "#c04700",
+              "valueDark": "#be7c4a"
+            },
+            {
+              "id": "8177f1c6-eae1-557a-b572-6a08d6c12924",
+              "name": "Error 600",
+              "slug": "error-600",
+              "folder": "Error",
+              "value": "#aa3200",
+              "valueDark": "#d3905e"
+            },
+            {
+              "id": "63ae9de0-ca23-52c7-add3-51aed8d30537",
+              "name": "Error 700",
+              "slug": "error-700",
+              "folder": "Error",
+              "value": "#8d2600",
+              "valueDark": "#dfa47a"
+            },
+            {
+              "id": "954d7cc1-eafc-5faf-9e63-afed73e83380",
+              "name": "Error 800",
+              "slug": "error-800",
+              "folder": "Error",
+              "value": "#701c00",
+              "valueDark": "#e3b493"
+            },
+            {
+              "id": "a9f29bcc-87bd-55db-a11a-ae79690d894a",
+              "name": "Error 900",
+              "slug": "error-900",
+              "folder": "Error",
+              "value": "#551200",
+              "valueDark": "#e5c4ac"
+            }
+          ]
+        },
+        {
+          "name": "Warning",
+          "colors": [
+            {
+              "id": "1fcc85c7-ab99-5dfd-a2e5-9de3439dd5aa",
+              "name": "Warning 50",
+              "slug": "warning-50",
+              "folder": "Warning",
+              "value": "#dec0c0",
+              "valueDark": "#2e2020"
+            },
+            {
+              "id": "37333c62-f14a-5e1c-a940-c200d226c260",
+              "name": "Warning 100",
+              "slug": "warning-100",
+              "folder": "Warning",
+              "value": "#dfaaac",
+              "valueDark": "#3c2929"
+            },
+            {
+              "id": "6bbd24a9-776a-5441-9663-7e57cc8557c7",
+              "name": "Warning 200",
+              "slug": "warning-200",
+              "folder": "Warning",
+              "value": "#e59598",
+              "valueDark": "#4b3132"
+            },
+            {
+              "id": "cf8b1cff-aedb-5897-9a7e-1e868932300f",
+              "name": "Warning 300",
+              "slug": "warning-300",
+              "folder": "Warning",
+              "value": "#ee8389",
+              "valueDark": "#5c3b3c"
+            },
+            {
+              "id": "3b88e990-36e8-58ae-ac09-7a872a94b3aa",
+              "name": "Warning 400",
+              "slug": "warning-400",
+              "folder": "Warning",
+              "value": "#e25f6c",
+              "valueDark": null
+            },
+            {
+              "id": "05a85e7a-4820-5029-a77d-7428bd6da2c6",
+              "name": "Warning 500",
+              "slug": "warning-500",
+              "folder": "Warning",
+              "value": "#c7314a",
+              "valueDark": "#c8324a"
+            },
+            {
+              "id": "35c578dd-e6fa-54c6-bcc9-6b6dd64525fd",
+              "name": "Warning 600",
+              "slug": "warning-600",
+              "folder": "Warning",
+              "value": "#ad203b",
+              "valueDark": "#dc878b"
+            },
+            {
+              "id": "96ad9f98-fb77-5507-8f53-8295b84c1893",
+              "name": "Warning 700",
+              "slug": "warning-700",
+              "folder": "Warning",
+              "value": "#90152e",
+              "valueDark": "#ba3650"
+            },
+            {
+              "id": "63d985fa-17c1-572f-b30a-0c97b16a1e4d",
+              "name": "Warning 800",
+              "slug": "warning-800",
+              "folder": "Warning",
+              "value": "#730e23",
+              "valueDark": "#c4173a"
+            },
+            {
+              "id": "8cd5d903-1444-539b-974c-7b28a2e9f875",
+              "name": "Warning 900",
+              "slug": "warning-900",
+              "folder": "Warning",
+              "value": "#570718",
+              "valueDark": "#eabfc0"
+            }
+          ]
+        },
+        {
+          "name": "Success",
+          "colors": [
+            {
+              "id": "c7e10f5c-f9cf-5bfc-bbae-a72d778dbc07",
+              "name": "Success 50",
+              "slug": "success-50",
+              "folder": "Success",
+              "value": "#c3ccb9",
+              "valueDark": "#202519"
+            },
+            {
+              "id": "733c25b6-d9af-5b6f-9afc-ac3e91c6958b",
+              "name": "Success 100",
+              "slug": "success-100",
+              "folder": "Success",
+              "value": "#b1c09e",
+              "valueDark": "#29301f"
+            },
+            {
+              "id": "e8fa91ba-0d94-58f2-ac36-4ec4633a4569",
+              "name": "Success 200",
+              "slug": "success-200",
+              "folder": "Success",
+              "value": "#a0b882",
+              "valueDark": "#313b25"
+            },
+            {
+              "id": "fecf72fb-1f7b-5287-be0f-4eb145503af3",
+              "name": "Success 300",
+              "slug": "success-300",
+              "folder": "Success",
+              "value": "#95b46a",
+              "valueDark": "#3b472b"
+            },
+            {
+              "id": "3c9fca59-0e05-516d-abd0-f74d3e7719b8",
+              "name": "Success 400",
+              "slug": "success-400",
+              "folder": "Success",
+              "value": "#7a9f40",
+              "valueDark": "#6f8553"
+            },
+            {
+              "id": "9abe4ad7-ad40-5986-b144-0f1de5ae425f",
+              "name": "Success 500",
+              "slug": "success-500",
+              "folder": "Success",
+              "value": "#5a8100",
+              "valueDark": "#77954c"
+            },
+            {
+              "id": "a5466a11-9378-582c-b50e-20fdd4a7fa12",
+              "name": "Success 600",
+              "slug": "success-600",
+              "folder": "Success",
+              "value": "#4a6e00",
+              "valueDark": "#8aa85f"
+            },
+            {
+              "id": "d884a73d-94fa-5cc1-b80f-d477434a77ab",
+              "name": "Success 700",
+              "slug": "success-700",
+              "folder": "Success",
+              "value": "#3b5a00",
+              "valueDark": "#9eb87a"
+            },
+            {
+              "id": "4bc7aa45-5966-5995-8f60-aab909ea117b",
+              "name": "Success 800",
+              "slug": "success-800",
+              "folder": "Success",
+              "value": "#2d4600",
+              "valueDark": "#afc594"
+            },
+            {
+              "id": "bd461cd9-e8fb-5aef-a235-3660e27afd32",
+              "name": "Success 900",
+              "slug": "success-900",
+              "folder": "Success",
+              "value": "#203400",
+              "valueDark": "#bfcfac"
+            }
+          ]
+        },
+        {
+          "name": "Semantic",
+          "colors": [
+            {
+              "id": "771c081e-2154-4540-8649-fe0313d9b9a4",
+              "name": "Background Alt",
+              "slug": "background-alt",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Neutral 50"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "57ac04d7-ab2d-4ccc-85f5-b6571f127048",
+              "name": "Surface",
+              "slug": "surface",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Neutral 100"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "57a9fffe-2529-40a9-beb6-23879048441f",
+              "name": "Input Background",
+              "slug": "input-background",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Neutral 50"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "c4591ff2-7a6b-452f-9d00-290a21167d48",
+              "name": "Secondary Action",
+              "slug": "secondary-action",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Neutral 100"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "7cd49d1e-af9c-46a2-aeed-4a0c20bc3249",
+              "name": "Link",
+              "slug": "link",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Brand 700"
+              },
+              "valueDark": {
+                "alias": "Brand 400"
+              }
+            },
+            {
+              "id": "ab772735-67bc-47f9-b9d2-40f3f3480768",
+              "name": "Focus",
+              "slug": "focus",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Brand 500"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "75af6574-a3f8-489c-96b0-a2dadac4f1b2",
+              "name": "Status Info",
+              "slug": "status-info",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Brand 700"
+              },
+              "valueDark": {
+                "alias": "Brand 400"
+              }
+            },
+            {
+              "id": "4010b4c6-03b2-4940-86f0-86ffe20d4967",
+              "name": "Status Success",
+              "slug": "status-success",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Success 500"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "1bee0c76-e2b7-4770-a416-84dd7fabd8e3",
+              "name": "Status Warning",
+              "slug": "status-warning",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Warning 700"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "36738395-4ac9-43ba-840c-b1758baaac9f",
+              "name": "Status Error",
+              "slug": "status-error",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Error 700"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "c2123232-6eff-412c-9424-1bd51bb9f21c",
+              "name": "Control Border",
+              "slug": "control-border",
+              "folder": "Semantic",
+              "value": {
+                "alias": "Neutral 600"
+              },
+              "valueDark": null
+            }
+          ]
+        },
+        {
+          "name": "Data Viz",
+          "colors": [
+            {
+              "id": "4fbf7ffe-2c2f-4ddc-b81b-2eacd0f38e7f",
+              "name": "Viz Node",
+              "slug": "viz-node",
+              "folder": "Data Viz",
+              "value": {
+                "alias": "Palette Terracotta"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "defa73ea-3684-461d-a26f-4f866fbb0357",
+              "name": "Viz Edge",
+              "slug": "viz-edge",
+              "folder": "Data Viz",
+              "value": {
+                "alias": "Palette Sage"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "8d21df10-f99d-404b-a5a7-546e78a4d32f",
+              "name": "Quality High",
+              "slug": "quality-high",
+              "folder": "Data Viz",
+              "value": {
+                "alias": "Success 700"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "3be828d5-4aae-4895-8420-03a363854317",
+              "name": "Quality Medium",
+              "slug": "quality-medium",
+              "folder": "Data Viz",
+              "value": {
+                "alias": "Warning 700"
+              },
+              "valueDark": null
+            },
+            {
+              "id": "a18d553e-2183-44c7-87c5-fca998385c98",
+              "name": "Quality Low",
+              "slug": "quality-low",
+              "folder": "Data Viz",
+              "value": {
+                "alias": "Error 700"
+              },
+              "valueDark": null
+            }
+          ]
+        },
+        {
+          "name": "Palette",
+          "colors": [
+            {
+              "id": "464d935b-ff7d-4da7-bd8c-8e31664d2b78",
+              "name": "Palette Gold",
+              "slug": "palette-gold",
+              "folder": "Palette",
+              "value": "#d0cb93",
+              "valueDark": null
+            },
+            {
+              "id": "62f0ff21-430a-4889-99c4-6cc7c53cf002",
+              "name": "Palette Sage",
+              "slug": "palette-sage",
+              "folder": "Palette",
+              "value": "#a6b890",
+              "valueDark": null
+            },
+            {
+              "id": "99e3eb60-c866-434a-a9f0-afb9376a9287",
+              "name": "Palette Terracotta",
+              "slug": "palette-terracotta",
+              "folder": "Palette",
+              "value": "#ce9770",
+              "valueDark": null
+            },
+            {
+              "id": "b410f50e-2975-42bd-8a18-041809ebabb4",
+              "name": "Palette Crimson",
+              "slug": "palette-crimson",
+              "folder": "Palette",
+              "value": "#cc2747",
+              "valueDark": null
+            },
+            {
+              "id": "49d3e542-93a7-45f0-9d4b-acf23a24609b",
+              "name": "Palette Plum",
+              "slug": "palette-plum",
+              "folder": "Palette",
+              "value": "#431b3d",
+              "valueDark": null
+            }
+          ]
+        },
+        {
+          "name": "Blue",
+          "colors": [
+            {
+              "id": "d6a20d9c-15e3-46d4-bbc4-33ab2a8e3441",
+              "name": "Blue 50",
+              "slug": "blue-50",
+              "folder": "Blue",
+              "value": "#a6ccf7",
+              "valueDark": null
+            },
+            {
+              "id": "2553ba3a-eae8-4123-b71b-51076a99e99c",
+              "name": "Blue 100",
+              "slug": "blue-100",
+              "folder": "Blue",
+              "value": "#9cbde3",
+              "valueDark": null
+            },
+            {
+              "id": "e2b9a231-1c5d-4d98-91fe-fcc00097a374",
+              "name": "Blue 200",
+              "slug": "blue-200",
+              "folder": "Blue",
+              "value": "#91b1d6",
+              "valueDark": null
+            },
+            {
+              "id": "9e0fd50b-ef01-4eb3-b8d2-5dac6bd307bc",
+              "name": "Blue 300",
+              "slug": "blue-300",
+              "folder": "Blue",
+              "value": "#83abd8",
+              "valueDark": null
+            },
+            {
+              "id": "4f1758b2-1c7c-47b6-b944-a4167b15eadb",
+              "name": "Blue 400",
+              "slug": "blue-400",
+              "folder": "Blue",
+              "value": "#5094dd",
+              "valueDark": null
+            },
+            {
+              "id": "35322545-1dce-4ccb-a511-1e5a64b49603",
+              "name": "Blue 500",
+              "slug": "blue-500",
+              "folder": "Blue",
+              "value": "#0073cf",
+              "valueDark": null
+            },
+            {
+              "id": "16172635-564d-4ef2-b70a-f565fe3dfed4",
+              "name": "Blue 600",
+              "slug": "blue-600",
+              "folder": "Blue",
+              "value": "#0061b0",
+              "valueDark": null
+            },
+            {
+              "id": "8096cd37-81b2-4b01-8ade-07875c694413",
+              "name": "Blue 700",
+              "slug": "blue-700",
+              "folder": "Blue",
+              "value": "#004f91",
+              "valueDark": null
+            },
+            {
+              "id": "70cf861b-5c8b-44fd-b802-2d648b342d9b",
+              "name": "Blue 800",
+              "slug": "blue-800",
+              "folder": "Blue",
+              "value": "#003e73",
+              "valueDark": null
+            },
+            {
+              "id": "8e891a80-d278-44ee-8007-e0f82ba9800a",
+              "name": "Blue 900",
+              "slug": "blue-900",
+              "folder": "Blue",
+              "value": "#072d52",
+              "valueDark": null
+            }
+          ]
+        }
+      ],
+      "colors": [
+        {
+          "id": "43d09749-af55-59c4-9f13-dc8735f1911f",
+          "name": "Brand Primary",
+          "slug": "brand-primary",
+          "folder": null,
+          "value": "#cc2747",
+          "valueDark": null
+        },
+        {
+          "id": "95779bdb-eea3-5dc3-8687-a31b765ab51c",
+          "name": "Default Font",
+          "slug": "default-font",
+          "folder": null,
+          "value": {
+            "alias": "Neutral 900"
+          },
+          "valueDark": null
+        },
+        {
+          "id": "15afc3b8-faf9-4c6d-8a6c-66f747304a92",
+          "name": "Subtext Color",
+          "slug": "subtext-color",
+          "folder": null,
+          "value": {
+            "alias": "Neutral 700"
+          },
+          "valueDark": null
+        },
+        {
+          "id": "eea0575d-0c18-563e-96f5-82590d2e8cb4",
+          "name": "Neutral Border",
+          "slug": "neutral-border",
+          "folder": null,
+          "value": {
+            "alias": "Neutral 300"
+          },
+          "valueDark": null
+        },
+        {
+          "id": "15bf976a-a0cf-57fe-9ad6-c68eaefdaa73",
+          "name": "White",
+          "slug": "white",
+          "folder": null,
+          "value": {
+            "alias": "Neutral 0"
+          },
+          "valueDark": "#ffffff"
+        },
+        {
+          "id": "49e8e4fd-73fb-457b-ae9a-59c2d60e53ae",
+          "name": "Default Background",
+          "slug": "default-background",
+          "folder": null,
+          "value": {
+            "alias": "Neutral 0"
+          },
+          "valueDark": null
+        }
+      ],
+      "typography": [
+        {
+          "id": "74ff7c19-cf06-4d46-b6f5-f4f67f80c01f",
+          "name": "Caption",
+          "className": "text-caption font-caption",
+          "value": {
+            "fontFamily": "IBM Plex Sans",
+            "fontSize": 12,
+            "lineHeight": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0
+          },
+          "valueDark": null
+        },
+        {
+          "id": "91f04b45-21c6-490f-a542-0cad30e37851",
+          "name": "Caption Bold",
+          "className": "text-caption-bold font-caption-bold",
+          "value": {
+            "fontFamily": "IBM Plex Sans",
+            "fontSize": 12,
+            "lineHeight": 16,
+            "fontWeight": 600,
+            "letterSpacing": 0
+          },
+          "valueDark": null
+        },
+        {
+          "id": "96843630-9319-4a85-85dc-982f89b5248e",
+          "name": "Body",
+          "className": "text-body font-body",
+          "value": {
+            "fontFamily": "IBM Plex Sans",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "fontWeight": 400,
+            "letterSpacing": 0
+          },
+          "valueDark": null
+        },
+        {
+          "id": "5703d67f-c018-4542-8e4d-c430ec5bff80",
+          "name": "Body Bold",
+          "className": "text-body-bold font-body-bold",
+          "value": {
+            "fontFamily": "IBM Plex Sans",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "fontWeight": 600,
+            "letterSpacing": 0
+          },
+          "valueDark": null
+        },
+        {
+          "id": "6669bfe5-9eba-4038-9093-1ab4ca0420b7",
+          "name": "Heading 3",
+          "className": "text-heading-3 font-heading-3",
+          "value": {
+            "fontFamily": "IBM Plex Sans",
+            "fontSize": 16,
+            "lineHeight": 24,
+            "fontWeight": 600,
+            "letterSpacing": 0
+          },
+          "valueDark": null
+        },
+        {
+          "id": "5d99518c-1c47-4fb2-a873-8ffa0b0c47bc",
+          "name": "Heading 2",
+          "className": "text-heading-2 font-heading-2",
+          "value": {
+            "fontFamily": "IBM Plex Sans",
+            "fontSize": 20,
+            "lineHeight": 28,
+            "fontWeight": 600,
+            "letterSpacing": -0.01
+          },
+          "valueDark": null
+        },
+        {
+          "id": "beec3f95-d8b8-436e-bb58-a80ba91e165d",
+          "name": "Heading 1",
+          "className": "text-heading-1 font-heading-1",
+          "value": {
+            "fontFamily": "Zilla Slab",
+            "fontSize": 24,
+            "lineHeight": 32,
+            "fontWeight": 600,
+            "letterSpacing": -0.01
+          },
+          "valueDark": null
+        },
+        {
+          "id": "a3110ab3-e433-45a7-9efb-88968ea19c55",
+          "name": "Monospace Body",
+          "className": "text-monospace-body font-monospace-body",
+          "value": {
+            "fontFamily": "IBM Plex Mono",
+            "fontSize": 12,
+            "lineHeight": 20,
+            "fontWeight": 400,
+            "letterSpacing": 0
+          },
+          "valueDark": null
+        },
+        {
+          "id": "3bdb8d16-c66c-4907-b05b-707be9a54534",
+          "name": "Micro",
+          "className": "text-micro font-micro",
+          "value": {
+            "fontFamily": "IBM Plex Sans",
+            "fontSize": 10,
+            "lineHeight": 12,
+            "fontWeight": 500,
+            "letterSpacing": 0.04
+          },
+          "valueDark": null
+        }
+      ],
+      "corners": [
+        {
+          "id": "867fa889-b6ba-4ff1-9d23-11d06d1f9a5e",
+          "name": "Rounded Small",
+          "className": "rounded-sm",
+          "value": {
+            "radius": 2
+          },
+          "valueDark": null
+        },
+        {
+          "id": "05ebad98-ce65-4785-9582-ebf66b8f5bf4",
+          "name": "Rounded Medium",
+          "className": "rounded-md",
+          "value": {
+            "radius": 4
+          },
+          "valueDark": null
+        },
+        {
+          "id": "f2f989e0-f992-4132-a66e-2f921d3d3329",
+          "name": "Rounded Large",
+          "className": "rounded-lg",
+          "value": {
+            "radius": 8
+          },
+          "valueDark": null
+        },
+        {
+          "id": "97fbebb9-78da-47ab-b512-d17f42ae7212",
+          "name": "Circular",
+          "className": "rounded-full",
+          "value": {
+            "radius": 9999
+          },
+          "valueDark": null
+        }
+      ],
+      "shadows": [
+        {
+          "id": "a1555c69-076b-4c7f-a5b3-da49730a7be2",
+          "name": "Shadow Small",
+          "className": "shadow-sm",
+          "value": [
+            {
+              "x": 0,
+              "y": 1,
+              "blur": 2,
+              "spread": 0,
+              "color": "#0000000d",
+              "inset": false
+            }
+          ],
+          "valueDark": null
+        },
+        {
+          "id": "c9d6145d-b192-473f-a9c4-cf8ed328d509",
+          "name": "Shadow Medium",
+          "className": "shadow-md",
+          "value": [
+            {
+              "x": 0,
+              "y": 4,
+              "blur": 16,
+              "spread": -2,
+              "color": "#00000014",
+              "inset": false
+            },
+            {
+              "x": 0,
+              "y": 2,
+              "blur": 4,
+              "spread": -1,
+              "color": "#00000014",
+              "inset": false
+            }
+          ],
+          "valueDark": null
+        },
+        {
+          "id": "445ef484-b6fa-4143-829a-cd950b8d5659",
+          "name": "Shadow Large",
+          "className": "shadow-lg",
+          "value": [
+            {
+              "x": 0,
+              "y": 12,
+              "blur": 32,
+              "spread": -4,
+              "color": "#00000014",
+              "inset": false
+            },
+            {
+              "x": 0,
+              "y": 4,
+              "blur": 8,
+              "spread": -2,
+              "color": "#00000014",
+              "inset": false
+            }
+          ],
+          "valueDark": null
+        }
+      ],
+      "borders": [
+        {
+          "id": "087422bd-1696-4959-b2aa-ab863991f603",
+          "name": "Primary Border Style",
+          "className": "border border-solid border-brand-primary",
+          "value": {
+            "width": 1,
+            "style": "solid",
+            "color": {
+              "alias": "Brand Primary"
+            }
+          },
+          "valueDark": null
+        },
+        {
+          "id": "7e2c3df6-c7d2-4c14-bb87-f267df58e332",
+          "name": "Neutral Border Style",
+          "className": "border border-solid border-neutral-border",
+          "value": {
+            "width": 1,
+            "style": "solid",
+            "color": {
+              "alias": "Neutral Border"
+            }
+          },
+          "valueDark": null
+        },
+        {
+          "id": "ebccfec9-d5af-474d-9e8f-62eba4f4a8ec",
+          "name": "Focus Border Style",
+          "className": "border-2 border-solid border-focus",
+          "value": {
+            "width": 2,
+            "style": "solid",
+            "color": {
+              "alias": "Focus"
+            }
+          },
+          "valueDark": null
+        },
+        {
+          "id": "5861b77b-32bb-4191-b213-9d15d0349138",
+          "name": "Control Border Style",
+          "className": "border border-solid border-control-border",
+          "value": {
+            "width": 1,
+            "style": "solid",
+            "color": {
+              "alias": "Control Border"
+            }
+          },
+          "valueDark": null
+        }
+      ]
+    },
+    "breakpoints": [
+      {
+        "id": "f21c2be6-660f-41f8-a812-ea0164ffdd77",
+        "name": "Desktop",
+        "prefix": null,
+        "minWidth": 768,
+        "maxWidth": null,
+        "isDefault": true
+      },
+      {
+        "id": "bcc7ff9f-53ab-46ee-8a1f-3c61f62c6b25",
+        "name": "Mobile",
+        "prefix": "mobile:",
+        "minWidth": null,
+        "maxWidth": 767,
+        "isDefault": false
+      }
+    ],
+    "availableFonts": [
+      "Afacad Flux",
+      "Archivo",
+      "Arimo",
+      "Arvo",
+      "Asap",
+      "Assistant",
+      "Barlow",
+      "Barlow Condensed",
+      "Bitter",
+      "Bokor",
+      "Cabin",
+      "Cairo",
+      "Catamaran",
+      "Chakra Petch",
+      "Comfortaa",
+      "Cormorant Garamond",
+      "Crimson Text",
+      "DM Mono",
+      "DM Sans",
+      "Domine",
+      "Dosis",
+      "EB Garamond",
+      "Epilogue",
+      "Exo",
+      "Exo 2",
+      "Figtree",
+      "Fira Sans",
+      "Fira Sans Condensed",
+      "Fjalla One",
+      "Fragment Mono",
+      "Funnel Display",
+      "Funnel Sans",
+      "Gabarito",
+      "Geist",
+      "Heebo",
+      "Hind",
+      "Hind Siliguri",
+      "Host Grotesk",
+      "Hubot Sans",
+      "IBM Plex Mono",
+      "IBM Plex Sans",
+      "IBM Plex Serif",
+      "Inconsolata",
+      "Instrument Sans",
+      "Instrument Serif",
+      "Inter",
+      "Inter Tight",
+      "Josefin Sans",
+      "Josefin Slab",
+      "Jost",
+      "Jura",
+      "Kanit",
+      "Karla",
+      "Kode Mono",
+      "Lato",
+      "Lexend",
+      "Libre Baskerville",
+      "Libre Franklin",
+      "Lilita One",
+      "Lora",
+      "M PLUS 1p",
+      "M PLUS Rounded 1c",
+      "Manrope",
+      "Maven Pro",
+      "Merriweather",
+      "Merriweather Sans",
+      "Mona Sans",
+      "monospace",
+      "Montserrat",
+      "Mukta",
+      "Mulish",
+      "Nanum Gothic",
+      "Nanum Myeongjo",
+      "National Park",
+      "Newsreader",
+      "Noto Sans",
+      "Noto Sans Display",
+      "Noto Serif",
+      "Nunito",
+      "Nunito Sans",
+      "Onest",
+      "Open Sans",
+      "Orbitron",
+      "Oswald",
+      "Outfit",
+      "Overpass",
+      "Oxygen",
+      "Pathway Extreme",
+      "Petrona",
+      "Playfair",
+      "Playfair Display",
+      "Plus Jakarta Sans",
+      "Poppins",
+      "Prompt",
+      "PT Sans",
+      "PT Serif",
+      "Public Sans",
+      "Quicksand",
+      "Rajdhani",
+      "Raleway",
+      "Red Hat Display",
+      "Red Hat Mono",
+      "Red Hat Text",
+      "Reddit Mono",
+      "Reddit Sans",
+      "Reddit Sans Condensed",
+      "Rethink Sans",
+      "Roboto",
+      "Roboto Condensed",
+      "Roboto Flex",
+      "Roboto Mono",
+      "Roboto Slab",
+      "Rowdies",
+      "Rubik",
+      "Saira",
+      "Saira Condensed",
+      "Sarabun",
+      "Schibsted Grotesk",
+      "Smooch Sans",
+      "Sora",
+      "Source Code Pro",
+      "Source Sans 3",
+      "Source Serif 4",
+      "Space Grotesk",
+      "Spectral",
+      "SUSE",
+      "Teachers",
+      "Teko",
+      "Tektur",
+      "Titillium Web",
+      "Ubuntu",
+      "Ubuntu Sans",
+      "Ubuntu Sans Mono",
+      "Urbanist",
+      "Vollkorn",
+      "Work Sans",
+      "Zilla Slab"
+    ]
+  },
+  "components": [
+    {
+      "id": "4ed46422-ecc3-41e8-8787-e55ee10cdc75",
+      "name": "Tree View",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/4ed46422-ecc3-41e8-8787-e55ee10cdc75/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "ccebd1e9-f6ac-4737-8376-0dfacd90c9f3",
+      "name": "Tooltip",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/ccebd1e9-f6ac-4737-8376-0dfacd90c9f3/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "2026f10a-e3cc-4c89-80da-a7259acae3b7",
+      "name": "Toggle Group",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/2026f10a-e3cc-4c89-80da-a7259acae3b7/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "2c7966c2-a95d-468a-83fe-bf196b95be7a",
+      "name": "Toast",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/2c7966c2-a95d-468a-83fe-bf196b95be7a/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "4ec05ee8-8f1c-46b2-b863-5419aa7f5cce",
+      "name": "Text Area",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/4ec05ee8-8f1c-46b2-b863-5419aa7f5cce/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "be48ca43-f8e7-4c0e-8870-d219ea11abfe",
+      "name": "Text Field",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/be48ca43-f8e7-4c0e-8870-d219ea11abfe/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "e1ad5091-8ad8-4319-b1f7-3e47f0256c20",
+      "name": "Tabs",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/e1ad5091-8ad8-4319-b1f7-3e47f0256c20/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "142dfde7-d0cc-48a1-a04c-a08ab2252633",
+      "name": "Table",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/142dfde7-d0cc-48a1-a04c-a08ab2252633/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "7a464794-9ea9-4040-b1de-5bfb2ce599d9",
+      "name": "Switch",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/7a464794-9ea9-4040-b1de-5bfb2ce599d9/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "bdc0291d-b5be-40c5-ae2f-527a868488b2",
+      "name": "Vertical Stepper",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/bdc0291d-b5be-40c5-ae2f-527a868488b2/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "3c5d47dc-1b1a-45d9-b244-18422d7bfb56",
+      "name": "Stepper",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/3c5d47dc-1b1a-45d9-b244-18422d7bfb56/edit",
+      "lastModifiedAt": "2026-11-12T10:24:25.636Z",
+      "folder": null
+    },
+    {
+      "id": "f4092874-0320-449e-a0c5-b435987c4cfb",
+      "name": "Slider",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/f4092874-0320-449e-a0c5-b435987c4cfb/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "a9aae3f0-955e-4607-a272-374f1dc18f4b",
+      "name": "Skeleton Text",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/a9aae3f0-955e-4607-a272-374f1dc18f4b/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "8b6e7a84-358f-4dc5-9de8-792a18fa9955",
+      "name": "Skeleton Circle",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/8b6e7a84-358f-4dc5-9de8-792a18fa9955/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "bb88f90b-8c43-4b73-9c2f-3558ce7838f3",
+      "name": "Select",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/bb88f90b-8c43-4b73-9c2f-3558ce7838f3/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "c4b6300e-20b4-4f3e-8b9f-379a046674ca",
+      "name": "Radio Group",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/c4b6300e-20b4-4f3e-8b9f-379a046674ca/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "6d5193b8-6043-4dc1-aad5-7f902ef872df",
+      "name": "Radio Card Group",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/6d5193b8-6043-4dc1-aad5-7f902ef872df/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "60964db0-a1bf-428b-b9d5-f34cdf58ea77",
+      "name": "Progress",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/60964db0-a1bf-428b-b9d5-f34cdf58ea77/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "0654ccc7-054c-4f3a-8e9a-b7c81dd3963c",
+      "name": "Pie Chart",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/0654ccc7-054c-4f3a-8e9a-b7c81dd3963c/edit",
+      "lastModifiedAt": "2026-11-02T10:44:21.973Z",
+      "folder": null
+    },
+    {
+      "id": "f2e570c8-e463-45c2-aae9-a960146bc5d5",
+      "name": "Loader",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/f2e570c8-e463-45c2-aae9-a960146bc5d5/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "a4ee726a-774c-4091-8c49-55b659356024",
+      "name": "Link Button",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/a4ee726a-774c-4091-8c49-55b659356024/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "22944dd2-3cdd-42fd-913a-1b11a3c1d16d",
+      "name": "Line Chart",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/22944dd2-3cdd-42fd-913a-1b11a3c1d16d/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "c5d68c0e-4c0c-4cff-8d8c-6ff334859b3a",
+      "name": "Icon with background",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/c5d68c0e-4c0c-4cff-8d8c-6ff334859b3a/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "af9405b1-8c54-4e01-9786-5aad308224f6",
+      "name": "Icon Button",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/af9405b1-8c54-4e01-9786-5aad308224f6/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "3f094173-71de-4378-a09a-05c482f7a137",
+      "name": "Fullscreen Dialog",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/3f094173-71de-4378-a09a-05c482f7a137/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "99951515-459b-4286-919e-a89e7549b43b",
+      "name": "Dropdown Menu",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/99951515-459b-4286-919e-a89e7549b43b/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "1e71b2cb-8d72-4e67-b368-8805179e9444",
+      "name": "Drawer",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/1e71b2cb-8d72-4e67-b368-8805179e9444/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "ca59db17-43fb-4247-8094-3c55162e902d",
+      "name": "Dialog",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/ca59db17-43fb-4247-8094-3c55162e902d/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "e8c76626-6462-4f2f-b595-38d530d427e8",
+      "name": "Copy to clipboard button",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/e8c76626-6462-4f2f-b595-38d530d427e8/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "f8a49f07-fa5b-46c8-9399-cbbf0930cc62",
+      "name": "Context Menu",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/f8a49f07-fa5b-46c8-9399-cbbf0930cc62/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "f9f1b596-c6b3-4d60-aa9a-f34b353f8aa5",
+      "name": "Checkbox Group",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/f9f1b596-c6b3-4d60-aa9a-f34b353f8aa5/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "de0b4dfb-3946-4702-be52-5678dd71925a",
+      "name": "Checkbox Card",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/de0b4dfb-3946-4702-be52-5678dd71925a/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "3816e3b5-c48c-499b-b45e-0777c6972523",
+      "name": "Checkbox",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/3816e3b5-c48c-499b-b45e-0777c6972523/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "5a87e517-ace2-49af-adcf-076c97ec3921",
+      "name": "Calendar",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/5a87e517-ace2-49af-adcf-076c97ec3921/edit",
+      "lastModifiedAt": "2026-11-03T09:55:59.405Z",
+      "folder": null
+    },
+    {
+      "id": "3b777358-b86b-40af-9327-891efc6826fe",
+      "name": "Button",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/3b777358-b86b-40af-9327-891efc6826fe/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "8898334b-a66f-4ee8-8bd1-afcfa8e37cc0",
+      "name": "Breadcrumbs",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/8898334b-a66f-4ee8-8bd1-afcfa8e37cc0/edit",
+      "lastModifiedAt": "2026-11-10T09:09:58.996Z",
+      "folder": null
+    },
+    {
+      "id": "4d4f30e7-1869-4980-8b96-617df3b37912",
+      "name": "Bar Chart",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/4d4f30e7-1869-4980-8b96-617df3b37912/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "97bdb082-1124-4dd7-a335-b14b822d0157",
+      "name": "Badge",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/97bdb082-1124-4dd7-a335-b14b822d0157/edit",
+      "lastModifiedAt": "2026-11-03T11:48:08.824Z",
+      "folder": null
+    },
+    {
+      "id": "bec25ae6-5010-4485-b46b-cf79e3943ab2",
+      "name": "Avatar",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/bec25ae6-5010-4485-b46b-cf79e3943ab2/edit",
+      "lastModifiedAt": "2026-11-03T08:34:28.189Z",
+      "folder": null
+    },
+    {
+      "id": "8aa1e7b3-5db6-4a62-aa49-137ced21a231",
+      "name": "Area Chart",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/8aa1e7b3-5db6-4a62-aa49-137ced21a231/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "3a65613d-d546-467c-80f4-aaba6a7edcd5",
+      "name": "Alert",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/3a65613d-d546-467c-80f4-aaba6a7edcd5/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "d2e81e20-863a-4027-826a-991d8910efd9",
+      "name": "Accordion",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/d2e81e20-863a-4027-826a-991d8910efd9/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "2f6803ed-5ed0-4934-b093-a1a46df2d1d1",
+      "name": "Drawer Layout",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/2f6803ed-5ed0-4934-b093-a1a46df2d1d1/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "ff4920a8-df26-4012-934d-0a9edbf5e373",
+      "name": "Dialog Layout",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/ff4920a8-df26-4012-934d-0a9edbf5e373/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "a57b1c43-310a-493f-b807-8cc88e2452cf",
+      "name": "Default Page Layout",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/a57b1c43-310a-493f-b807-8cc88e2452cf/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "f4047c8b-cfb4-4761-b9cf-fbcae8a9b9b5",
+      "name": "Sidebar with sections",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/f4047c8b-cfb4-4761-b9cf-fbcae8a9b9b5/edit",
+      "lastModifiedAt": null,
+      "folder": null
+    },
+    {
+      "id": "572ed53f-503e-44d6-aee9-06f043ab708f",
+      "name": "Combobox",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/572ed53f-503e-44d6-aee9-06f043ab708f/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "c63eaa65-f318-4ba2-8422-e7209b7a0776",
+      "name": "Field",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/c63eaa65-f318-4ba2-8422-e7209b7a0776/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "a2c9b4d2-7c0d-401b-aa4c-fc3e223a5bf7",
+      "name": "Code Block",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/a2c9b4d2-7c0d-401b-aa4c-fc3e223a5bf7/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "901f7cdd-561b-4431-9723-1bfa7bea34fc",
+      "name": "Timeline",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/901f7cdd-561b-4431-9723-1bfa7bea34fc/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "ccfa9293-8788-404c-b91a-0deacfbbbd2d",
+      "name": "Collapsible Section",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/ccfa9293-8788-404c-b91a-0deacfbbbd2d/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "2127be4a-5177-436c-8d65-13ab999d6d05",
+      "name": "Card",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/2127be4a-5177-436c-8d65-13ab999d6d05/edit",
+      "lastModifiedAt": "2026-11-02T10:32:10.714Z",
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "51039ade-e3c8-40b5-ad2f-d4b4b55e4d10",
+      "name": "List Item",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/51039ade-e3c8-40b5-ad2f-d4b4b55e4d10/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "7986d0d8-90fb-4e83-9da2-e494ea666bf9",
+      "name": "Pagination",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/7986d0d8-90fb-4e83-9da2-e494ea666bf9/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "755e1abd-8173-425f-908b-02bbf18de868",
+      "name": "Empty State",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/755e1abd-8173-425f-908b-02bbf18de868/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "d1385603-a279-4b61-9f0e-8e333d303000",
+      "name": "Kbd",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/d1385603-a279-4b61-9f0e-8e333d303000/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "3462e84c-0dff-4f41-a482-c82aa7028b94",
+      "name": "Separator",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/3462e84c-0dff-4f41-a482-c82aa7028b94/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "6e1dfd8f-21b5-47e2-a9b8-daeb87811b28",
+      "name": "Hover Card",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/6e1dfd8f-21b5-47e2-a9b8-daeb87811b28/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "e81bf0f6-8602-4e61-842f-4feb3e380278",
+      "name": "Bubble",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/e81bf0f6-8602-4e61-842f-4feb3e380278/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f26914c3-164a-4129-8249-34686dcfde88",
+        "name": "Chat & XAI"
+      }
+    },
+    {
+      "id": "eb8352b0-43ef-423d-be5c-666d761e94ae",
+      "name": "Trace",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/eb8352b0-43ef-423d-be5c-666d761e94ae/edit",
+      "lastModifiedAt": "2026-11-12T12:02:08.187Z",
+      "folder": {
+        "id": "f26914c3-164a-4129-8249-34686dcfde88",
+        "name": "Chat & XAI"
+      }
+    },
+    {
+      "id": "04965ff0-73a6-4caf-80a7-d1b418087caf",
+      "name": "Map Marker",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/04965ff0-73a6-4caf-80a7-d1b418087caf/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "9b46ea44-bb19-4c39-8111-a5e0a8b5e868",
+      "name": "Diff Viewer",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/9b46ea44-bb19-4c39-8111-a5e0a8b5e868/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "fd7ae17a-700d-474c-87f6-18e37f9a9538",
+      "name": "Network Graph",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/fd7ae17a-700d-474c-87f6-18e37f9a9538/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "0da861fc-1807-4515-9ddf-b742862433b6",
+      "name": "Rich Text Editor",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/0da861fc-1807-4515-9ddf-b742862433b6/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "0482c2f1-e413-49dd-9927-40eb61a30744",
+      "name": "Mapping Board",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/0482c2f1-e413-49dd-9927-40eb61a30744/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "d40a6fc6-b9dd-4dc1-8ed9-32fd268f751c",
+      "name": "App Header",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/d40a6fc6-b9dd-4dc1-8ed9-32fd268f751c/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "3ce9dcd5-cad3-4764-a79b-0c60dc0fb883",
+        "name": "Layout"
+      }
+    },
+    {
+      "id": "2a67c8d0-517c-45ff-a656-fe8d8b3c7d62",
+      "name": "Footer",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/2a67c8d0-517c-45ff-a656-fe8d8b3c7d62/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "3ce9dcd5-cad3-4764-a79b-0c60dc0fb883",
+        "name": "Layout"
+      }
+    },
+    {
+      "id": "eb55cc42-cd9b-43a6-9f3e-e5005c3c1da6",
+      "name": "Nav Rail",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/eb55cc42-cd9b-43a6-9f3e-e5005c3c1da6/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "3ce9dcd5-cad3-4764-a79b-0c60dc0fb883",
+        "name": "Layout"
+      }
+    },
+    {
+      "id": "151784fc-e517-47fd-ab4b-6c4438f46e00",
+      "name": "Language Selector",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/151784fc-e517-47fd-ab4b-6c4438f46e00/edit",
+      "lastModifiedAt": "2026-11-13T14:32:38.608Z",
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "4a976f46-b66c-4437-a288-d32e9011b924",
+      "name": "Message",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/4a976f46-b66c-4437-a288-d32e9011b924/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f26914c3-164a-4129-8249-34686dcfde88",
+        "name": "Chat & XAI"
+      }
+    },
+    {
+      "id": "1ccf3fee-4ecc-4fef-95dc-e816c9a37430",
+      "name": "Form",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/1ccf3fee-4ecc-4fef-95dc-e816c9a37430/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "429c1bb3-cd59-42e2-be16-748778e06a37",
+      "name": "Map",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/429c1bb3-cd59-42e2-be16-748778e06a37/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "8da334cb-147c-4edf-9d30-7385c586588d",
+      "name": "Message Scroller",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/8da334cb-147c-4edf-9d30-7385c586588d/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f26914c3-164a-4129-8249-34686dcfde88",
+        "name": "Chat & XAI"
+      }
+    },
+    {
+      "id": "c262cbfc-6177-4a79-9a3f-fb84b814a444",
+      "name": "Workspace Selector",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/c262cbfc-6177-4a79-9a3f-fb84b814a444/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "3ce9dcd5-cad3-4764-a79b-0c60dc0fb883",
+        "name": "Layout"
+      }
+    },
+    {
+      "id": "502e687b-05fe-4c93-9528-46408849a7c7",
+      "name": "Split Button",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/502e687b-05fe-4c93-9528-46408849a7c7/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "e378db25-6700-48a8-97d0-74f186cd2300",
+      "name": "Page Header",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/e378db25-6700-48a8-97d0-74f186cd2300/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "3ce9dcd5-cad3-4764-a79b-0c60dc0fb883",
+        "name": "Layout"
+      }
+    },
+    {
+      "id": "e3df883d-f6dd-4c72-962f-ea379f20a013",
+      "name": "Table Toolbar",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/e3df883d-f6dd-4c72-962f-ea379f20a013/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "fa7248db-488a-485f-a741-1cca1f77eaae",
+      "name": "Number Stepper",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/fa7248db-488a-485f-a741-1cca1f77eaae/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "38098dc1-a826-4462-82e4-438f2346003f",
+      "name": "Description List",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/38098dc1-a826-4462-82e4-438f2346003f/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "c7f3e57c-0d2a-4a98-a66f-58940a94dccb",
+      "name": "Action Tile",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/c7f3e57c-0d2a-4a98-a66f-58940a94dccb/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "3fdc023c-0b6d-466a-9eb7-99f543e8c4e8",
+      "name": "Guide Panel",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/3fdc023c-0b6d-466a-9eb7-99f543e8c4e8/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "d0871fd6-b3e9-49a5-8609-21d2f933778b",
+        "name": "Feedback"
+      }
+    },
+    {
+      "id": "5b4f371e-806d-4bde-85f1-5112c3a1edb5",
+      "name": "Setting Row",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/5b4f371e-806d-4bde-85f1-5112c3a1edb5/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "82d24133-ddde-42c2-b797-87227858026a",
+      "name": "Query Editor",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/82d24133-ddde-42c2-b797-87227858026a/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "4b179e79-16ff-4e4d-819c-1bcd9283fb8e",
+      "name": "Workspace Picker",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/4b179e79-16ff-4e4d-819c-1bcd9283fb8e/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "3ce9dcd5-cad3-4764-a79b-0c60dc0fb883",
+        "name": "Layout"
+      }
+    },
+    {
+      "id": "b671c29d-1a30-4b6d-82bc-e0bcb0eb9eae",
+      "name": "Import File Row",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/b671c29d-1a30-4b6d-82bc-e0bcb0eb9eae/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "468ef516-8afd-4409-bddc-34260590624e",
+      "name": "Graph Config Row",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/468ef516-8afd-4409-bddc-34260590624e/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "a02600a2-2919-4c24-ab07-ebca5b3f127d",
+      "name": "Class Relationships Panel",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/a02600a2-2919-4c24-ab07-ebca5b3f127d/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "3d984d68-acf4-4d1a-9a17-40aecf93ab93",
+      "name": "Agent Config Dialog",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/3d984d68-acf4-4d1a-9a17-40aecf93ab93/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "f26914c3-164a-4129-8249-34686dcfde88",
+        "name": "Chat & XAI"
+      }
+    },
+    {
+      "id": "2c585ee9-3370-4903-baf4-93ac0fb0ee94",
+      "name": "Graph Toolbar",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/2c585ee9-3370-4903-baf4-93ac0fb0ee94/edit",
+      "lastModifiedAt": null,
+      "folder": {
+        "id": "a8ab71ea-c600-4d21-8b2a-80d463e48ba2",
+        "name": "Knowledge Graph"
+      }
+    },
+    {
+      "id": "c3d8abca-82de-4228-9c4b-b7e8295ebc4e",
+      "name": "breadcrumbs main process",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/c3d8abca-82de-4228-9c4b-b7e8295ebc4e/edit",
+      "lastModifiedAt": "2026-11-10T09:01:02.635Z",
+      "folder": null
+    },
+    {
+      "id": "9fc7e5fe-bae1-400d-b0f4-8bdeb6689495",
+      "name": "Dashboard Stepper",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/9fc7e5fe-bae1-400d-b0f4-8bdeb6689495/edit",
+      "lastModifiedAt": "2026-11-16T11:16:39.329Z",
+      "folder": {
+        "id": "f702f07e-737b-4759-84e2-275f2c1ab214",
+        "name": "Primitives"
+      }
+    },
+    {
+      "id": "c0a318dd-60e7-4c17-a0da-eb88fea6dde3",
+      "name": "PipelineStepper",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/c0a318dd-60e7-4c17-a0da-eb88fea6dde3/edit",
+      "lastModifiedAt": "2026-11-18T13:51:25.934Z",
+      "folder": null
+    },
+    {
+      "id": "38e4b432-e4b1-4c7c-9bcc-58882a21a4d3",
+      "name": "Process Stepper",
+      "url": "https://app.subframe.com/fbbaaa9a39d6/design/38e4b432-e4b1-4c7c-9bcc-58882a21a4d3/edit",
+      "lastModifiedAt": "2026-11-18T13:55:31.547Z",
+      "folder": null
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+---
+import { ACTIVE_MAIN, MAIN_STEPS } from "@/data/pipeline-flow";
+
+const { pipelineStep, showMain } = Astro.props;
+const activeMain = ACTIVE_MAIN[pipelineStep] ?? 0;
+---
+
+{
+  showMain && (
+    <div class="pipeline-flow" data-pipeline={pipelineStep}>
+      {showMain ? (
+        <nav class="pf-main" aria-label="Pipeline stages">
+          {MAIN_STEPS.map((step, index) => (
+            <>
+              <a
+                class:list={["pf-step", { "is-active": index === activeMain, "is-done": index < activeMain }]}
+                href={step.route}
+                aria-current={index === activeMain ? "step" : undefined}
+              >
+                <span class="pf-num">{index + 1}</span>
+                <span class="pf-label">{step.label}</span>
+              </a>
+              {index < MAIN_STEPS.length - 1 ? <span class="pf-line" aria-hidden="true" /> : null}
+            </>
+          ))}
+          <span class="pf-stage">stage {activeMain + 1} of {MAIN_STEPS.length}</span>
+        </nav>
+      ) : null}
+
+    </div>
+  )
+}
+
+<style>
+  .pipeline-flow {
+    width: 100%;
+    padding: 8px 24px 0;
+    font-family: var(--font-caption);
+  }
+
+  .pf-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border: 1px solid var(--color-neutral-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-default-background);
+    padding: 8px 12px;
+    box-shadow: var(--shadow-sm);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .pf-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--color-subtext-color);
+  }
+
+  .pf-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex: none;
+    border-radius: 999px;
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-600);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .pf-label {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .pf-step.is-active .pf-num {
+    background: var(--color-brand-500);
+    color: white;
+  }
+
+  .pf-step.is-active .pf-label {
+    color: var(--color-brand-700);
+    font-weight: 700;
+  }
+
+  .pf-step.is-done .pf-num {
+    background: var(--color-success-100);
+    color: var(--color-success-800);
+  }
+
+  .pf-line {
+    height: 1px;
+    min-width: 8px;
+    flex: 1 1 auto;
+    background: var(--color-neutral-300);
+  }
+
+  .pf-stage {
+    flex: none;
+    margin-left: auto;
+    padding-left: 8px;
+    font-size: 10px;
+    color: var(--color-subtext-color);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 900px) {
+    .pipeline-flow {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+</style>

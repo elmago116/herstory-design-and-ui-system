@@ -1,0 +1,14 @@
+# Linux renderer gate — run the parity harness where the text stack matches the
+# Subframe export (FreeType instead of CoreText), removing the metric cascade.
+# §11 option 1. Reference PNGs were produced on Subframe's Linux renderer.
+# Usage: see scripts/linux-gate.sh
+FROM mcr.microsoft.com/playwright:v1.56.0-noble
+
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY . .
+
+# The harness needs Chromium (installed in the playwright base image),
+# the fonts self-hosted in the repo, and nothing else from the network.
+CMD ["npx", "playwright", "install", "chromium"]

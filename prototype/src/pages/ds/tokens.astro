@@ -1,0 +1,115 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import Board from "@/layouts/Board.astro";
+
+const themeCss = fs.readFileSync(path.join(process.cwd(), "src/ui/theme.css"), "utf8");
+
+const colorVars = [...themeCss.matchAll(/--color-([a-z0-9-]+):\s*([^;]+);/g)].map((m) => ({
+  name: m[1],
+  value: m[2].trim(),
+}));
+
+const groups = new Map<string, typeof colorVars>();
+for (const c of colorVars) {
+  const group = c.name.includes("-") ? c.name.split("-")[0] : "base";
+  if (!groups.has(group)) groups.set(group, []);
+  groups.get(group)!.push(c);
+}
+
+const textStyles = [...themeCss.matchAll(/--text-([a-z0-9-]+)--font-size:/g)].map((m) => m[1]);
+const fontVars = [...themeCss.matchAll(/--font-([a-z0-9-]+):\s*([^;]+);/g)].map((m) => ({
+  name: m[1],
+  value: m[2].trim(),
+}));
+const radii = [...themeCss.matchAll(/--radius-([a-z0-9-]+):\s*([^;]+);/g)].map((m) => ({
+  name: m[1],
+  value: m[2].trim(),
+}));
+const shadows = [...themeCss.matchAll(/--shadow-([a-z0-9-]+):\s*([^;]+);/g)].map((m) => ({
+  name: m[1],
+  value: m[2].trim(),
+}));
+---
+
+<Board title="HerStory tokens — Foundations">
+  <main class="flex w-full flex-col gap-10 bg-default-background px-12 py-12">
+    <header class="flex flex-col gap-2">
+      <span class="text-micro font-micro uppercase text-subtext-color">HERSTORY · FOUNDATIONS</span>
+      <h1 class="text-heading-1 font-heading-1 text-default-font">Design tokens</h1>
+      <p class="max-w-[720px] text-body font-body text-subtext-color">
+        Parsed at build time from <code>src/ui/theme.css</code>, the file copied verbatim from the
+        Subframe sync. No Subframe runtime is involved; these are plain CSS custom properties.
+      </p>
+    </header>
+
+    {
+      [...groups.entries()].map(([group, colors]) => (
+        <section class="flex flex-col gap-3">
+          <h2 class="text-heading-3 font-heading-3 text-default-font capitalize">{group}</h2>
+          <div class="flex flex-wrap gap-3">
+            {colors.map((c) => (
+              <div class="flex w-[150px] flex-col gap-1 rounded-md border border-solid border-neutral-border p-2">
+                <div
+                  class="h-10 w-full rounded-sm border border-solid border-neutral-200"
+                  style={`background: var(--color-${c.name})`}
+                />
+                <span class="text-caption font-caption text-default-font">{c.name}</span>
+                <span class="text-micro font-micro text-subtext-color">{c.value}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))
+    }
+
+    <section class="flex flex-col gap-3">
+      <h2 class="text-heading-3 font-heading-3 text-default-font">Typography</h2>
+      <div class="flex flex-col gap-2 rounded-md border border-solid border-neutral-border p-4">
+        {
+          textStyles.map((s) => (
+            <div class="flex items-baseline gap-4">
+              <span class="w-[140px] text-micro font-micro uppercase text-subtext-color">{s}</span>
+              <span class={`text-${s} font-${s} text-default-font`}>
+                The Pallars Jussà collection · 1936
+              </span>
+            </div>
+          ))
+        }
+      </div>
+      <div class="flex flex-wrap gap-4">
+        {fontVars.map((f) => (
+          <div class="flex flex-col gap-1 rounded-md border border-solid border-neutral-border px-3 py-2">
+            <span class="text-micro font-micro uppercase text-subtext-color">{f.name}</span>
+            <span class="text-body font-body" style={`font-family: var(--font-${f.name})`}>
+              {f.value}
+            </span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-3">
+      <h2 class="text-heading-3 font-heading-3 text-default-font">Radii & shadows</h2>
+      <div class="flex flex-wrap gap-4">
+        {
+          radii.map((r) => (
+            <div class="flex flex-col items-center gap-2">
+              <div
+                class="h-16 w-16 bg-brand-100"
+                style={`border-radius: var(--radius-${r.name})`}
+              />
+              <span class="text-caption font-caption text-subtext-color">{r.name}</span>
+            </div>
+          ))
+        }
+        {shadows.map((s) => (
+          <div class="flex flex-col items-center gap-2">
+            <div class="h-16 w-16 rounded-md bg-white" style={`box-shadow: var(--shadow-${s.name})`} />
+            <span class="text-caption font-caption text-subtext-color">{s.name}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  </main>
+</Board>

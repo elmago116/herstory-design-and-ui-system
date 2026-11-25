@@ -1,0 +1,1931 @@
+version: 1
+
+# HerStory prototype interactions
+# ------------------------------------------------------------------
+# This file is the single source of truth for control behaviour.
+# Edit a `to:` target here, reload the page, and the prototype navigates
+# there. No route regeneration and no TSX edits are needed.
+#
+# Rules are matched per surface (`data-ui-id`) by the control's visible text.
+# `nth` disambiguates repeated labels on one surface (1-based); `scope`
+# narrows the match to the nearest row/layer containing that text.
+#
+# Effects:
+#   navigate: needs `to` (an existing Astro route)
+#   back:     browser history back
+#   action:   named handler, optionally followed by a `to` navigation
+#
+# Actions that do not mutate data explain the prototype boundary in a toast.
+# Every control without a rule also explains itself when clicked.
+
+surfaces:
+  UI-01:
+    - control: Button:AuthenticationPolicy
+      match: Authentication policy
+      effect: navigate
+      to: /ui/ui-01-3-authentication-policy
+    - control: Button:EditRole
+      match: Edit role
+      effect: navigate
+      to: /ui/ui-01-2-edit-role-and-workspace-access
+    - control: Button:Export
+      match: Export
+      effect: action
+      action: download
+    - control: Button:InviteUser
+      match: Invite user
+      effect: navigate
+      to: /ui/ui-01-1-invite-user
+  UI-01.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-01-user-management
+    - control: Button:SendInvite
+      match: Send invite
+      effect: action
+      action: confirm
+      to: /ui/ui-01-user-management
+  UI-01.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-01-user-management
+    - control: Button:SaveChanges
+      match: Save changes
+      effect: action
+      action: confirm
+      to: /ui/ui-01-user-management
+  UI-01.3:
+    - control: Button:Discard
+      match: Discard
+      effect: navigate
+      to: /ui/ui-01-user-management
+    - control: Button:SavePolicy
+      match: Save policy
+      effect: action
+      action: confirm
+      to: /ui/ui-01-user-management
+  UI-02:
+    - control: Button:CreateWorkspace
+      match: Create workspace
+      effect: navigate
+      to: /ui/ui-02-2-create-workspace
+    - control: Button:EditWorkspace
+      match: Edit workspace
+      effect: navigate
+      to: /ui/ui-02-3-edit-workspace-and-membership
+    - control: Button:Inspect#5
+      match: Inspect
+      effect: navigate
+      to: /ui/ui-02-1-inspect-workspace
+    - control: Button:SovereigntyAndQuota
+      match: Sovereignty and quota
+      effect: navigate
+      to: /ui/ui-02-4-sovereignty-and-quota-settings
+  UI-02.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-02-workspace-management
+    - control: Button:OpenWorkspace
+      match: Open workspace
+      effect: navigate
+      to: /ui/ui-02-workspace-management
+  UI-02.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-02-workspace-management
+    - control: Button:CreateWorkspace
+      match: Create workspace
+      effect: action
+      action: confirm
+      to: /ui/ui-02-workspace-management
+  UI-02.3:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-02-workspace-management
+    - control: Button:SaveWorkspace
+      match: Save workspace
+      effect: action
+      action: confirm
+      to: /ui/ui-02-workspace-management
+  UI-02.4:
+    - control: Button:Discard
+      match: Discard
+      effect: navigate
+      to: /ui/ui-02-workspace-management
+    - control: Button:SaveSettings
+      match: Save settings
+      effect: action
+      action: confirm
+      to: /ui/ui-02-workspace-management
+  UI-03:
+    - control: Button:Discard
+      match: Discard
+      effect: navigate
+      to: /ui/ui-03-2-discard-changes
+    - control: Button:SaveChanges#2
+      match: Save changes
+      effect: navigate
+      to: /ui/ui-03-1-save-integration-settings
+  UI-03.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-03-integration-settings
+    - control: Button:Save3Changes
+      match: Save 3 changes
+      effect: action
+      action: confirm
+      to: /ui/ui-03-integration-settings
+  UI-03.2:
+    - control: Button:DiscardChanges
+      match: Discard changes
+      effect: action
+      action: confirm
+      to: /ui/ui-03-integration-settings
+    - control: Button:KeepEditing
+      match: Keep editing
+      effect: navigate
+      to: /ui/ui-03-integration-settings
+  UI-04:
+    - control: Button:AuthorityMatrix
+      match: Authority matrix
+      effect: navigate
+      to: /ui/ui-04-3-authority-matrix-editor
+    - control: Button:ExportDecisions
+      match: Export decisions
+      effect: navigate
+      to: /ui/ui-04-4-consent-and-gdpr-view
+    - control: Button:NewPolicy
+      match: New policy
+      effect: navigate
+      to: /ui/ui-04-1-new-policy
+    - control: Button:Review#5
+      match: Review
+      effect: navigate
+      to: /ui/ui-04-2-review-policy
+  UI-04.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-04-governance-panel
+    - control: Button:CreatePolicy
+      match: Create policy
+      effect: action
+      action: confirm
+      to: /ui/ui-04-governance-panel
+  UI-04.2:
+    - control: Button:ApprovePolicy
+      match: Approve policy
+      effect: action
+      action: confirm
+      to: /ui/ui-04-governance-panel
+    - control: Button:Reject
+      match: Reject
+      effect: navigate
+      to: /ui/ui-04-governance-panel
+  UI-04.3:
+    - control: Button:SaveMatrix
+      match: Save matrix
+      effect: action
+      action: confirm
+      to: /ui/ui-04-governance-panel
+  UI-04.4:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-04-governance-panel
+    - control: Button:ExportRecord
+      match: Export record
+      effect: action
+      action: confirm
+  UI-05:
+    - control: Button:Edit#5
+      match: Edit
+      effect: navigate
+      to: /ui/ui-05-2-edit-retention-rule
+    - control: Button:RunRetentionSweep
+      match: Run retention sweep
+      effect: navigate
+      to: /ui/ui-05-1-run-retention-sweep
+  UI-05.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-05-data-retention-console
+    - control: Button:DeleteFiles
+      match: Delete files
+      effect: action
+      action: destructive
+      to: /ui/ui-05-data-retention-console
+  UI-05.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-05-data-retention-console
+    - control: Button:SaveRule
+      match: Save rule
+      effect: action
+      action: confirm
+      to: /ui/ui-05-data-retention-console
+  UI-06:
+    - control: Button:AddStakeholder
+      match: Add stakeholder
+      effect: navigate
+      to: /ui/ui-06-1-add-stakeholder
+    - control: Button:EditRecord
+      match: Edit record
+      effect: navigate
+      to: /ui/ui-06-4-edit-stakeholder-record
+    - control: Button:Export
+      match: Export
+      effect: navigate
+      to: /ui/ui-06-2-export
+    - control: Button:View#5
+      match: View
+      effect: navigate
+      to: /ui/ui-06-3-view-stakeholder
+  UI-06.1:
+    - control: Button:AddStakeholder
+      match: Add stakeholder
+      effect: action
+      action: confirm
+      to: /ui/ui-06-stakeholder-registry
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-06-stakeholder-registry
+  UI-06.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-06-stakeholder-registry
+    - control: Button:Export
+      match: Export
+      effect: action
+      action: confirm
+  UI-06.3:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-06-stakeholder-registry
+    - control: Button:EditStakeholder
+      match: Edit stakeholder
+      effect: navigate
+      to: /ui/ui-06-4-edit-stakeholder-record
+  UI-06.4:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-06-stakeholder-registry
+    - control: Button:SaveRecord
+      match: Save record
+      effect: action
+      action: confirm
+      to: /ui/ui-06-stakeholder-registry
+  UI-07:
+    - control: Button:AssignOrEscalate
+      match: Assign or escalate
+      effect: navigate
+      to: /ui/ui-07-2-assign-or-escalate-event
+    - control: Button:View#5
+      match: View
+      effect: navigate
+      to: /ui/ui-07-1-view-governance-event
+  UI-07.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-07-cross-workspace-governance-dashboard
+    - control: Button:OpenMappingVersion
+      match: Open mapping version
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+  UI-07.2:
+    - control: Button:Apply
+      match: Apply
+      effect: action
+      action: confirm
+      to: /ui/ui-07-cross-workspace-governance-dashboard
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-07-cross-workspace-governance-dashboard
+  UI-08:
+    - control: Button:ExportLogs
+      match: Export logs
+      effect: navigate
+      to: /ui/ui-08-1-export-logs
+    - control: Button:Revoke#4
+      match: Revoke
+      effect: navigate
+      to: /ui/ui-08-2-revoke-session
+  UI-08.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-08-audit-logs-session-monitor
+    - control: Button:ExportLogs
+      match: Export logs
+      effect: action
+      action: confirm
+  UI-08.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-08-audit-logs-session-monitor
+    - control: Button:RevokeSession
+      match: Revoke session
+      effect: action
+      action: confirm
+      to: /ui/ui-08-audit-logs-session-monitor
+  UI-08.3:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-08-audit-logs-session-monitor
+    - control: Button:RevokeSession
+      match: Revoke session
+      effect: navigate
+      to: /ui/ui-08-2-revoke-session
+    - control: Button:VerifyWithOwner
+      match: Verify with owner
+      effect: action
+      action: simulate
+  UI-09:
+    - control: Button:EditSource
+      match: Edit source
+      effect: navigate
+      to: /ui/ui-09-2-edit-source
+    - control: Button:RegisterSource
+      match: Register source
+      effect: action
+      action: confirm
+    - control: Button:ReIngest
+      match: Re-ingest
+      effect: action
+      action: simulate
+    - control: IconButton:Trash
+      match: Trash
+      effect: action
+      action: destructive
+    - control: Button:Close
+      match: Close
+      effect: back
+    - match: Source registration
+      effect: navigate
+      to: /ui/ui-09-source-registration
+    - match: Ingestion
+      effect: navigate
+      to: /ui/ui-10-ingestion-monitor
+    - match: Ontology
+      effect: navigate
+      to: /ui/ui-11s-ontology-manager-select
+    - match: Mapping
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+    - match: Validation
+      effect: navigate
+      to: /ui/ui-13-shacl-shapes-editor
+    - match: Publish
+      effect: navigate
+      to: /ui/ui-19-artifact-exporter
+  UI-09.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-09-source-registration
+    - control: Button:SaveChanges
+      match: Save changes
+      effect: action
+      action: confirm
+      to: /ui/ui-09-source-registration
+  UI-10:
+    - control: DropdownMenu
+      match: Escalate to engineer
+      effect: navigate
+      to: /ui/ui-10-2-retry-or-escalate-run
+    - control: Button:RetryRun
+      match: Retry run
+      effect: navigate
+      to: /ui/ui-10-2-retry-or-escalate-run
+    - control: Button:View#4
+      match: View
+      effect: navigate
+      to: /ui/ui-10-2-retry-or-escalate-run
+    - control: Button:Close
+      match: Close
+      effect: back
+  UI-10.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-10-ingestion-monitor
+    - control: Button:EscalateToEngineer
+      match: Escalate to engineer
+      effect: action
+      action: confirm
+      to: /ui/ui-10-ingestion-monitor
+    - control: Button:RetryRun
+      match: Retry run
+      effect: action
+      action: confirm
+      to: /ui/ui-10-ingestion-monitor
+  UI-11C:
+    - control: SplitButton:Add
+      match: Add
+      effect: navigate
+      to: /ui/ui-11-2-add-class
+    - control: Button:EditClass
+      match: Edit class
+      effect: navigate
+      to: /ui/ui-11-6-edit-class
+    - control: Button:EditProperty
+      match: Edit property
+      effect: navigate
+      to: /ui/ui-11-1-edit-property
+    - control: Button:ImportExport
+      match: Import / export
+      effect: navigate
+      to: /ui/ui-11-4-ontology-import-and-export
+    - control: Button:OpenGraph
+      match: Open graph
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - control: Button:ReviewOntology
+      match: Review Ontology
+      effect: navigate
+      to: /ui/ui-11s-ontology-manager-select
+    - control: Button:RunReasoner
+      match: Run reasoner
+      effect: navigate
+      to: /ui/ui-11-5-reasoner-and-oops-runner
+    - control: Button:Validate
+      match: Validate
+      effect: navigate
+      to: /ui/ui-11-5-reasoner-and-oops-runner
+    - control: Button:Close#2
+      match: Close
+      effect: navigate
+      to: /ui/ui-11s-ontology-manager-select
+    - control: Button:View#6
+      match: View
+      effect: navigate
+      to: /ui/ui-11-6-edit-class
+    - control: Button:ViewMappings
+      match: View mappings
+      effect: navigate
+      to: /ui/ui-11-3-mapping-code-inspector
+    - control: SplitButton:Edit
+      match: Edit
+      effect: navigate
+      to: /ui/ui-11-6-edit-class
+    - control: Button:Restricción
+      match: + restricción
+      effect: action
+      action: simulate
+  UI-11S:
+    - control: Button:OpenGraph
+      match: Open graph
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-11c-ontology-manager-create
+    - control: Button:ViewMappings
+      match: View mappings
+      effect: navigate
+      to: /ui/ui-11-3-mapping-code-inspector
+    - control: Button:View#4
+      match: view
+      effect: navigate
+      to: /ui/ui-11-6-edit-class
+  UI-11.1:
+    - control: Button:SaveProperty
+      match: Save property
+      effect: action
+      action: confirm
+      to: /ui/ui-11c-ontology-manager-create
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-11c-ontology-manager-create
+  UI-11.2:
+    - control: Button:AddClass
+      match: Add class
+      effect: action
+      action: confirm
+      to: /ui/ui-11c-ontology-manager-create
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-11c-ontology-manager-create
+  UI-11.4:
+    - control: Button:StartImport
+      match: Start import
+      effect: action
+      action: confirm
+      to: /ui/ui-11c-ontology-manager-create
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-11c-ontology-manager-create
+    - control: Button:ChooseFile
+      match: Choose file
+      effect: action
+      action: simulate
+  UI-11.5:
+    - control: Button:OpenValidationReport
+      match: Open validation report
+      effect: navigate
+      to: /ui/ui-16-4-shacl-report-and-job-cancel
+    - control: Button:RunReasoner
+      match: Run reasoner
+      effect: action
+      action: simulate
+    - control: Button:RunOOPS
+      match: Run OOPS!
+      effect: action
+      action: simulate
+    - control: Button:SeeChanges
+      match: See changes
+      effect: action
+      action: simulate
+    - control: Button:ReconsiderChanges
+      match: Reconsider changes
+      effect: navigate
+      to: /ui/ui-11c-ontology-manager-create
+  UI-11.6:
+    - control: Button:Guardar
+      match: guardar
+      effect: action
+      action: confirm
+      to: /ui/ui-11c-ontology-manager-create
+    - control: Button:Cancelar
+      match: cancelar
+      effect: navigate
+      to: /ui/ui-11c-ontology-manager-create
+    - control: Button:OcultarDeEstePerfil
+      match: ocultar de este perfil
+      effect: action
+      action: simulate
+    - control: Button:RestaurarDelBootstrap
+      match: restaurar del bootstrap
+      effect: action
+      action: simulate
+    - control: Button:Propiedad
+      match: propiedad
+      effect: navigate
+      to: /ui/ui-11-1-edit-property
+    - control: Button:Restricción
+      match: restricción
+      effect: action
+      action: simulate
+  UI-12:
+    - control: Button:Adjudicate
+      match: Adjudicate
+      effect: navigate
+      to: /ui/ui-12-2-conflict-adjudication
+    - control: Button:Edit#5
+      match: Edit
+      effect: navigate
+      to: /ui/ui-12-1-edit-mapping-rule
+    - control: Button:EditRule
+      match: Edit rule
+      effect: navigate
+      to: /ui/ui-12-1-edit-mapping-rule
+    - control: Button:Validate#2
+      match: Validate
+      effect: action
+      action: simulate
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-11c-ontology-manager-create
+    - control: Button:Remove#5
+      match: Remove
+      effect: action
+      action: destructive
+    - control: Button:View#4
+      match: View
+      effect: navigate
+      to: /ui/ui-12-1-edit-mapping-rule
+    - control: Button:Save
+      match: Save
+      effect: action
+      to: /ui/ui-11c-ontology-manager-create
+      action: confirm
+  UI-12.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+    - control: Button:SaveRule
+      match: Save rule
+      effect: action
+      action: confirm
+      to: /ui/ui-12-mapping-editor
+  UI-12.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+    - control: Button:SaveDecision
+      match: Save decision
+      effect: action
+      action: confirm
+      to: /ui/ui-12-mapping-editor
+  UI-13:
+    - control: Button:Edit#3
+      match: Edit
+      effect: navigate
+      to: /ui/ui-11-6-edit-class
+    - control: Button:EditShape
+      match: Edit shape
+      effect: navigate
+      to: /ui/ui-11-6-edit-class
+    - control: Button:SaveShape
+      match: Save shape
+      effect: action
+      action: confirm
+    - control: Button:View#3
+      match: View
+      effect: navigate
+      to: /ui/ui-11-6-edit-class
+    - control: Button:ViewValidationReport
+      match: View validation report
+      effect: navigate
+      to: /ui/ui-16-4-shacl-report-and-job-cancel
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+    - control: Button:ReRunValidation
+      match: Re-run validation
+      effect: action
+      action: simulate
+  UI-14:
+    - control: IconButton:Edit2
+      match: Edit 2
+      effect: navigate
+      to: /ui/ui-14-2-new-cq
+    - control: IconButton:Eye#5
+      match: Eye
+      effect: navigate
+      to: /ui/ui-14-1-cq-detail
+    - control: Button:NewCQ
+      match: New CQ
+      effect: navigate
+      to: /ui/ui-14-2-new-cq
+    - control: Button:AND
+      match: AND
+      effect: action
+      action: simulate
+    - control: Button:OR
+      match: OR
+      effect: action
+      action: simulate
+  UI-14.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-14-competency-question-registry
+    - control: Button:SaveAndRun
+      match: Save and run
+      effect: action
+      action: confirm
+      to: /ui/ui-14-competency-question-registry
+    - control: Button:AddFacet
+      match: Add facet
+      effect: action
+      action: simulate
+  UI-15:
+    - control: Button:DryRun
+      match: Dry run
+      effect: navigate
+      to: /ui/ui-15-2-dry-run-report
+    - control: Button:RunTransformation
+      match: Run transformation
+      effect: navigate
+      to: /ui/ui-15-1-run-transformation
+  UI-15.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-15-transformer-runner
+    - control: Button:RunTransformation
+      match: Run transformation
+      effect: action
+      action: confirm
+      to: /ui/ui-15-transformer-runner
+    - control: Button:ShowReport
+      match: Show report
+      effect: navigate
+      to: /ui/ui-15-2-dry-run-report
+  UI-15.2:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-15-transformer-runner
+    - control: Button:ExportReport
+      match: Export report
+      effect: action
+      action: confirm
+    - control: Button:SendToStaging
+      match: Send to staging
+      effect: action
+      action: sendToStaging
+      to: /ui/ui-16-staging-review
+  UI-16:
+    - control: Button:ApproveAndPublish
+      match: Approve and publish
+      effect: navigate
+      to: /ui/ui-16-2-approve-and-publish
+    - control: Button:ApproveBatch
+      match: Approve batch
+      effect: navigate
+      to: /ui/ui-16-1-approve-batch
+    - control: Button:Reject#5
+      match: Reject
+      effect: navigate
+      to: /ui/ui-16-3-reject-triple-with-reason
+    - control: Button:Approve#5
+      match: Approve
+      effect: navigate
+      to: /ui/ui-16-1-approve-batch
+  UI-16.1:
+    - control: Button:ApproveBatch
+      match: Approve batch
+      effect: action
+      action: approveBatch
+      to: /ui/ui-16-2-approve-and-publish
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-16-staging-review
+  UI-16.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-16-staging-review
+    - control: Button:Publish
+      match: Publish
+      effect: action
+      action: publishBatch
+      to: /ui/ui-19-artifact-exporter
+  UI-16.3:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-16-staging-review
+    - control: Button:RejectTriple
+      match: Reject triple
+      effect: action
+      action: confirm
+      to: /ui/ui-16-staging-review
+  UI-16.4:
+    - control: Button:CancelJob
+      match: Cancel job
+      effect: action
+      action: confirm
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-16-staging-review
+    - control: Button:OpenReport
+      match: Open report
+      effect: action
+      action: confirm
+    - control: Button:ExportReport
+      match: Export report
+      effect: action
+      action: download
+  UI-17:
+    - control: Button:AcceptAndAdd
+      match: Accept and add
+      effect: navigate
+      to: /ui/ui-17-1-review-suggestion
+    - control: Button:RequireHumanGateForNewSuggestions
+      match: Require human gate for new suggestions
+      effect: action
+      action: confirm
+    - control: Button:Review#10
+      match: Review
+      effect: navigate
+      to: /ui/ui-17-1-review-suggestion
+    - control: Button:Add#5
+      match: Add
+      effect: navigate
+      to: /ui/ui-17-1-review-suggestion
+  UI-17.1:
+    - control: Button:AcceptSuggestion
+      match: Accept suggestion
+      effect: action
+      action: acceptSuggestion
+      to: /ui/ui-17-llm-suggestion-panel
+    - control: Button:Reject
+      match: Reject
+      effect: navigate
+      to: /ui/ui-17-llm-suggestion-panel
+  UI-17.2:
+    - control: Button:AcceptOutput
+      match: Accept output
+      effect: navigate
+      to: /ui/ui-16-staging-review
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-17-llm-suggestion-panel
+  UI-17.3:
+    - control: Button:ApproveSuggestion
+      match: Approve suggestion
+      effect: action
+      action: confirm
+      to: /ui/ui-17-llm-suggestion-panel
+    - control: Button:BackToSuggestions
+      match: Back to suggestions
+      effect: navigate
+      to: /ui/ui-17-llm-suggestion-panel
+  UI-18:
+    - control: Button:Accept
+      match: Accept
+      effect: navigate
+      to: /ui/ui-18-2-candidate-comparison
+    - control: Button:Add
+      match: Add
+      effect: navigate
+      to: /ui/ui-18-1-edit-alias
+    - control: IconButton:Check#3
+      match: Check
+      effect: navigate
+      to: /ui/ui-18-2-candidate-comparison
+    - control: IconButton:Edit2
+      match: Edit 2
+      effect: navigate
+      to: /ui/ui-18-1-edit-alias
+  UI-18.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-18-wikidata-resolver
+    - control: Button:SaveAlias
+      match: Save alias
+      effect: action
+      action: confirm
+      to: /ui/ui-18-wikidata-resolver
+  UI-18.2:
+    - control: Button:ConfirmMatch
+      match: Confirm match
+      effect: action
+      action: confirm
+      to: /ui/ui-18-wikidata-resolver
+    - control: Button:KeepHSIdentifier
+      match: Keep HS identifier
+      effect: navigate
+      to: /ui/ui-18-wikidata-resolver
+    - control: Button:Select#3
+      match: Select
+      effect: action
+      action: simulate
+  UI-19:
+    - control: Button:Download#5
+      match: Download
+      effect: navigate
+      to: /ui/ui-19-2-artifact-detail
+    - control: Button:Export
+      match: Export
+      effect: navigate
+      to: /ui/ui-19-1-export-run
+  UI-19.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-19-artifact-exporter
+    - control: Button:DownloadWhenReady
+      match: Download when ready
+      effect: action
+      action: download
+  UI-19.2:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-19-artifact-exporter
+    - control: Button:Download
+      match: Download
+      effect: action
+      action: download
+  UI-20:
+    - control: Button:ReclassifyGap
+      match: Reclassify gap
+      effect: navigate
+      to: /ui/ui-22-2-reclassify-objection
+    - control: Button:RegisterGap
+      match: Register gap
+      effect: navigate
+      to: /ui/ui-20-2-register-absence-gap
+    - control: Button:View#5
+      match: View
+      effect: navigate
+      to: /ui/ui-20-1-view-absence
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-19-artifact-exporter
+    - control: Button:LinkCompetencyQuestion
+      match: Link competency question
+      effect: action
+      action: simulate
+  UI-20.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-20-absence-registry
+  UI-20.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-20-absence-registry
+    - control: Button:RegisterGap
+      match: Register gap
+      effect: navigate
+      to: /ui/ui-20-absence-registry
+  UI-21:
+    - control: Button:Escalate
+      match: Escalate
+      effect: navigate
+      to: /ui/ui-21-3-escalate-to-community-review
+    - control: Button:FlagNewTerm
+      match: Flag new term
+      effect: navigate
+      to: /ui/ui-21-1-flag-new-term
+    - control: Button:Review#5
+      match: Review
+      effect: navigate
+      to: /ui/ui-21-2-review-term
+  UI-21.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-21-vocabulary-review-panel
+    - control: Button:FlagForReview
+      match: Flag for review
+      effect: action
+      action: confirm
+      to: /ui/ui-21-vocabulary-review-panel
+  UI-21.2:
+    - control: Button:ApproveTerm
+      match: Approve term
+      effect: action
+      action: confirm
+      to: /ui/ui-21-vocabulary-review-panel
+    - control: Button:Reject
+      match: Reject
+      effect: navigate
+      to: /ui/ui-21-vocabulary-review-panel
+  UI-21.3:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-21-vocabulary-review-panel
+    - control: Button:Escalate
+      match: Escalate
+      effect: navigate
+      to: /ui/ui-24-community-workshop-scheduler
+  UI-22:
+    - control: Button:Reclassify
+      match: Reclassify
+      effect: navigate
+      to: /ui/ui-22-2-reclassify-objection
+    - control: Button:RejectionRationale
+      match: Rejection rationale
+      effect: navigate
+      to: /ui/ui-22-3-rejection-rationale
+    - control: Button:Respond#3
+      match: Respond
+      effect: navigate
+      to: /ui/ui-22-1-view-document
+    - control: Button:SendResponse
+      match: Send response
+      effect: navigate
+      to: /ui/ui-22-1-view-document
+  UI-22.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-22-objection-management-dashboard
+  UI-22.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-22-objection-management-dashboard
+    - control: Button:Reclassify
+      match: Reclassify
+      effect: action
+      action: confirm
+      to: /ui/ui-22-objection-management-dashboard
+  UI-22.3:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-22-objection-management-dashboard
+    - control: Button:RecordDecision
+      match: Record decision
+      effect: navigate
+      to: /ui/ui-22-objection-management-dashboard
+  UI-23:
+    - control: Button:Publish
+      match: Publish
+      effect: navigate
+      to: /ui/ui-23-1-publish
+    - control: Button:ReRunEJCheck
+      match: Re-run EJ check
+      effect: action
+      action: simulate
+  UI-23.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-23-ej-checklist-operator
+    - control: Button:OpenExporter
+      match: Open exporter
+      effect: navigate
+      to: /ui/ui-19-artifact-exporter
+  UI-24:
+    - control: Button:Edit#5
+      match: Edit
+      effect: navigate
+      to: /ui/ui-24-1-edit-workshop
+    - control: Button:ScheduleWorkshop
+      match: Schedule workshop
+      effect: navigate
+      to: /ui/ui-24-2-schedule-new-workshop
+  UI-24.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-24-community-workshop-scheduler
+    - control: Button:Save
+      match: Save
+      effect: action
+      action: confirm
+      to: /ui/ui-24-community-workshop-scheduler
+  UI-24.2:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-24-community-workshop-scheduler
+    - control: Button:ScheduleWorkshop
+      match: Schedule workshop
+      effect: action
+      action: confirm
+      to: /ui/ui-24-community-workshop-scheduler
+  UI-25:
+    - control: Button:Compare
+      match: Compare
+      effect: navigate
+      to: /ui/ui-25-1-comparison-result
+    - control: Button:DivergenceReport
+      match: Divergence report
+      effect: navigate
+      to: /ui/ui-25-2-divergence-report
+  UI-25.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-25-multichannel-comparison-tool
+    - control: Button:OpenInMappingEditor
+      match: Open in mapping editor
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+  UI-25.2:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-25-multichannel-comparison-tool
+    - control: Button:ExportReport
+      match: Export report
+      effect: action
+      action: confirm
+  UI-26:
+    - control: Button:AssignMitigation
+      match: Assign mitigation
+      effect: navigate
+      to: /ui/ui-26-2-assign-mitigation
+  UI-26.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-26-bias-evaluation-dashboard
+    - control: Button:OpenEvaluationLog
+      match: Open evaluation log
+      effect: action
+      action: simulate
+  UI-26.2:
+    - control: Button:AssignMitigation
+      match: Assign mitigation
+      effect: navigate
+      to: /ui/ui-26-bias-evaluation-dashboard
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-26-bias-evaluation-dashboard
+  UI-27:
+    - control: Button:GenerateImpactReport
+      match: Generate impact report
+      effect: navigate
+      to: /ui/ui-27-1-generate-impact-report
+  UI-27.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-27-participation-metrics-impact-report
+  UI-28:
+    - control: Button:Copy
+      match: Copy
+      effect: action
+      action: copy
+    - control: Button:LlinatgePanel
+      match: Llinatge panel
+      effect: navigate
+      to: /ui/ui-28-4-llinatge-panel
+    - control: Button:OpenSearch
+      match: Open search
+      effect: navigate
+      to: /ui/ui-28-1-entity-search
+    - control: Button:RaiseObjection
+      match: Raise objection
+      effect: navigate
+      to: /ui/ui-28-3-objection-form
+    - control: Button:SeeSPARQL
+      match: See SPARQL
+      effect: navigate
+      to: /ui/ui-30-sparql-editor
+    - control: Button:Clear
+      match: Clear
+      effect: action
+      action: simulate
+    - control: Button:Close
+      match: Close
+      effect: back
+  UI-28.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - control: Button:Open#4
+      match: Open
+      effect: navigate
+      to: /ui/ui-28-2-entity-detail
+    - control: Button:OpenInGraph
+      match: Open in graph
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+  UI-28.2:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - control: Button:LlinatgePanel
+      match: Llinatge panel
+      effect: navigate
+      to: /ui/ui-28-4-llinatge-panel
+    - control: Button:RaiseObjection
+      match: Raise objection
+      effect: navigate
+      to: /ui/ui-28-3-objection-form
+  UI-28.3:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - control: Button:SubmitObjection
+      match: Submit objection
+      effect: action
+      action: confirm
+      to: /ui/ui-28-graph-explorer
+  UI-28.4:
+    - control: Button:Back
+      match: Back
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - control: Button:OpenGraph
+      match: Open graph
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - control: Button:AddRelation
+      match: Add relation
+      effect: action
+      action: simulate
+  UI-29:
+    - control: Button:AddCondition
+      match: Add condition
+      effect: navigate
+      to: /ui/ui-29-1-condition-editor
+    - control: Button:RunQuery
+      match: Run query
+      effect: navigate
+      to: /ui/ui-29-2-query-run-results
+    - control: Button:AND
+      match: AND
+      effect: action
+      action: simulate
+    - control: Button:OR
+      match: OR
+      effect: action
+      action: simulate
+  UI-29.1:
+    - control: Button:AddCondition
+      match: Add condition
+      effect: action
+      action: confirm
+      to: /ui/ui-29-visual-query-builder
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-29-visual-query-builder
+  UI-29.2:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-29-visual-query-builder
+    - control: Button:OpenInSPARQLEditor
+      match: Open in SPARQL editor
+      effect: navigate
+      to: /ui/ui-30-sparql-editor
+  UI-30:
+    - control: Button:CompareWithUIQuery
+      match: Compare with UI query
+      effect: navigate
+      to: /ui/ui-30-2-compare-with-ui-query
+    - control: Button:Run
+      match: Run
+      effect: action
+      action: simulate
+    - control: Button:SaveQuery
+      match: Save query
+      effect: navigate
+      to: /ui/ui-30-1-save-query
+  UI-30.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-30-sparql-editor
+    - control: Button:SaveQuery
+      match: Save query
+      effect: navigate
+      to: /ui/ui-30-sparql-editor
+  UI-30.2:
+    - control: Button:AdoptBuilderVersion
+      match: Adopt builder version
+      effect: action
+      action: confirm
+      to: /ui/ui-30-sparql-editor
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-30-sparql-editor
+  UI-31:
+    - control: Button:FirstSteps
+      match: First steps
+      effect: navigate
+      to: /ui/ui-31-3-first-steps-guide
+    - control: Button:Send
+      match: Send
+      effect: action
+      action: simulate
+    - control: Button:SourceCitation
+      match: Source citation
+      effect: navigate
+      to: /ui/ui-31-1-source-citation
+  UI-31.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-31-nl-chat
+    - control: Button:OpenInCorpus
+      match: Open in corpus
+      effect: navigate
+      to: /ui/ui-33-document-corpus
+    - control: Button:OpenOriginalPage
+      match: Open original page
+      effect: action
+      action: external
+  UI-31.2:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-31-nl-chat
+    - control: Button:CopyTrace
+      match: Copy trace
+      effect: action
+      action: confirm
+  UI-31.3:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-31-nl-chat
+  UI-32:
+    - control: Button:Open#6
+      match: Open
+      effect: navigate
+      to: /ui/ui-32-1-collection-detail
+    - control: Button:Cards
+      match: Cards
+      effect: action
+      action: simulate
+    - control: Button:List
+      match: List
+      effect: action
+      action: simulate
+  UI-32.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-32-collection-browser
+  UI-33:
+    - control: Button:Open#7
+      match: Open
+      effect: navigate
+      to: /ui/ui-33-2-document-detail
+    - control: Button:UploadDocument
+      match: Upload document
+      effect: navigate
+      to: /ui/ui-33-1-upload-document
+  UI-33.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-33-document-corpus
+    - control: Button:Upload
+      match: Upload
+      effect: action
+      action: confirm
+      to: /ui/ui-33-document-corpus
+    - control: Button:ChooseFile
+      match: Choose file
+      effect: action
+      action: simulate
+  UI-33.2:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-33-document-corpus
+  UI-34:
+    - control: Button:ExploreRelated
+      match: Explore related
+      effect: navigate
+      to: /ui/ui-34-1-explore-related-places
+  UI-34.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-34-map-view
+    - control: Button:OpenInGraph
+      match: Open in graph
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - control: Button:OpenPlace
+      match: Open place
+      effect: navigate
+      to: /ui/ui-34-2-place-detail
+  UI-34.2:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-34-map-view
+    - control: Button:ExploreRelatedPlaces
+      match: Explore related places
+      effect: navigate
+      to: /ui/ui-34-1-explore-related-places
+  UI-35:
+    - control: Button:Changelog
+      match: Changelog
+      effect: navigate
+      to: /ui/ui-35-8-changelog
+    - control: Button:ContactSupport
+      match: Contact support
+      effect: navigate
+      to: /ui/ui-35-5-contact-support
+    - control: Button:FAQ
+      match: FAQ
+      effect: navigate
+      to: /ui/ui-35-6-faq
+    - control: Button:GettingStarted
+      match: Getting started
+      effect: navigate
+      to: /ui/ui-35-1-getting-started
+    - control: Button:Glossary
+      match: Glossary
+      effect: navigate
+      to: /ui/ui-35-4-glossary
+    - control: Button:KeyboardShortcuts
+      match: Keyboard shortcuts
+      effect: navigate
+      to: /ui/ui-35-9-keyboard-shortcuts
+    - control: Button:RolesAndPermissions
+      match: Roles and permissions
+      effect: navigate
+      to: /ui/ui-35-2-roles-permissions
+    - control: Button:TheKGPipeline
+      match: The KG pipeline
+      effect: navigate
+      to: /ui/ui-35-3-the-kg-pipeline
+    - control: Button:VideoIndex
+      match: Video index
+      effect: navigate
+      to: /ui/ui-35-7-video-index
+  UI-35.4:
+    - control: Button:BackToHelp
+      match: Back to help
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+  UI-35.5:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+    - control: Button:SendMessage
+      match: Send message
+      effect: action
+      to: /ui/ui-36-1-submission-receipt
+      action: confirm
+  UI-35.6:
+    - control: Button:BackToHelp
+      match: Back to help
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+    - control: Button:ContactSupport
+      match: Contact support
+      effect: navigate
+      to: /ui/ui-35-5-contact-support
+  UI-35.7:
+    - control: Button:BackToHelp
+      match: Back to help
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+  UI-35.8:
+    - control: Button:BackToHelp
+      match: Back to help
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+  UI-35.9:
+    - control: Button:BackToHelp
+      match: Back to help
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+  UI-36:
+    - control: Button:Submit
+      match: Submit
+      effect: navigate
+      to: /ui/ui-36-1-submission-receipt
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+  UI-36.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-36-bug-feature-request-form
+    - control: Button:ViewTicket
+      match: View ticket
+      effect: action
+      action: external
+  UI-37.5:
+    - control: Button:Apply
+      match: Apply
+      effect: action
+      action: confirm
+    - control: Button:ExportAudit
+      match: Export audit
+      effect: navigate
+      to: /ui/ui-08-1-export-logs
+    - control: Button:NewPolicy
+      match: New policy
+      effect: navigate
+      to: /ui/ui-04-1-new-policy
+    - control: Button:OpenWorkspace
+      match: Open workspace
+      effect: navigate
+      to: /ui/ui-02-workspace-management
+    - control: Button:ReviewAuthorityMatrix
+      match: Review authority matrix
+      effect: navigate
+      to: /ui/ui-04-3-authority-matrix-editor
+    - match: Sources
+      effect: navigate
+      to: /ui/ui-09-source-registration
+    - match: Mapping
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+    - match: Ontology
+      effect: navigate
+      to: /ui/ui-11s-ontology-manager-select
+    - match: Pipeline dashboard
+      effect: navigate
+      to: /ui/ui-39-pipeline-observability-dashboard
+    - match: Provenance and polyvocality
+      effect: navigate
+      to: /ui/ui-38-provenance-polyvocality-panel
+    - match: Audit logs
+      effect: navigate
+      to: /ui/ui-08-audit-logs-session-monitor
+    - match: CQ registry
+      effect: navigate
+      to: /ui/ui-14-competency-question-registry
+    - match: '"LLM suggestions"'
+      effect: navigate
+      to: /ui/ui-17-llm-suggestion-panel
+    - match: Graph
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - match: Query builder
+      effect: navigate
+      to: /ui/ui-29-visual-query-builder
+    - match: Stakeholders
+      effect: navigate
+      to: /ui/ui-06-stakeholder-registry
+    - match: Vocabulary review
+      effect: navigate
+      to: /ui/ui-21-vocabulary-review-panel
+    - match: Objections
+      effect: navigate
+      to: /ui/ui-22-objection-management-dashboard
+    - match: Epistemic Justice checklist
+      effect: navigate
+      to: /ui/ui-23-ej-checklist-operator
+    - match: Overview
+      effect: navigate
+      to: /ui/ui-07-cross-workspace-governance-dashboard
+    - match: Policy and authority
+      effect: navigate
+      to: /ui/ui-04-3-authority-matrix-editor
+    - match: Consent and GDPR
+      effect: navigate
+      to: /ui/ui-04-4-consent-and-gdpr-view
+    - match: Users
+      effect: navigate
+      to: /ui/ui-01-user-management
+    - match: Workspaces
+      effect: navigate
+      to: /ui/ui-02-workspace-management
+  UI-37.6.2:
+    - control: Button:Apply
+      match: Apply
+      effect: action
+      action: confirm
+    - control: Button:DelegateTask#2
+      match: Delegate task
+      effect: navigate
+      to: /ui/ui-07-2-assign-or-escalate-event
+    - control: Button:OpenQualityGates
+      match: Open quality gates
+      effect: navigate
+      to: /ui/ui-16-4-shacl-report-and-job-cancel
+    - control: Button:OpenWorkspace
+      match: Open workspace
+      effect: navigate
+      to: /ui/ui-02-workspace-management
+    - control: Button:ReviewOutputs
+      match: Review outputs
+      effect: navigate
+      to: /ui/ui-16-staging-review
+    - match: Overview
+      effect: navigate
+      to: /ui/ui-37-6-2-general-operation-coordinator-team
+    - match: Team work
+      effect: navigate
+      to: /ui/ui-07-cross-workspace-governance-dashboard
+    - match: Quality gates
+      effect: navigate
+      to: /ui/ui-16-4-shacl-report-and-job-cancel
+    - match: Sources
+      effect: navigate
+      to: /ui/ui-09-source-registration
+    - match: Ingestion monitor
+      effect: navigate
+      to: /ui/ui-10-ingestion-monitor
+    - match: Ontology
+      effect: navigate
+      to: /ui/ui-11s-ontology-manager-select
+    - match: Mapping editor
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+    - match: Staging review
+      effect: navigate
+      to: /ui/ui-16-staging-review
+    - match: CQ registry
+      effect: navigate
+      to: /ui/ui-14-competency-question-registry
+    - match: LLM suggestions
+      effect: navigate
+      to: /ui/ui-17-llm-suggestion-panel
+    - match: Pipeline dashboard
+      effect: navigate
+      to: /ui/ui-39-pipeline-observability-dashboard
+    - match: Provenance and polyvocality
+      effect: navigate
+      to: /ui/ui-38-provenance-polyvocality-panel
+    - match: Absence registry
+      effect: navigate
+      to: /ui/ui-20-absence-registry
+    - match: Vocabulary review
+      effect: navigate
+      to: /ui/ui-21-vocabulary-review-panel
+    - match: Objections
+      effect: navigate
+      to: /ui/ui-22-objection-management-dashboard
+    - match: EJ checklist
+      effect: navigate
+      to: /ui/ui-23-ej-checklist-operator
+    - match: Policy · read only
+      effect: navigate
+      to: /ui/ui-04-governance-panel
+    - match: Stakeholders · read only
+      effect: navigate
+      to: /ui/ui-06-stakeholder-registry
+    - match: Graph · read only
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - match: Query · read only
+      effect: navigate
+      to: /ui/ui-29-visual-query-builder
+  UI-37.6.1:
+    - control: Button:OpenIngestionMonitor
+      match: Open ingestion monitor
+      effect: navigate
+      to: /ui/ui-10-ingestion-monitor
+    - control: Button:OpenWorkspace
+      match: Open workspace
+      effect: navigate
+      to: /ui/ui-02-workspace-management
+    - control: Button:ReviewStaging
+      match: Review staging
+      effect: navigate
+      to: /ui/ui-16-staging-review
+    - control: Button:RunTransformation
+      match: Run transformation
+      effect: navigate
+      to: /ui/ui-15-transformer-runner
+    - match: Sources
+      effect: navigate
+      to: /ui/ui-09-source-registration
+    - match: Ingestion monitor
+      effect: navigate
+      to: /ui/ui-10-ingestion-monitor
+    - match: Ontology
+      effect: navigate
+      to: /ui/ui-11s-ontology-manager-select
+    - match: Mapping editor
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+    - match: Staging review
+      effect: navigate
+      to: /ui/ui-16-staging-review
+    - match: CQ registry
+      effect: navigate
+      to: /ui/ui-14-competency-question-registry
+    - match: LLM suggestions
+      effect: navigate
+      to: /ui/ui-17-llm-suggestion-panel
+    - match: Pipeline dashboard
+      effect: navigate
+      to: /ui/ui-39-pipeline-observability-dashboard
+    - match: Provenance and polyvocality
+      effect: navigate
+      to: /ui/ui-38-provenance-polyvocality-panel
+    - match: Absence registry
+      effect: navigate
+      to: /ui/ui-20-absence-registry
+    - match: Vocabulary review
+      effect: navigate
+      to: /ui/ui-21-vocabulary-review-panel
+    - match: Objections
+      effect: navigate
+      to: /ui/ui-22-objection-management-dashboard
+    - match: EJ checklist
+      effect: navigate
+      to: /ui/ui-23-ej-checklist-operator
+    - match: Policy · read only
+      effect: navigate
+      to: /ui/ui-04-governance-panel
+    - match: Stakeholders · read only
+      effect: navigate
+      to: /ui/ui-06-stakeholder-registry
+    - match: Graph
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - match: Query
+      effect: navigate
+      to: /ui/ui-29-visual-query-builder
+  UI-37.7:
+    - control: Button:ChangeLevel
+      match: Change level
+      effect: action
+      action: simulate
+    - control: Button:Search
+      match: Search
+      effect: navigate
+      to: /ui/ui-28-1-entity-search
+    - match: Graph explorer
+      effect: navigate
+      to: /ui/ui-28-graph-explorer
+    - match: Visual query
+      effect: navigate
+      to: /ui/ui-29-visual-query-builder
+    - match: SPARQL editor
+      effect: navigate
+      to: /ui/ui-30-sparql-editor
+    - match: Chat
+      effect: navigate
+      to: /ui/ui-31-nl-chat
+    - match: Collections
+      effect: navigate
+      to: /ui/ui-32-collection-browser
+    - match: Documents
+      effect: navigate
+      to: /ui/ui-33-document-corpus
+    - match: Map
+      effect: navigate
+      to: /ui/ui-34-map-view
+    - match: Trace · read only
+      effect: navigate
+      to: /ui/ui-31-2-grounding-trace
+    - match: Sources · read only
+      effect: navigate
+      to: /ui/ui-09-source-registration
+    - match: Preferences
+      effect: navigate
+      to: /ui/ui-40-personalisation-adaptation-settings
+    - match: History and defaults
+      effect: navigate
+      to: /ui/ui-40-1-clear-history
+    - match: Getting started
+      effect: navigate
+      to: /ui/ui-35-1-getting-started
+    - match: FAQ
+      effect: navigate
+      to: /ui/ui-35-6-faq
+    - match: Glossary
+      effect: navigate
+      to: /ui/ui-35-4-glossary
+    - match: Contact support
+      effect: navigate
+      to: /ui/ui-35-5-contact-support
+  UI-38:
+    - control: Button:DualVoiceDiff
+      match: Dual-voice diff
+      effect: navigate
+      to: /ui/ui-38-2-dual-voice-diff
+    - control: Button:OpenProvenance
+      match: Open provenance
+      effect: navigate
+      to: /ui/ui-38-1-statement-provenance
+  UI-38.1:
+    - control: Button:OpenPublicationRecord
+      match: Open publication record
+      effect: navigate
+      to: /ui/ui-19-2-artifact-detail
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-38-provenance-polyvocality-panel
+  UI-38.2:
+    - control: Button:ExportDiff
+      match: Export diff
+      effect: action
+      action: confirm
+    - control: Button:KeepBothReadings
+      match: Keep both readings
+      effect: action
+      action: confirm
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-38-provenance-polyvocality-panel
+  UI-39:
+    - control: Button:AlertAction
+      match: Alert action
+      effect: navigate
+      to: /ui/ui-39-2-alert-action
+    - control: Button:Ingestion
+      match: Ingestion
+      effect: navigate
+      to: /ui/ui-10-ingestion-monitor
+    - control: Button:Mapping
+      match: Mapping
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+    - control: Button:Publication
+      match: Publication
+      effect: navigate
+      to: /ui/ui-19-artifact-exporter
+    - control: Button:SHACLValidation
+      match: SHACL validation
+      effect: navigate
+      to: /ui/ui-13-shacl-shapes-editor
+    - control: Button:StagingReview
+      match: Staging review
+      effect: navigate
+      to: /ui/ui-16-staging-review
+    - control: Button:Transformation
+      match: Transformation
+      effect: navigate
+      to: /ui/ui-15-transformer-runner
+  UI-39.1:
+    - control: Button:Close
+      match: Close
+      effect: navigate
+      to: /ui/ui-39-pipeline-observability-dashboard
+  UI-39.2:
+    - control: Button:ApplyAction
+      match: Apply action
+      effect: action
+      action: confirm
+      to: /ui/ui-39-pipeline-observability-dashboard
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-39-pipeline-observability-dashboard
+  UI-40:
+    - control: Button:ClearHistory
+      match: Clear history
+      effect: navigate
+      to: /ui/ui-40-1-clear-history
+    - control: Button:SavePreferences
+      match: Save preferences
+      effect: action
+      action: confirm
+    - control: Button:Eye#3
+      match: Eye
+      effect: action
+      action: simulate
+  UI-40.1:
+    - control: Button:Cancel
+      match: Cancel
+      effect: navigate
+      to: /ui/ui-40-personalisation-adaptation-settings
+    - control: Button:ClearHistory
+      match: Clear history
+      effect: action
+      action: destructive
+      to: /ui/ui-40-personalisation-adaptation-settings
+  UI-START:
+    - control: Button:CoordinatorResearcher
+      match: Coordinator / researcher
+      effect: action
+      action: selectRole
+      role: coordinator
+      to: /ui/ui-37-6-1-general-operation-coordinator-alone
+    - control: Button:CoordinatorTeam
+      match: Coordinator of a team
+      effect: action
+      action: selectRole
+      role: coordinator-team
+      to: /ui/ui-37-6-2-general-operation-coordinator-team
+    - control: Button:Inquirer
+      match: Inquirer
+      effect: action
+      action: selectRole
+      role: inquirer
+      to: /ui/ui-37-7-general-operation-inquirer
+    - control: Button:Superadmin
+      match: Superadmin
+      effect: action
+      action: selectRole
+      role: superadmin
+      to: /ui/ui-37-5-general-operation-superadmin
+  UI-35.1:
+    - control: Button:BackToHelp
+      match: Back to help
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+  UI-35.2:
+    - control: Button:BackToHelp
+      match: Back to help
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+  UI-35.3:
+    - control: Button:BackToHelp
+      match: Back to help
+      effect: navigate
+      to: /ui/ui-35-help-documentation-system
+  UI-11.3:
+    - control: Button:OpenInMappingEditor
+      match: Open in mapping editor
+      effect: navigate
+      to: /ui/ui-12-mapping-editor
+  UI-14.1:
+    - control: Button:Edit
+      match: Edit
+      effect: navigate
+      to: /ui/ui-14-2-new-cq
+    - control: Button:RunAgainstGraph
+      match: Run against graph
+      effect: action
+      action: simulate

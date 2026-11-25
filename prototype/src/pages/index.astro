@@ -1,0 +1,69 @@
+---
+import Board from "@/layouts/Board.astro";
+---
+
+<Board title="HerStory — choose role" id="UI-START">
+  <div data-board-root data-ui-id="UI-START" class="flex min-h-[calc(100vh-57px)] w-full items-center justify-center bg-default-background px-4 py-12">
+    <main class="flex w-full max-w-[680px] flex-col items-start gap-6">
+      <header class="flex flex-col items-start gap-2">
+        <span class="text-micro font-micro uppercase text-subtext-color">HERSTORY · START</span>
+        <h1 class="text-heading-1 font-heading-1 text-default-font">Choose how you enter</h1>
+        <p class="max-w-[560px] text-body font-body text-subtext-color">
+          Temporary role picker for the interaction prototype. Each path opens the
+          corresponding operation shell; the destinations live in
+          <code class="text-monospace-body font-monospace-body">public/interactions.yaml</code>.
+        </p>
+      </header>
+
+      <div class="flex w-full flex-col gap-3">
+        <button
+          type="button"
+          data-match="Superadmin"
+          class="group flex w-full items-center justify-between gap-4 rounded-lg border border-solid border-neutral-border bg-default-background px-5 py-4 text-left hover:border-brand-primary hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-brand-primary"
+        >
+          <span class="flex flex-col items-start gap-1">
+            <span class="text-heading-3 font-heading-3 text-default-font">Superadmin</span>
+            <span class="text-caption font-caption text-subtext-color">Platform governance, workspaces and access.</span>
+          </span>
+          <span aria-hidden="true" class="text-heading-3 font-heading-3 text-brand-primary">→</span>
+        </button>
+
+        <button
+          type="button"
+          data-match="Coordinator / researcher"
+          class="group flex w-full items-center justify-between gap-4 rounded-lg border border-solid border-neutral-border bg-default-background px-5 py-4 text-left hover:border-brand-primary hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-brand-primary"
+        >
+          <span class="flex flex-col items-start gap-1">
+            <span class="text-heading-3 font-heading-3 text-default-font">Coordinator / researcher</span>
+            <span class="text-caption font-caption text-subtext-color">Run the pipeline on your own.</span>
+          </span>
+          <span aria-hidden="true" class="text-heading-3 font-heading-3 text-brand-primary">→</span>
+        </button>
+
+        <button
+          type="button"
+          data-match="Coordinator of a team"
+          class="group flex w-full items-center justify-between gap-4 rounded-lg border border-solid border-neutral-border bg-default-background px-5 py-4 text-left hover:border-brand-primary hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-brand-primary"
+        >
+          <span class="flex flex-col items-start gap-1">
+            <span class="text-heading-3 font-heading-3 text-default-font">Coordinator of a team</span>
+            <span class="text-caption font-caption text-subtext-color">Coordinate contributors and review their work.</span>
+          </span>
+          <span aria-hidden="true" class="text-heading-3 font-heading-3 text-brand-primary">→</span>
+        </button>
+
+        <button
+          type="button"
+          data-match="Inquirer"
+          class="group flex w-full items-center justify-between gap-4 rounded-lg border border-solid border-neutral-border bg-default-background px-5 py-4 text-left hover:border-brand-primary hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-brand-primary"
+        >
+          <span class="flex flex-col items-start gap-1">
+            <span class="text-heading-3 font-heading-3 text-default-font">Inquirer</span>
+            <span class="text-caption font-caption text-subtext-color">Explore, search and ask the archive.</span>
+          </span>
+          <span aria-hidden="true" class="text-heading-3 font-heading-3 text-brand-primary">→</span>
+        </button>
+      </div>
+    </main>
+  </div>
+</Board>

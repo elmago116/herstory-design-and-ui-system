@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+*.log
+
+# local verification output
+prototype/shots/local/
+prototype/shots/diff/

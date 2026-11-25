@@ -1,0 +1,289 @@
+---
+import YAML from "yaml";
+import fs from "node:fs";
+import path from "node:path";
+
+// Navigation overlay shared by every board. Fixed left rail with role tabs and
+// grouped links, built from uis.yaml `roles` + the boards themselves. Hidden by
+// the parity harness (`html[data-shots]`) so screenshots stay identical to the
+// Subframe reference.
+const cfg = YAML.parse(fs.readFileSync(path.join(process.cwd(), "uis.yaml"), "utf8"));
+const roles = cfg.roles ?? {};
+const ui = cfg.ui.filter((u) => u.route);
+const byId = new Map(ui.map((u) => [u.id.replace(/\.[0-9]+$/, ""), u]));
+const byFull = new Map(ui.map((u) => [u.id, u]));
+
+function items(ids) {
+  return ids
+    .map((id) => byFull.get(id) ?? byId.get(id))
+    .filter(Boolean)
+    .sort((a, b) => a.id.localeCompare(b.id));
+}
+
+const groups = Object.entries(roles).map(([key, r]) => ({
+  key,
+  title: r.title,
+  own: items(r.own ?? []),
+  shared: items(r.shared ?? []),
+  global: items(r.global ?? []),
+}));
+---
+
+<div class="proto-nav" id="protoNav">
+  <button class="proto-nav-toggle" id="protoNavToggle" aria-label="Toggle navigation">
+    <span class="proto-nav-brand">HerStory ▸</span>
+  </button>
+
+  <aside class="proto-nav-panel">
+    <header class="proto-nav-head">
+      <span class="proto-nav-title">HerStory prototype</span>
+      <a class="proto-nav-home" href="/">Index</a>
+      <a class="proto-nav-home" href="/prototype">Coverage</a>
+      <a class="proto-nav-home" href="/ds/foundations">DS</a>
+    </header>
+
+    <nav class="proto-nav-roles">
+      {groups.map((g) => (
+        <section class="proto-nav-role" data-role={g.key}>
+          <h2 class="proto-nav-role-title">{g.title}</h2>
+          {g.own.length ? (
+            <ul class="proto-nav-list">
+              {g.own.map((u) => (
+                <li>
+                  <a href={u.route}>
+                    <span class="proto-nav-id">{u.id}</span>
+                    <span class="proto-nav-name">{u.title}</span>
+                    <span class={`proto-nav-status proto-nav-status-${u.status}`}>{u.status}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          {g.shared.length ? (
+            <>
+              <h3 class="proto-nav-sub">Shared governance &amp; evaluation</h3>
+              <ul class="proto-nav-list">
+                {g.shared.map((u) => (
+                  <li>
+                    <a href={u.route}>
+                      <span class="proto-nav-id">{u.id}</span>
+                      <span class="proto-nav-name">{u.title}</span>
+                      <span class={`proto-nav-status proto-nav-status-${u.status}`}>{u.status}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+          {g.global.length ? (
+            <>
+              <h3 class="proto-nav-sub">All users</h3>
+              <ul class="proto-nav-list">
+                {g.global.map((u) => (
+                  <li>
+                    <a href={u.route}>
+                      <span class="proto-nav-id">{u.id}</span>
+                      <span class="proto-nav-name">{u.title}</span>
+                      <span class={`proto-nav-status proto-nav-status-${u.status}`}>{u.status}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+        </section>
+      ))}
+    </nav>
+  </aside>
+</div>
+
+<style>
+  .proto-nav {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 50;
+    pointer-events: none;
+  }
+  .proto-nav-toggle {
+    pointer-events: auto;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 60;
+    border: 1px solid var(--color-neutral-border);
+    background: var(--color-default-background);
+    color: var(--color-brand-700);
+    border-radius: var(--radius-md);
+    padding: 4px 10px;
+    font: 500 13px var(--font-caption);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  .proto-nav-panel {
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    transform: translateX(-100%);
+    transition: transform 180ms ease;
+    background: var(--color-default-background);
+    border-right: 1px solid var(--color-neutral-border);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .proto-nav.open .proto-nav-panel {
+    transform: translateX(0);
+  }
+  .proto-nav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--color-neutral-border);
+  }
+  .proto-nav-title {
+    font: 600 14px var(--font-heading-3);
+    color: var(--color-default-font);
+  }
+  .proto-nav-home {
+    font: 500 12px var(--font-caption);
+    color: var(--color-brand-primary);
+    text-decoration: none;
+  }
+  .proto-nav-roles {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+  }
+  .proto-nav-role {
+    margin-bottom: 10px;
+  }
+  .proto-nav-role-title {
+    font: 600 12px var(--font-micro);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-subtext-color);
+    margin: 10px 6px 4px;
+  }
+  .proto-nav-sub {
+    font: 500 11px var(--font-micro);
+    color: var(--color-subtext-color);
+    margin: 8px 6px 2px;
+  }
+  .proto-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .proto-nav-list a {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 5px 6px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--color-default-font);
+    font: 400 13px var(--font-body);
+  }
+  .proto-nav-list a:hover {
+    background: var(--color-neutral-100);
+  }
+  .proto-nav-list a[aria-current="page"] {
+    background: var(--color-neutral-100);
+    color: var(--color-brand-primary);
+  }
+  .proto-nav-id {
+    flex: 0 0 52px;
+    font: 500 11px var(--font-micro);
+    color: var(--color-subtext-color);
+  }
+  .proto-nav-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .proto-nav-status {
+    flex: 0 0 auto;
+    font: 500 9px var(--font-micro);
+    padding: 1px 4px;
+    border-radius: 999px;
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-700);
+  }
+  .proto-nav-status-verified {
+    background: var(--color-success-100);
+    color: var(--color-success-800);
+  }
+  .proto-nav-status-failed,
+  .proto-nav-status-missing-source {
+    background: var(--color-error-100);
+    color: var(--color-error-700);
+  }
+  .proto-nav-status-deviated {
+    background: var(--color-warning-100);
+    color: var(--color-warning-800);
+  }
+
+  html[data-shots] .proto-nav {
+    display: none !important;
+  }
+</style>
+
+<script>
+  const nav = document.getElementById("protoNav");
+  const toggle = document.getElementById("protoNavToggle");
+  const saved = localStorage.getItem("herstory-role") ?? "superadmin";
+  // The coordinator-of-a-team shell shares the coordinator's surface list but
+  // keeps its own role value, so map it only for which panel to show.
+  const displayRole = saved === "coordinator-team" ? "coordinator" : saved;
+  const sections = nav.querySelectorAll("[data-role]");
+  sections.forEach((s) => (s.style.display = s.dataset.role === displayRole ? "" : "none"));
+  // role tabs: a tiny select in the header for switching
+  const head = nav.querySelector(".proto-nav-head");
+  const select = document.createElement("select");
+  select.setAttribute("aria-label", "Role");
+  select.innerHTML = `
+    <option value="superadmin">Superadmin</option>
+    <option value="coordinator">Coordinator</option>
+    <option value="coordinator-team">Coordinator · team</option>
+    <option value="inquirer">Inquirer</option>`;
+  select.value = saved;
+  select.classList.add("proto-nav-select");
+  select.addEventListener("change", () => {
+    localStorage.setItem("herstory-role", select.value);
+    // The header badge and task rail read the role on mount; reload so both
+    // switch together instead of leaving mixed chrome.
+    window.location.reload();
+  });
+  head.insertBefore(select, head.firstChild);
+  // active page
+  const here = location.pathname;
+  nav.querySelectorAll("a").forEach((a) => {
+    if (a.getAttribute("href") === here) a.setAttribute("aria-current", "page");
+  });
+  nav.addEventListener("click", (e) => {
+    if (e.target.closest("a") || e.target.closest("select")) return;
+    nav.classList.toggle("open");
+  });
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    nav.classList.toggle("open");
+  });
+</script>
+
+<style>
+  .proto-nav-select {
+    font: 500 12px var(--font-caption);
+    border: 1px solid var(--color-neutral-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-default-background);
+    color: var(--color-default-font);
+    padding: 2px 6px;
+  }
+</style>

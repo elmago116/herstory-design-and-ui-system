@@ -1,0 +1,409 @@
+---
+import "@/styles/globals.css";
+import fs from "node:fs";
+import path from "node:path";
+import YAML from "yaml";
+import PrototypeNav from "@/components/PrototypeNav.astro";
+
+const root = process.cwd();
+const inventory = YAML.parse(fs.readFileSync(path.join(root, "uis.yaml"), "utf8")) as {
+  ui: {
+    id: string;
+    title: string;
+    route: string | null;
+    kind: string;
+    status: string;
+    components?: { component: string; name: string; key: string; config?: Record<string, unknown> }[];
+  }[];
+};
+const interactions = YAML.parse(
+  fs.readFileSync(path.join(root, "public/interactions.yaml"), "utf8"),
+) as {
+  surfaces?: Record<string, { match: string; control?: string; effect: string; action?: string; to?: string }[]>;
+};
+
+const clean = (value: string | null | undefined) =>
+  (value ?? "").replace(/\s+/g, " ").trim().toLowerCase();
+
+const INPUTS = new Set([
+  "TextField",
+  "TextArea",
+  "Select",
+  "Combobox",
+  "Checkbox",
+  "CheckboxGroup",
+  "CheckboxCard",
+  "RadioGroup",
+  "RadioCardGroup",
+  "Switch",
+  "Slider",
+  "NumberStepper",
+  "Calendar",
+  "DatePicker",
+  "RichTextEditor",
+  "QueryEditor",
+  "Form",
+  "Field",
+]);
+const STATIC = new Set([
+  "Table",
+  "TableToolbar",
+  "Tabs",
+  "Tab",
+  "TreeView",
+  "Pagination",
+  "Badge",
+  "Avatar",
+  "Progress",
+  "Loader",
+  "Separator",
+  "SkeletonText",
+  "SkeletonCircle",
+  "AreaChart",
+  "BarChart",
+  "LineChart",
+  "PieChart",
+  "NetworkGraph",
+  "Map",
+  "MapMarker",
+  "Trace",
+  "DiffViewer",
+  "DescriptionList",
+  "Timeline",
+  "MessageScroller",
+  "Message",
+  "Kbd",
+  "CopyToClipboardButton",
+]);
+
+type Row = {
+  component: string;
+  name: string;
+  status: "wired" | "simulated" | "input" | "static" | "unmapped";
+  detail: string;
+  to?: string;
+};
+
+const surfaces = inventory.ui
+  .filter((entry) => entry.route)
+  .map((entry) => {
+    const rules = interactions.surfaces?.[entry.id] ?? [];
+    const demo = entry.kind === "design-system";
+    const rows: Row[] = (entry.components ?? []).map((component) => {
+      if (demo) {
+        return { component: component.component, name: component.name, status: "static", detail: "Design-system demo control" };
+      }
+      const label = clean(component.name);
+      const rule = rules.find((candidate) => clean(candidate.match) === label);
+      if (rule) {
+        if (rule.effect === "navigate") {
+          return { component: component.component, name: component.name, status: "wired", detail: "Navigates", to: rule.to };
+        }
+        if (rule.effect === "action") {
+          return {
+            component: component.component,
+            name: component.name,
+            status: "simulated",
+            detail: rule.to ? `Simulated, then returns` : `Simulated (${rule.action})`,
+            to: rule.to,
+          };
+        }
+        return { component: component.component, name: component.name, status: "wired", detail: "Back" };
+      }
+      if (INPUTS.has(component.component)) {
+        return { component: component.component, name: component.name, status: "input", detail: "Local input; no data model" };
+      }
+      if (STATIC.has(component.component)) {
+        return { component: component.component, name: component.name, status: "static", detail: "Static rendering for parity" };
+      }
+      if (component.component === "IconButton" || !component.name || component.name === component.component) {
+        return { component: component.component, name: component.name, status: "unmapped", detail: "Icon-only or unlabelled; text matching cannot reach it" };
+      }
+      return { component: component.component, name: component.name, status: "unmapped", detail: "No destination screen in this prototype" };
+    });
+    const count = (status: Row["status"]) => rows.filter((row) => row.status === status).length;
+    return {
+      ...entry,
+      rows,
+      wired: count("wired"),
+      simulated: count("simulated"),
+      local: count("input") + count("static"),
+      unmapped: count("unmapped"),
+    };
+  });
+
+const totals = surfaces.reduce(
+  (acc, surface) => {
+    acc.surfaces++;
+    acc.wired += surface.wired;
+    acc.simulated += surface.simulated;
+    acc.local += surface.local;
+    acc.unmapped += surface.unmapped;
+    if (surface.unmapped === 0) acc.complete++;
+    return acc;
+  },
+  { surfaces: 0, wired: 0, simulated: 0, local: 0, unmapped: 0, complete: 0 },
+);
+const actionable = totals.wired + totals.simulated + totals.unmapped;
+const pct = Math.round(((totals.wired + totals.simulated) / actionable) * 100);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prototype coverage — HerStory</title>
+  </head>
+  <body class="bg-default-background font-body text-default-font">
+    <PrototypeNav />
+    <main class="coverage">
+      <header class="coverage-head">
+        <p class="coverage-kicker">HerStory prototype</p>
+        <h1>Control coverage</h1>
+        <p class="coverage-lede">
+          Every control rendered from the Subframe boards, and what it does here. This page is
+          generated at build time from <code>uis.yaml</code> and
+          <code>public/interactions.yaml</code>.
+        </p>
+      </header>
+
+      <section class="coverage-stats" aria-label="Coverage summary">
+        <div><strong>{pct}%</strong><span>of actionable controls wired</span></div>
+        <div><strong>{totals.surfaces}</strong><span>routed surfaces</span></div>
+        <div><strong>{totals.wired}</strong><span>navigate</span></div>
+        <div><strong>{totals.simulated}</strong><span>simulated action</span></div>
+        <div><strong>{actionable}</strong><span>actionable controls</span></div>
+        <div><strong>{totals.unmapped}</strong><span>not wired</span></div>
+      </section>
+
+      <section class="coverage-note">
+        <h2>What “not possible” means here</h2>
+        <ul>
+          <li>
+            <strong>No destination screen.</strong> The board draws a control that has no matching
+            surface in the inventory. It stays for pixel parity; clicking it shows an explanation
+            instead of pretending to navigate.
+          </li>
+          <li>
+            <strong>No backend.</strong> Saving, publishing, uploading, reasoning, SPARQL execution,
+            LLM calls and file download are simulated with a toast. Submitted values are not stored
+            beyond the action state in <code>localStorage</code>.
+          </li>
+          <li>
+            <strong>No data model.</strong> Tables, charts, filters and selects render the seeded
+            values from the board. They accept text or open menus, but they do not query anything.
+          </li>
+          <li>
+            <strong>Icon-only controls.</strong> Matching is by visible text. A button whose only
+            label is an icon cannot be addressed without editing the pulled board, so it is listed
+            as unmapped rather than given an arbitrary target.
+          </li>
+          <li>
+            <strong>External content.</strong> “Open original page” and similar links point outside
+            the prototype and are not embedded.
+          </li>
+        </ul>
+      </section>
+
+      <section class="coverage-list">
+        {surfaces.map((surface) => (
+          <details class="surface">
+            <summary>
+              <span class="surface-id">{surface.id}</span>
+              <span class="surface-title">{surface.title}</span>
+              <span class="chip chip-wired">{surface.wired} wired</span>
+              <span class="chip chip-sim">{surface.simulated} simulated</span>
+              <span class="chip chip-local">{surface.local} local</span>
+              <span class:list={["chip", surface.unmapped ? "chip-gap" : "chip-ok"]}>
+                {surface.unmapped ? `${surface.unmapped} not wired` : "complete"}
+              </span>
+              <a class="surface-open" href={surface.route}>Open surface</a>
+            </summary>
+            <table>
+              <thead>
+                <tr>
+                  <th>Component</th>
+                  <th>Visible name</th>
+                  <th>Status</th>
+                  <th>Behaviour</th>
+                </tr>
+              </thead>
+              <tbody>
+                {surface.rows.map((row) => (
+                  <tr>
+                    <td class="mono">{row.component}</td>
+                    <td>{row.name}</td>
+                    <td><span class:list={["dot", `dot-${row.status}`]} />{row.status}</td>
+                    <td>
+                      {row.to ? <a href={row.to}>{row.detail}</a> : row.detail}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </details>
+        ))}
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  .coverage {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 72px 28px 80px;
+  }
+  .coverage-kicker {
+    margin: 0;
+    font: 500 11px var(--font-micro);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-subtext-color);
+  }
+  .coverage h1 {
+    margin: 6px 0 10px;
+    font: 600 40px/1.1 var(--font-heading-1);
+    color: var(--color-brand-700);
+  }
+  .coverage-lede {
+    max-width: 720px;
+    margin: 0;
+    font: 400 15px/1.55 var(--font-body);
+    color: var(--color-subtext-color);
+  }
+  code {
+    font: 400 0.9em var(--font-monospace-body, monospace);
+    background: var(--color-neutral-100);
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+  .coverage-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    margin: 28px 0;
+    border: 1px solid var(--color-neutral-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--color-neutral-border);
+  }
+  .coverage-stats div {
+    background: var(--color-default-background);
+    padding: 14px 16px;
+  }
+  .coverage-stats strong {
+    display: block;
+    font: 600 26px/1.1 var(--font-heading-3);
+  }
+  .coverage-stats span {
+    font: 400 12px var(--font-caption);
+    color: var(--color-subtext-color);
+  }
+  .coverage-note {
+    margin: 28px 0 34px;
+    padding: 18px 22px;
+    border: 1px solid var(--color-neutral-border);
+    border-left: 3px solid var(--color-brand-primary);
+    border-radius: var(--radius-md);
+    background: var(--color-neutral-50);
+  }
+  .coverage-note h2 {
+    margin: 0 0 10px;
+    font: 600 16px var(--font-heading-3);
+  }
+  .coverage-note ul {
+    margin: 0;
+    padding-left: 20px;
+    display: grid;
+    gap: 8px;
+    font: 400 13px/1.5 var(--font-body);
+    color: var(--color-default-font);
+  }
+  .surface {
+    border: 1px solid var(--color-neutral-border);
+    border-radius: var(--radius-md);
+    margin-bottom: 8px;
+    background: var(--color-default-background);
+  }
+  .surface > summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 10px 14px;
+    cursor: pointer;
+    list-style: none;
+  }
+  .surface > summary::-webkit-details-marker {
+    display: none;
+  }
+  .surface-id {
+    font: 500 11px var(--font-monospace-body, monospace);
+    color: var(--color-subtext-color);
+    min-width: 58px;
+  }
+  .surface-title {
+    flex: 1;
+    min-width: 180px;
+    font: 500 14px var(--font-body);
+  }
+  .chip {
+    font: 500 10px var(--font-micro);
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-700);
+  }
+  .chip-wired { background: var(--color-success-100); color: var(--color-success-800); }
+  .chip-sim { background: var(--color-brand-100); color: var(--color-brand-800); }
+  .chip-local { background: var(--color-neutral-100); color: var(--color-neutral-700); }
+  .chip-gap { background: var(--color-warning-100); color: var(--color-warning-800); }
+  .chip-ok { background: var(--color-success-100); color: var(--color-success-800); }
+  .surface-open {
+    font: 500 11px var(--font-caption);
+    color: var(--color-brand-primary);
+    text-decoration: none;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid var(--color-neutral-border);
+    font: 400 12px/1.4 var(--font-body);
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 6px 14px;
+    border-bottom: 1px solid var(--color-neutral-100);
+    vertical-align: top;
+  }
+  th {
+    font: 500 10px var(--font-micro);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-subtext-color);
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  .mono {
+    font-family: var(--font-monospace-body, monospace);
+    color: var(--color-subtext-color);
+  }
+  .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    margin-right: 5px;
+    background: var(--color-neutral-400);
+  }
+  .dot-wired { background: var(--color-success-700); }
+  .dot-simulated { background: var(--color-brand-primary); }
+  .dot-input { background: var(--color-neutral-400); }
+  .dot-static { background: var(--color-neutral-300); }
+  .dot-unmapped { background: var(--color-warning-700); }
+  a { color: var(--color-brand-primary); }
+</style>

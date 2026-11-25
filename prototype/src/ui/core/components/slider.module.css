@@ -1,0 +1,16 @@
+@layer subframe-core {
+.sliderRoot {
+  position: relative;
+  user-select: none;
+  touch-action: none;
+}
+
+.sliderTrack {
+  position: relative;
+}
+
+.sliderRange {
+  position: absolute;
+}
+
+}
